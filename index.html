@@ -50,7 +50,7 @@ nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:#fff}
 .hero h1 em{font-style:normal;color:var(--lime)}
 .lede{margin-top:24px;font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:680px}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:72px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:72px}
 .stats div{background:var(--ink2);padding:24px}
 .stats b{display:block;font:700 40px "Space Grotesk";color:#fff;letter-spacing:-.02em}
 .stats span{font-size:14.5px;color:var(--muted)}
@@ -98,7 +98,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-s
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
 footer a{text-decoration:none}footer a:hover{color:#fff}
 footer nav{gap:20px}
-@media (max-width:900px){.flag,.founder{grid-template-columns:1fr}.grid,.model{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}nav a:not(.btn){display:none}}
+@media (max-width:900px){.flag,.founder{grid-template-columns:1fr}.grid,.model{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}nav a:not(.btn){display:none}}
 @media (max-width:600px){.grid,.model{grid-template-columns:1fr}.hero{padding:70px 0 60px}section{padding:64px 0}.stats b{font-size:32px}.big{padding:26px}.big h3{font-size:28px}.orb{width:420px;height:420px;right:-200px}}
 </style>
 </head>
@@ -115,9 +115,8 @@ footer nav{gap:20px}
   <p class="lede">Suncal builds and runs its own AI products on Claude, from oversight for AI agents to data products built on public records. We also build Claude agents for companies, which funds the studio as it grows.</p>
   <div class="cta"><a class="btn btn-lime" href="#products">See the products</a><a class="btn btn-line" href="https://github.com/suncal">Open source on GitHub ↗</a></div>
   <div class="stats">
-    <div><b>43</b><span>products shipped in 2026</span></div>
-    <div><b>23</b><span>live today</span></div>
-    <div><b>7</b><span>on their own domains</span></div>
+    <div><b>34</b><span>public projects on GitHub in 2026</span></div>
+    <div><b>33</b><span>with a live site or demo</span></div>
     <div><b>10+ yrs</b><span>running production cloud systems</span></div>
   </div>
 </div></section>
@@ -143,13 +142,23 @@ footer nav{gap:20px}
     </div>
   </div>
 
-  <div class="cat"><h3>Data products and search sites</h3><div class="grid">
+  <div class="cat"><h3>AI tools</h3><div class="grid">
+    <a class="item" href="https://suncal.github.io/tokentrim/"><b>TokenTrim</b><p>Makes Claude Code limits last longer by cutting what it re-reads on every step: about 74% less re-read history in real use. Free and open source.</p></a>
+    <a class="item" href="https://suncal.github.io/awardscope/"><b>AwardScope</b><p>Contract intelligence for small US government contractors: a live SAM.gov feed, win scoring, teaming, pricing and an AI proposal writer.</p></a>
+    <a class="item" href="https://suncal.github.io/lumi/"><b>Lumi</b><p>An AI skin coach: a selfie becomes a pixel-based skin analysis and a daily routine. Web and iOS.</p></a>
+    <a class="item" href="https://suncal.github.io/listlift/"><b>ListLift</b><p>A Chrome extension that turns a product photo into a search-ready Etsy listing in one click.</p></a>
+  </div></div>
+
+  <div class="cat"><h3>Data products and utilities</h3><div class="grid">
     <a class="item" href="https://ascentwork.com"><b>AscentWork</b><p>Visa-sponsored job finder: 316K licensed sponsor employers in 7 countries, matched to 26K live roles, refreshed hourly.</p></a>
     <a class="item" href="https://suncal.github.io/recall-radar/"><b>Recall Radar</b><p>Product-recall intelligence from six free government data sources, with no backend to run.</p></a>
     <a class="item" href="https://taxdeeds-api.sunnyatlanta20.workers.dev"><b>OTC Tax Deed Finder</b><p>Over-the-counter tax-deed listings with flood-zone and road-access checks.</p></a>
     <a class="item" href="https://paysums.com"><b>paysums.com</b><p>Take-home pay and tax calculators for 7 countries, built from official tax tables.</p></a>
     <a class="item" href="https://alarmwake.com"><b>alarmwake.com</b><p>A free online alarm clock and timer suite in 27 languages, with no account needed.</p></a>
     <a class="item" href="https://caratbase.com"><b>caratbase.com</b><p>Free jewelry value tools for diamonds, gemstones and gold, with live metal prices.</p></a>
+    <a class="item" href="https://suncal.github.io/drip/"><b>Drip</b><p>Finds every subscription, price rise and forgotten renewal in a bank statement. Runs fully in the browser.</p></a>
+    <a class="item" href="https://suncal.github.io/exactkb/"><b>ExactKB</b><p>Compresses a photo or PDF to the exact file size a government or exam form requires, in the browser.</p></a>
+    <a class="item" href="https://suncal.github.io/carouselkit/"><b>CarouselKit</b><p>A free maker for LinkedIn carousel PDFs.</p></a>
   </div></div>
 
   <div class="cat"><h3>Consumer and impact</h3><div class="grid">
@@ -158,15 +167,19 @@ footer nav{gap:20px}
     <a class="item" href="https://suncal.github.io/soundlink/"><b>SoundLink</b><p>Send text between two phones using only sound. No internet, no pairing.</p></a>
   </div></div>
 
-  <div class="cat"><h3>Research</h3><div class="grid">
+  <div class="cat"><h3>Research, games and creative</h3><div class="grid">
     <a class="item" href="https://suncal.github.io/latent-comms/"><b>Latent Comms</b><p>Neural radio links that degrade gracefully instead of cutting out, tested on contested and deep-space channels.</p></a>
     <a class="item" href="https://crucible-3lu.pages.dev"><b>Crucible</b><p>A game where every move is a real molecular docking calculation.</p></a>
+    <a class="item" href="https://suncal.github.io/drift/"><b>Drift</b><p>A browser space-exploration game: fly the Milky Way and land on every planet.</p></a>
+    <a class="item" href="https://suncal.github.io/vantage/"><b>Vantage</b><p>A daily 3D puzzle: rotate the chaos until the hidden picture snaps into place.</p></a>
+    <a class="item" href="https://suncal.github.io/volta/"><b>Volta</b><p>A WebGL studio website where scrolling moves the camera, in two styles.</p></a>
+    <a class="item" href="https://suncal.github.io/bulletproof-algo/"><b>Bulletproof.Algo</b><p>Landing page for a 4-week course on building production-grade trading bots.</p></a>
     <a class="item" href="https://github.com/suncal"><b>More on GitHub</b><p>All public repositories, built with Claude Code.</p></a>
   </div></div>
 </div></section>
 
 <section id="model" class="alt"><div class="wrap">
-  <div class="sec-head"><div class="eyebrow">How we work</div><h2>A lean studio that ships like a large one.</h2><p>Claude Code is our main engineering tool, which is how one studio shipped 43 products in a year. Every product is built to run cheaply, so each one can keep going while it finds its market.</p></div>
+  <div class="sec-head"><div class="eyebrow">How we work</div><h2>A lean studio that ships like a large one.</h2><p>Claude Code is our main engineering tool, which is how one studio has published 34 public projects in 2026. Every product is built to run cheaply, so each one can keep going while it finds its market.</p></div>
   <div class="model">
     <div class="card"><b>01</b><h3 style="margin-top:16px">Build fast</h3><p>Ideas go from prototype to a live product in days, not quarters, and the code is ours.</p></div>
     <div class="card"><b>02</b><h3 style="margin-top:16px">Run lean</h3><p>Serverless hosting and public data keep running costs near zero, so products don't need to win immediately.</p></div>
