@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suncal | AI product studio</title>
+<meta name="description" content="Suncal is an AI product studio in Atlanta. We build and run our own AI products on Claude, from AI-agent oversight to data products, and build Claude agents for companies.">
+<meta name="theme-color" content="#0B0F14">
+<link rel="canonical" href="https://suncal.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Suncal | AI products that earn trust">
+<meta property="og:description" content="An AI product studio in Atlanta: AI-agent oversight, developer tools, data products and Claude agent builds.">
+<meta property="og:url" content="https://suncal.github.io/">
+<meta property="og:image" content="https://suncal.github.io/assets/suncal-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/assets/suncal-mark.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/suncal-logo-32.png">
+<link rel="apple-touch-icon" href="/assets/suncal-logo-180.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Suncal","url":"https://suncal.github.io/","logo":"https://suncal.github.io/assets/suncal-logo-512.png","description":"AI product studio in Atlanta, Georgia.","founder":{"@type":"Person","name":"Prriyankarr Chakraborty"},"sameAs":["https://github.com/suncal","https://www.linkedin.com/company/146709025/"]}</script>
+<style>
+@font-face{font-family:"Space Grotesk";font-weight:500;font-display:swap;src:url(/assets/space-grotesk-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Space Grotesk";font-weight:700;font-display:swap;src:url(/assets/space-grotesk-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(/assets/inter-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(/assets/inter-latin-600-normal.woff2) format("woff2")}
+:root{--ink:#0B0F14;--ink2:#11161D;--ink3:#171D26;--lime:#C9F24B;--text:#E8ECF1;--muted:#97A1AE;--line:rgba(232,236,241,.09);--r:16px}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--text);font:400 17px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;font-weight:700;letter-spacing:-.025em;line-height:1.08;margin:0;color:#fff}
+p{margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:5;background:rgba(11,15,20,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 22px "Space Grotesk";letter-spacing:-.02em;color:#fff}
+.brand img{width:34px;height:34px}
+nav{display:flex;gap:26px;align-items:center;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent}
+.btn-lime{background:var(--lime);color:var(--ink)}
+.btn-line{border-color:rgba(232,236,241,.22);color:#fff}
+.hero{position:relative;padding:110px 0 90px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(201,242,75,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,242,75,.05) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 70% 30%,#000 30%,transparent 75%)}
+.orb{position:absolute;right:-140px;top:-120px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(201,242,75,.22),rgba(201,242,75,0) 62%)}
+.orb::after{content:"";position:absolute;inset:90px;border:2px solid rgba(201,242,75,.28);border-radius:50%}
+.hero .wrap{position:relative}
+.eyebrow{font:500 14px "Space Grotesk";letter-spacing:.16em;text-transform:uppercase;color:var(--lime)}
+.hero h1{font-size:clamp(42px,7vw,84px);max-width:860px;margin-top:18px}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.lede{margin-top:24px;font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:680px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:72px}
+.stats div{background:var(--ink2);padding:24px}
+.stats b{display:block;font:700 40px "Space Grotesk";color:#fff;letter-spacing:-.02em}
+.stats span{font-size:14.5px;color:var(--muted)}
+section{padding:90px 0}
+.sec-head{max-width:720px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(30px,4vw,44px);margin-top:12px}
+.sec-head p{margin-top:14px;color:var(--muted)}
+.flag{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.card h3{font-size:24px}
+.card .tag{display:inline-block;font:500 12px "Space Grotesk";letter-spacing:.12em;text-transform:uppercase;color:var(--lime);margin-bottom:12px}
+.card p{color:var(--muted);margin-top:10px;font-size:16px}
+.card .links{margin-top:18px;display:flex;flex-wrap:wrap;gap:16px;font-size:15px;font-weight:600}
+.card .links a{color:var(--lime);text-decoration:none}
+.card .links a:hover{text-decoration:underline}
+.big{padding:36px;background:linear-gradient(160deg,#1A2312,var(--ink2) 60%)}
+.big h3{font-size:34px}
+.big ul{margin:18px 0 0;padding:0;list-style:none;color:var(--text);font-size:15.5px}
+.big li{padding:7px 0 7px 26px;position:relative;border-top:1px solid var(--line)}
+.big li::before{content:"";position:absolute;left:4px;top:15px;width:9px;height:9px;border-radius:50%;background:var(--lime)}
+.stack{display:grid;gap:20px}
+.cat{margin-top:46px}
+.cat h3{font:500 14px "Space Grotesk";letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.item{display:block;text-decoration:none;background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:22px;transition:border-color .2s,transform .2s}
+.item:hover{border-color:rgba(201,242,75,.45);transform:translateY(-2px)}
+.item b{font:700 19px "Space Grotesk";color:#fff;letter-spacing:-.01em}
+.item b::after{content:" ↗";color:var(--lime);font-weight:500}
+.item p{margin-top:8px;color:var(--muted);font-size:15px;line-height:1.5}
+.model{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.model .card b{display:block;font:700 44px "Space Grotesk";color:var(--lime);line-height:1}
+.alt{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.alt .card{background:var(--ink3)}
+.founder{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:start}
+.founder h2{font-size:clamp(28px,3.6vw,40px)}
+.founder .creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.founder .creds span{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:14px;color:var(--text)}
+.founder p{color:var(--muted)}
+.founder p+p{margin-top:14px}
+.invest{text-align:center;padding:100px 0}
+.invest h2{font-size:clamp(32px,5vw,56px);max-width:820px;margin:14px auto 0}
+.invest p{color:var(--muted);max-width:640px;margin:18px auto 0}
+.invest .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+footer nav{gap:20px}
+@media (max-width:900px){.flag,.founder{grid-template-columns:1fr}.grid,.model{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}nav a:not(.btn){display:none}}
+@media (max-width:600px){.grid,.model{grid-template-columns:1fr}.hero{padding:70px 0 60px}section{padding:64px 0}.stats b{font-size:32px}.big{padding:26px}.big h3{font-size:28px}.orb{width:420px;height:420px;right:-200px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="/"><img src="/assets/suncal-mark.svg" alt="" width="34" height="34">suncal</a>
+  <nav><a href="#products">Products</a><a href="#model">How we work</a><a href="#founder">Founder</a><a class="btn btn-lime" href="#investors">Talk to us</a></nav>
+</div></header>
+
+<main>
+<section class="hero"><div class="orb" aria-hidden="true"></div><div class="wrap">
+  <div class="eyebrow">AI product studio · Atlanta</div>
+  <h1>AI products that <em>earn trust.</em></h1>
+  <p class="lede">Suncal builds and runs its own AI products on Claude, from oversight for AI agents to data products built on public records. We also build Claude agents for companies, which funds the studio as it grows.</p>
+  <div class="cta"><a class="btn btn-lime" href="#products">See the products</a><a class="btn btn-line" href="https://github.com/suncal">Open source on GitHub ↗</a></div>
+  <div class="stats">
+    <div><b>43</b><span>products shipped in 2026</span></div>
+    <div><b>23</b><span>live today</span></div>
+    <div><b>7</b><span>on their own domains</span></div>
+    <div><b>10+ yrs</b><span>running production cloud systems</span></div>
+  </div>
+</div></section>
+
+<section id="products"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Flagship</div><h2>Trust is the bottleneck for AI agents. We build the layer that earns it.</h2><p>Companies want AI agents doing real work, but can't yet prove which ones are safe to let act. Our flagship answers that with evidence, not promises.</p></div>
+  <div class="flag">
+    <div class="card big">
+      <span class="tag">Flagship · AI-agent oversight</span>
+      <h3>Tacit</h3>
+      <p>The verified work layer. Tacit grades every AI agent a company runs against what its own people actually do, then lets the proven ones work, step by step.</p>
+      <ul>
+        <li>Trust ladder: an agent shadows, then proposes, then acts on its own</li>
+        <li>A full audit trail behind every decision</li>
+        <li>Evidence for the EU AI Act</li>
+        <li>Self-hosted and MIT-licensed</li>
+      </ul>
+      <div class="links"><a href="https://suncal.github.io/tacit/">Live demo ↗</a><a href="https://github.com/suncal/tacit">Source ↗</a></div>
+    </div>
+    <div class="stack">
+      <div class="card"><span class="tag">Developer tools</span><h3>mcpslim</h3><p>An MCP proxy that compresses what tools send back to Claude Code: 12–60% fewer tokens with no loss, up to 90% in aggressive mode.</p><div class="links"><a href="https://github.com/suncal/mcpslim">Source ↗</a></div></div>
+      <div class="card"><span class="tag">Security</span><h3>ARGUS</h3><p>A security console that joins five log formats into one graph and turns them into readable attack timelines.</p><div class="links"><a href="https://suncal.github.io/argus/">Demo ↗</a><a href="https://github.com/suncal/argus">Source ↗</a></div></div>
+    </div>
+  </div>
+
+  <div class="cat"><h3>Data products and search sites</h3><div class="grid">
+    <a class="item" href="https://ascentwork.com"><b>AscentWork</b><p>Visa-sponsored job finder: 316K licensed sponsor employers in 7 countries, matched to 26K live roles, refreshed hourly.</p></a>
+    <a class="item" href="https://suncal.github.io/recall-radar/"><b>Recall Radar</b><p>Product-recall intelligence from six free government data sources, with no backend to run.</p></a>
+    <a class="item" href="https://taxdeeds-api.sunnyatlanta20.workers.dev"><b>OTC Tax Deed Finder</b><p>Over-the-counter tax-deed listings with flood-zone and road-access checks.</p></a>
+    <a class="item" href="https://paysums.com"><b>paysums.com</b><p>Take-home pay and tax calculators for 7 countries, built from official tax tables.</p></a>
+    <a class="item" href="https://alarmwake.com"><b>alarmwake.com</b><p>A free online alarm clock and timer suite in 27 languages, with no account needed.</p></a>
+    <a class="item" href="https://caratbase.com"><b>caratbase.com</b><p>Free jewelry value tools for diamonds, gemstones and gold, with live metal prices.</p></a>
+  </div></div>
+
+  <div class="cat"><h3>Consumer and impact</h3><div class="grid">
+    <a class="item" href="https://lantern.sunnyatlanta20.workers.dev"><b>Lantern</b><p>Daily check-ins for older relatives, so families know they're OK. Runs at $0 a month.</p></a>
+    <a class="item" href="https://suncal.github.io/aloud/"><b>Aloud</b><p>A free, offline communication app for people who cannot speak.</p></a>
+    <a class="item" href="https://suncal.github.io/soundlink/"><b>SoundLink</b><p>Send text between two phones using only sound. No internet, no pairing.</p></a>
+  </div></div>
+
+  <div class="cat"><h3>Research</h3><div class="grid">
+    <a class="item" href="https://suncal.github.io/latent-comms/"><b>Latent Comms</b><p>Neural radio links that degrade gracefully instead of cutting out, tested on contested and deep-space channels.</p></a>
+    <a class="item" href="https://crucible-3lu.pages.dev"><b>Crucible</b><p>A game where every move is a real molecular docking calculation.</p></a>
+    <a class="item" href="https://github.com/suncal"><b>More on GitHub</b><p>All public repositories, built with Claude Code.</p></a>
+  </div></div>
+</div></section>
+
+<section id="model" class="alt"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">How we work</div><h2>A lean studio that ships like a large one.</h2><p>Claude Code is our main engineering tool, which is how one studio shipped 43 products in a year. Every product is built to run cheaply, so each one can keep going while it finds its market.</p></div>
+  <div class="model">
+    <div class="card"><b>01</b><h3 style="margin-top:16px">Build fast</h3><p>Ideas go from prototype to a live product in days, not quarters, and the code is ours.</p></div>
+    <div class="card"><b>02</b><h3 style="margin-top:16px">Run lean</h3><p>Serverless hosting and public data keep running costs near zero, so products don't need to win immediately.</p></div>
+    <div class="card"><b>03</b><h3 style="margin-top:16px">Fund with services</h3><p>We build Claude agents, MCP integrations and Claude Code setups for companies. That revenue funds new products.</p></div>
+  </div>
+</div></section>
+
+<section id="founder"><div class="wrap founder">
+  <div><div class="eyebrow">Founder</div><h2 style="margin-top:12px">Prriyankarr (Sunny) Chakraborty</h2>
+    <div class="creds"><span>AWS Certified Solutions Architect</span><span>CompTIA Security+</span><span>PMP</span></div></div>
+  <div>
+    <p>Sunny spent 10+ years running production cloud systems on AWS before founding Suncal. Since November 2024 he has built full-time with Claude, shipping AI agents, MCP tools and data products.</p>
+    <p>He also runs <a href="https://brightpeakads.com" style="color:var(--lime)">BrightPeak Ads</a>, a Meta ads agency for small businesses.</p>
+    <div class="cta" style="margin-top:22px"><a class="btn btn-line" href="https://www.linkedin.com/in/prriyankarr/">LinkedIn ↗</a><a class="btn btn-line" href="https://everbuiltstudio.com/portfolio/">Portfolio ↗</a></div>
+  </div>
+</div></section>
+
+<section id="investors" class="alt invest"><div class="wrap">
+  <div class="eyebrow">Investors and partners</div>
+  <h2>Interested in what we're building?</h2>
+  <p>We're open to conversations with angel investors, acquirers and companies that want Claude agents built. Write to us to start a conversation.</p>
+  <div class="cta"><a class="btn btn-lime" href="mailto:sunnyatlanta20@gmail.com?subject=Suncal">Email Suncal</a><a class="btn btn-line" href="https://www.linkedin.com/company/146709025/">Follow on LinkedIn ↗</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 Suncal · Atlanta, Georgia</span>
+  <nav><a href="https://github.com/suncal">GitHub</a><a href="https://www.linkedin.com/company/146709025/">LinkedIn</a><a href="mailto:sunnyatlanta20@gmail.com">Email</a></nav>
+</div></footer>
+</body>
+</html>

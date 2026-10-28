@@ -44,3 +44,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://suncal.github.io/tokentrim/sitemap.xml
+Sitemap: https://suncal.github.io/sitemap.xml
