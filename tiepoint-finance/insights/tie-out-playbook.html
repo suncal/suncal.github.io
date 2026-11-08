@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Tie-out Playbook: Proving FP&amp;A and Dashboard Numbers Reconcile to the General Ledger | TiePoint Finance Insights</title>
+<meta name="description" content="How to prove, entity by entity and month by month, that every number in your planning platform and dashboards comes from the ledger, and how to keep...">
+<link rel="canonical" href="https://www.tiepointfinance.com/insights/tie-out-playbook">
+<meta name="theme-color" content="#0A1220">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TiePoint Finance">
+<meta property="og:title" content="The Tie-out Playbook: Proving FP&amp;A and Dashboard Numbers Reconcile to the General Ledger | TiePoint Finance Insights">
+<meta property="og:description" content="How to prove, entity by entity and month by month, that every number in your planning platform and dashboards comes from the ledger, and how to keep...">
+<meta property="og:url" content="https://www.tiepointfinance.com/insights/tie-out-playbook">
+<meta property="og:image" content="https://www.tiepointfinance.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TiePoint Finance. Every number ties out.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Tie-out Playbook: Proving FP&amp;A and Dashboard Numbers Reconcile to the General Ledger | TiePoint Finance Insights">
+<meta name="twitter:description" content="How to prove, entity by entity and month by month, that every number in your planning platform and dashboards comes from the ledger, and how to keep...">
+<meta name="twitter:image" content="https://www.tiepointfinance.com/assets/og-image.png">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://www.tiepointfinance.com/#org", "name": "TiePoint Finance", "slogan": "Every number ties out.", "url": "https://www.tiepointfinance.com/", "logo": "https://www.tiepointfinance.com/assets/apple-touch-icon.png", "image": "https://www.tiepointfinance.com/assets/og-image.png", "description": "Independent finance systems implementation and integration: ERP, CRM, HRIS and bank data connected into FP&A platforms and Power BI, reconciled to the general ledger.", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}, "areaServed": "Worldwide", "knowsAbout": ["FP&A implementation", "Financial consolidation", "General ledger reconciliation", "ERP integration", "Power BI"], "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "url": "https://www.tiepointfinance.com/contact"}, "parentOrganization": {"@type": "Organization", "name": "P CHAK Consulting LLC", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tiepointfinance.com/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.tiepointfinance.com/insights/"}, {"@type": "ListItem", "position": 3, "name": "The Tie-out Playbook: Proving FP&A and Dashboard Numbers Reconcile to the General Ledger", "item": "https://www.tiepointfinance.com/insights/tie-out-playbook"}]}, {"@type": "Article", "headline": "The Tie-out Playbook: Proving FP&A and Dashboard Numbers Reconcile to the General Ledger", "description": "How to prove, entity by entity and month by month, that every number in your planning platform and dashboards comes from the ledger, and how to keep...", "mainEntityOfPage": "https://www.tiepointfinance.com/insights/tie-out-playbook", "author": {"@type": "Person", "name": "Priyankar Chakraborty"}, "publisher": {"@id": "https://www.tiepointfinance.com/#org"}, "image": "https://www.tiepointfinance.com/assets/og-image.png", "wordCount": 2821}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="../services.html">Services</a>
+      <a href="../method.html">Method</a>
+      <a href="../platforms/index.html">Platforms</a>
+      <a href="../insights/index.html" aria-current="page">Insights</a>
+      <a href="../glossary.html">Glossary</a>
+      <a href="../demo.html">Demo</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a class="nav-cta" href="../contact.html" data-book>Book a Discovery Call</a>
+    </nav>
+  </div>
+</header>
+<div class="progress" aria-hidden="true"></div>
+<main id="main">
+<section class="page-hero art-hero grain"><div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../index.html">Home</a></li><li><a href="../insights/index.html">Insights</a></li><li><span aria-current="page">Field guide</span></li></ol></nav>
+    <span class="eyebrow">Field guide</span>
+    <h1>The Tie-out Playbook: Proving FP&amp;A and Dashboard Numbers Reconcile to the General Ledger</h1>
+    <p class="lede">How to prove, entity by entity and month by month, that every number in your planning platform and dashboards comes from the ledger, and how to keep proving it after go-live.</p>
+    <div class="art-meta"><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l2.5 2"/></svg>13 min read</span><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="7" r="3"/><path d="M4 17c.8-3 3.2-4.5 6-4.5s5.2 1.5 6 4.5"/></svg>Priyankar Chakraborty</span><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4.5A1.5 1.5 0 015.5 3H16v12H5.5A1.5 1.5 0 004 16.5zM4 16.5A1.5 1.5 0 005.5 18H16"/></svg>10 sections</span></div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap art-layout">
+    <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#why-it-matches-the-erp-is-not-evidence">Why &quot;it matches the ERP&quot; is not evidence</a></li><li><a href="#step-0-fix-the-reference-before-you-test-against-it">Step 0: Fix the reference before you test against it</a></li><li><a href="#the-five-tie-out-checks">The Five Tie-out Checks</a></li><li><a href="#tolerances-rounding-and-what-zero-means">Tolerances, rounding and what &quot;zero&quot; means</a></li><li><a href="#the-failure-mode-catalog">The failure-mode catalog</a></li><li><a href="#sign-off-evidence-what-to-keep">Sign-off evidence: what to keep</a></li><li><a href="#artifact-the-tie-out-workbook-template">Artifact: the tie-out workbook template</a></li><li><a href="#making-it-routine-after-go-live">Making it routine after go-live</a></li><li><a href="#where-tiepoint-fits">Where TiePoint fits</a></li><li><a href="#sources-h">Sources</a></li></ol></nav>
+    <article class="article">
+      <aside class="takeaways" aria-label="Key takeaways"><h2>Key takeaways</h2><ul><li>"The dashboard total matches the ERP" is not evidence. Offsetting errors hide in totals. The test must run at the grain of <strong>entity × period × account</strong>, in both functional and presentation currency.</li><li>Tie the balance sheet on <strong>closing balances</strong> and the P&amp;L on <strong>period activity</strong>. A year-to-date P&amp;L tie alone can hide a misposted month.</li><li>Mapping completeness comes before any amount check. An unmapped account with a balance is the quietest way a report goes wrong.</li><li>The pass condition for a ledger tie-out is <strong>0.00</strong>, not "within tolerance". Thresholds belong to the variance review, not to the reconciliation.</li><li>Most tie-out failures fall into a dozen repeatable patterns, and each has a test that detects it automatically.</li><li>Evidence matters as much as the result: keep the extract parameters, the mapping version, the difference matrix and the sign-off together, every month.</li></ul></aside>
+      
+<p class="who-for"><strong>Who this is for:</strong> controllers, FP&amp;A leaders and finance systems managers who own a planning platform or BI layer fed from one or more ERPs, and anyone who has been asked "why doesn't the board pack match the ledger?" and wanted a better answer than "timing."</p>
+
+<hr />
+<h2 id="why-it-matches-the-erp-is-not-evidence">Why &quot;it matches the ERP&quot; is not evidence</h2>
+<p>Most FP&amp;A implementations end with someone comparing the platform's consolidated revenue to the ERP's consolidated revenue, finding the two agree, and declaring the data validated. That check is necessary and close to worthless on its own, for three reasons:</p>
+<ol>
+<li><strong>Offsetting errors survive aggregation.</strong> If one account is mapped to both "Marketing" and "G&amp;A" while another is mapped to nothing, the total can still agree.</li>
+<li><strong>The two numbers may share the same defect.</strong> If the ERP report and the data extract both exclude an adjustment period or the elimination subsidiary, they will agree and both be wrong.</li>
+<li><strong>A one-off comparison proves one month.</strong> Ledgers keep moving: late journals, reopened periods, new accounts, rate corrections. A tie-out that is not repeated every load decays.</li>
+</ol>
+<p>The rest of this guide is the procedure we use to make the comparison real. In the TiePoint Method (Discover → Connect &amp; Map → Validate/<a class="gl" href="../glossary.html#tie-out">Tie-out</a> → Deliver &amp; Handover), it is the whole of the third phase, and no dashboard is released until it passes.</p>
+<h2 id="step-0-fix-the-reference-before-you-test-against-it">Step 0: Fix the reference before you test against it</h2>
+<p>A <a class="gl" href="../glossary.html#reconciliation">reconciliation</a> is only as good as the thing you reconcile to. Before any comparison, pin down the <a class="gl" href="../glossary.html#trial-balance">trial balance</a> (TB) you are treating as the truth and record exactly how it was produced.</p>
+<p><strong>Record these extract parameters every time:</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entity / subsidiary, and whether children are included</td>
+<td>A parent-level TB in a multi-entity ERP may already be consolidated. Comparing it to an unconsolidated load creates false differences.</td>
+</tr>
+<tr>
+<td>Accounting book or ledger</td>
+<td>Multi-book ERPs (for example NetSuite with Multi-Book Accounting, or SAP with parallel ledgers) can hold different numbers for the same account.</td>
+</tr>
+<tr>
+<td>Period range and period status</td>
+<td>Is the period closed and locked? An open period can change after you test.</td>
+</tr>
+<tr>
+<td>Adjustment and year-end periods</td>
+<td>Some ledgers post audit adjustments or closing entries to separate periods that an ordinary "month" filter misses.</td>
+</tr>
+<tr>
+<td>Currency basis</td>
+<td>Transaction, functional (local) or consolidated/presentation currency.</td>
+</tr>
+<tr>
+<td>Elimination entities</td>
+<td>Whether the dedicated elimination subsidiary or company is included.</td>
+</tr>
+<tr>
+<td>Run timestamp and user</td>
+<td>So you can prove later what the ledger said at the moment you tested.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Save the TB export itself, not a screenshot, and keep it with the test results. If the platform extracts data through an API or query, extract the TB through a <strong>separate path</strong> where possible (a standard ERP report rather than the same query). Two independent paths that agree are evidence. One path compared with itself is not.</p>
+<h2 id="the-five-tie-out-checks">The Five Tie-out Checks</h2>
+<p>These are the five checks in our release gate. They run for every <a class="gl" href="../glossary.html#entity">entity</a> and every month in scope, and their results go to the client before any report is released.</p>
+<h3>Check 1: Every GL account is mapped exactly once</h3>
+<p><strong>Pass condition:</strong> unmapped = 0 and duplicate mappings = 0, for every account that has a balance or activity in any period in scope.</p>
+<p>This runs first because every other check depends on it. Run it as three set comparisons, not by eye:</p>
+<ul>
+<li><strong>Unmapped test.</strong> Take the distinct list of (entity, account) pairs that have any non-zero balance or activity in the load. Remove every pair that appears in the mapping table. Anything left over is unmapped. Include inactive accounts: an account can be marked inactive in the ERP and still carry a balance.</li>
+<li><strong>Duplicate test.</strong> Count mapping rows per (entity, account, effective period). Any count above one is a double-count risk. This is common when mappings are written as ranges ("6000–6999 → Opex") and then an explicit exception is added for one account inside the range without excluding it from the range.</li>
+<li><strong>Suspense test.</strong> If your design routes unrecognized accounts to a catch-all line ("Unmapped" or "Suspense"), that line must be exactly zero at release. A catch-all is a detection device, not a home.</li>
+</ul>
+<h3>Check 2: Totals tie to the trial balance, per entity, per month</h3>
+<p><strong>Pass condition:</strong> <a class="gl" href="../glossary.html#variance">variance</a> = 0.00 for every entity × period × reporting line, in <a class="gl" href="../glossary.html#functional-currency">functional currency</a> first, then in <a class="gl" href="../glossary.html#presentation-currency">presentation currency</a>.</p>
+<p>Build a <strong>difference matrix</strong>: entities down the side, months across the top, and in each cell the absolute sum of differences between the loaded data and the TB at reporting-line level. Using the sum of absolute differences per cell (rather than the net difference) stops a +500 on one line and a -500 on another from showing as a clean zero.</p>
+<p>Run it in this order:</p>
+<ol>
+<li><strong>Ledger integrity.</strong> Confirm the TB itself sums to zero (debits equal credits) for each entity and month. If it does not, you have an extract problem, not a mapping problem.</li>
+<li><strong>Functional-currency tie.</strong> Compare the loaded data to the TB in each entity's own currency. FX cannot cause a difference here, so any difference is a mapping, filtering or extraction issue.</li>
+<li><strong>Presentation-currency tie.</strong> Only after step 2 is clean, compare translated figures to the ERP's consolidated report. Differences here point to rates or rate types (see Check 4).</li>
+<li><strong>Basis check.</strong> Tie balance sheet lines on <strong>closing balances</strong> and P&amp;L lines on <strong>period activity</strong>. Then confirm the year-to-date P&amp;L as a cross-check. A P&amp;L that ties year-to-date but not by month means something is in the wrong period.</li>
+<li><strong>Retained earnings roll.</strong> Opening retained earnings for the year should equal prior-year closing retained earnings plus prior-year net income (adjusted for dividends and any direct equity postings). Many ledgers perform the year-end close virtually, so the platform must reproduce the roll itself. This is where many "balance sheet doesn't balance in January" problems come from.</li>
+</ol>
+<h3>Check 3: Intercompany nets to zero after eliminations</h3>
+<p><strong>Pass condition:</strong> IC net = 0.00 at group level, for every period.</p>
+<p>Three sub-tests:</p>
+<ul>
+<li><strong>Pair test.</strong> For each pair of entities, the receivable recorded by one must equal the payable recorded by the other, and the same for intercompany revenue and expense, loans and interest. Run it in a common currency so that both sides are comparable.</li>
+<li><strong>Group test.</strong> After eliminations, the sum of all accounts tagged as intercompany must be zero for the consolidated group.</li>
+<li><strong>Residual test.</strong> Any amount left after elimination must be classified: timing (goods or cash in transit), FX (each side translated at different rates) or error (booked to the wrong account or counterparty). Our guide on consolidation and eliminations covers how to resolve each.</li>
+</ul>
+<p>If the ERP performs eliminations itself (NetSuite, for example, generates <a class="gl" href="../glossary.html#elimination">elimination</a> journals as the last task in its Period Close Checklist and posts FX differences to a Cumulative Translation Adjustment-Elimination account), test that the platform has loaded those elimination entries exactly once.</p>
+<h3>Check 4: Correct FX rates and periods</h3>
+<p><strong>Pass condition:</strong> every rate used matches the rate table approved under your FX policy, and every transaction sits in the fiscal period the ledger assigns it to.</p>
+<ul>
+<li><strong>Rate table test.</strong> Compare the platform's rate table to the ERP's for every currency pair and period, including the rate <em>type</em>. NetSuite, for example, maintains three consolidated rate types: Current (period-end, used for most balance sheet accounts), Average (a transaction-weighted average used for income statement accounts) and Historical (used for equity). If the platform recalculates its own "average" as a simple average of daily rates, it will not match.</li>
+<li><strong>Rate type test.</strong> For every account, confirm that the rate type applied matches the account's classification. A balance sheet account translated at the average rate is a classic silent error.</li>
+<li><strong>Translated balance test.</strong> After translation, the translated TB for each entity must still balance, with the difference landing in the cumulative translation adjustment (CTA) account. Recompute the CTA movement independently (opening net assets × change in closing rate, plus net income × difference between closing and average rate, plus equity transactions at their own rates). If the platform's CTA and your recomputation disagree, something is translated at the wrong rate.</li>
+<li><strong>Period test.</strong> Confirm fiscal calendar alignment: 4-4-5 calendars, 13-period years, and entities with different fiscal year-ends need explicit period mapping. Also confirm that transaction dates have not shifted across a month boundary during extraction. Dates converted between time zones in an integration layer can move a 31 March posting into April. Test by comparing period totals at the boundary days.</li>
+</ul>
+<h3>Check 5: Large movements are explained before release</h3>
+<p><strong>Pass condition:</strong> unexplained = 0 for every line that breaches the movement threshold.</p>
+<p>This check does not prove the numbers are correct. It proves that someone with context has looked at the numbers most likely to be questioned. Set thresholds with both an absolute and a relative trigger, so that a 300% swing on a tiny account and a 2% swing on revenue are both treated sensibly. The values are a policy decision tied to your materiality, not a universal number. Compare month-over-month and against <a class="gl" href="../glossary.html#budget">budget</a> or <a class="gl" href="../glossary.html#forecast">forecast</a>. Each breach gets a one-line written explanation from the account owner before the pack is released.</p>
+<h2 id="tolerances-rounding-and-what-zero-means">Tolerances, rounding and what &quot;zero&quot; means</h2>
+<p>Tie-out tolerance is <strong>zero at source precision</strong>. Store and compare amounts at the precision of the ledger (usually two decimal places in transaction or functional currency). Rounding belongs to presentation only.</p>
+<p>Two rounding traps to design out:</p>
+<ul>
+<li><strong>Sum of rounded ≠ rounded sum.</strong> If reports display thousands, the rows will not always add to the displayed total. Decide whether to show unadjusted rounding or apply a documented rounding line, and never feed rounded figures back into the tie-out.</li>
+<li><strong>Translation rounding.</strong> Translating line by line and then summing gives slightly different results from translating a total. Decide which the ERP does and match it, or accept a documented translation rounding account with a pre-agreed ceiling.</li>
+</ul>
+<p>A tolerance band is appropriate for <strong>Check 5</strong> (which movements need explanations). It is not appropriate for <strong>Check 2</strong> (whether the data agrees with the ledger).</p>
+<h2 id="the-failure-mode-catalog">The failure-mode catalog</h2>
+<p>These are the patterns we test for by name. Each has a symptom, a likely cause and a test that detects it without anyone having to notice by eye.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Failure mode</th>
+<th>Symptom</th>
+<th>Typical cause</th>
+<th>Detection test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>The Orphan Account</strong></td>
+<td>Totals short by an amount that grows over time</td>
+<td>New ERP account created after mapping was built</td>
+<td>Unmapped test (Check 1), run on every load</td>
+</tr>
+<tr>
+<td><strong>The Double Count</strong></td>
+<td>One line overstated, often by an exact account balance</td>
+<td>Range mapping plus explicit exception</td>
+<td>Duplicate test (Check 1)</td>
+</tr>
+<tr>
+<td><strong>The Sign Flip</strong></td>
+<td>Revenue or liabilities negative in reports, or a line exactly 2× the expected difference</td>
+<td>Source stores credits as negatives; presentation uses natural sign; flip applied twice or not at all</td>
+<td>Compare sign convention per account type; any difference equal to 2× a balance is a sign error</td>
+</tr>
+<tr>
+<td><strong>The Late Journal</strong></td>
+<td>Prior month ties at test, then breaks later</td>
+<td>Journal posted to a closed-but-unlocked period after the load</td>
+<td>Re-extract the TB for prior periods each load and compare to the stored snapshot</td>
+</tr>
+<tr>
+<td><strong>The Wrong Book</strong></td>
+<td>Differences only on accounts with book-specific adjustments</td>
+<td>Extract pulls primary book; report uses a secondary book, or the reverse</td>
+<td>Record the book in the extract parameters; tie per book</td>
+</tr>
+<tr>
+<td><strong>The Period Shift</strong></td>
+<td>Month-end boundary differences that reverse next month</td>
+<td>Fiscal calendar mismatch or time-zone date conversion</td>
+<td>Period test (Check 4) on boundary days</td>
+</tr>
+<tr>
+<td><strong>The Elimination Echo</strong></td>
+<td>Group totals off by exactly the elimination amount</td>
+<td>Elimination entity loaded twice, or excluded while the platform also eliminates</td>
+<td>Compare elimination entries loaded with those posted in the ERP</td>
+</tr>
+<tr>
+<td><strong>The Rate Drift</strong></td>
+<td>Functional currency ties; presentation currency does not</td>
+<td>Platform recalculates average rates or uses a different rate source</td>
+<td>Rate table and rate type tests (Check 4)</td>
+</tr>
+<tr>
+<td><strong>The Retained Earnings Gap</strong></td>
+<td>Balance sheet out by prior-year net income in the first period of a year</td>
+<td>Virtual year-end close not replicated</td>
+<td>Retained earnings roll (Check 2)</td>
+</tr>
+<tr>
+<td><strong>The Dimension Leak</strong></td>
+<td>Department or location report totals fall short of the entity total</td>
+<td>Lines with no dimension value dropped by a filter</td>
+<td>Tie dimension totals, including an explicit "blank" member, back to the entity total</td>
+</tr>
+<tr>
+<td><strong>The Reclass Ghost</strong></td>
+<td>Platform differs from ledger by a known adjustment</td>
+<td>Top-side adjustments entered in the platform but not in the ledger</td>
+<td>Store top-side adjustments in a separate, labeled layer; tie the ledger layer before adjustments</td>
+</tr>
+<tr>
+<td><strong>The Stale Snapshot</strong></td>
+<td>Platform agrees with last week's ledger</td>
+<td>Refresh failed silently and the old data stayed in place</td>
+<td>Load timestamp shown on every report; alert when a scheduled refresh fails or returns zero rows</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sign-off-evidence-what-to-keep">Sign-off evidence: what to keep</h2>
+<p>If an auditor, a new controller or your own team asks in six months "how do we know this report was right?", the answer should be a folder, not a memory. For each period, keep an <strong>evidence pack</strong>:</p>
+<ol>
+<li>The TB export, with the extract parameters from Step 0 and the run timestamp.</li>
+<li>The mapping table version in force (with its change log reference).</li>
+<li>The difference matrix for Checks 2 and 3, showing 0.00 or the residual and its classification.</li>
+<li>The rate table used, with its source and approval.</li>
+<li>The movement review (Check 5) with each explanation and who gave it.</li>
+<li>Preparer and reviewer sign-off, with dates. The reviewer should be someone who did not build the load, usually the controller or an assistant controller.</li>
+</ol>
+<p>Keep these where the finance team can find them, with a retention period that matches your record-keeping policy.</p>
+<h2 id="artifact-the-tie-out-workbook-template">Artifact: the tie-out workbook template</h2>
+<p>A practical layout that works whether you run the tie-out in Excel, in your FP&amp;A platform or in a BI tool:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Tab</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>README</strong></td>
+<td>Scope (entities, periods, books, currencies), who prepared, who reviewed, date</td>
+</tr>
+<tr>
+<td><strong>Parameters</strong></td>
+<td>Extract parameters per entity (Step 0 table)</td>
+</tr>
+<tr>
+<td><strong>TB_Source</strong></td>
+<td>Raw TB exports, one block per entity × period, unedited</td>
+</tr>
+<tr>
+<td><strong>Platform_Data</strong></td>
+<td>Same grain, extracted from the platform</td>
+</tr>
+<tr>
+<td><strong>Mapping_Check</strong></td>
+<td>Unmapped, duplicate and suspense test results</td>
+</tr>
+<tr>
+<td><strong>Diff_Matrix</strong></td>
+<td>Entity × month grid of absolute differences, conditional formatting on non-zero</td>
+</tr>
+<tr>
+<td><strong>Diff_Detail</strong></td>
+<td>Drill-down to account level for any non-zero cell</td>
+</tr>
+<tr>
+<td><strong>IC_Check</strong></td>
+<td>Pair-level and group-level intercompany results</td>
+</tr>
+<tr>
+<td><strong>FX_Check</strong></td>
+<td>Rate table comparison, rate type by account, CTA recomputation</td>
+</tr>
+<tr>
+<td><strong>Movements</strong></td>
+<td>Lines breaching thresholds, with explanation and owner</td>
+</tr>
+<tr>
+<td><strong>Sign-off</strong></td>
+<td>Preparer, reviewer, date, open items</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Release checklist (use it every month):</strong></p>
+<ul class="checklist">
+<li>TB extracted with documented parameters, through an independent path</li>
+<li>TB balances (debits = credits) for every entity and month</li>
+<li>Unmapped = 0, duplicates = 0, suspense = 0</li>
+<li>Functional-currency difference matrix all 0.00</li>
+<li>Presentation-currency difference matrix all 0.00</li>
+<li>Retained earnings roll agrees</li>
+<li>Intercompany pairs agree or residuals classified; group IC net = 0.00</li>
+<li>Rate table matches approved policy rates and rate types</li>
+<li>Prior periods re-extracted and unchanged (or changes explained)</li>
+<li>Movements over threshold explained</li>
+<li>Reviewer sign-off recorded</li>
+</ul>
+<h2 id="making-it-routine-after-go-live">Making it routine after go-live</h2>
+<p>A tie-out that only happens during implementation proves the implementation, not the reporting. After handover, the same checks should run on every refresh, automatically where the platform allows, with failures blocking or clearly flagging the affected reports. In practice that means:</p>
+<ul>
+<li>the mapping completeness test runs on every load and alerts the finance systems owner,</li>
+<li>the TB comparison runs at least at each close, and again before the board pack is finalized,</li>
+<li>a load timestamp and a "last tie-out passed" marker appear on every dashboard, so readers know which data they are looking at.</li>
+</ul>
+<h2 id="where-tiepoint-fits">Where TiePoint fits</h2>
+<p>Tie-out is the phase most implementations rush, and the one that decides whether anyone trusts the dashboards. In the TiePoint Method it is a hard gate: no report is released until the Five Tie-out Checks pass for every entity and month in scope, and the evidence pack is handed to your team along with a <a class="gl" href="../glossary.html#runbook">runbook</a> for repeating it at each close.</p>
+<p>If you want this done for your team, start with a paid discovery. We will review your ledgers, entities and current reports, and give you a written plan and a fixed quote for the work.</p>
+
+      <section class="sources" aria-labelledby="sources-h"><h2 id="sources-h">Sources</h2><ol><li>Oracle NetSuite Help Center, "Consolidated Exchange Rate Types": <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1405625.html" rel="noopener">https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1405625.html</a></li><li>Oracle NetSuite Help Center, "Calculating Consolidated Exchange Rates Automatically": <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1406908.html" rel="noopener">https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1406908.html</a></li><li>Oracle NetSuite Help Center, "Intercompany Elimination Overview": <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1498385.html" rel="noopener">https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1498385.html</a></li><li>Microsoft Learn, "Set up company consolidation" (Business Central): <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/finance-consolidated-company-reporting-setup" rel="noopener">https://learn.microsoft.com/en-us/dynamics365/business-central/finance-consolidated-company-reporting-setup</a></li><li>PwC Viewpoint, Foreign currency guide, 5.3 (translation rates and CTA): <a href="https://viewpoint.pwc.com/dt/us/en/pwc/accounting_guides/foreign_currency/foreign_currency__2_US/chapter_5_translatin_US/53_translation_when__US.html" rel="noopener">https://viewpoint.pwc.com/dt/us/en/pwc/accounting_guides/foreign_currency/foreign_currency__2_US/chapter_5_translatin_US/53_translation_when__US.html</a></li></ol></section>
+      <div class="disclaimer" role="note"><strong>Disclaimer.</strong> This guide is general information about finance systems and reporting practice. It is not accounting, tax, legal or investment advice. Product features change, so confirm details in each vendor's current documentation before you rely on them.</div>
+      <aside class="art-cta"><div><h2>Want this applied to your systems?</h2><p>Paid Discovery takes one to two weeks at a fixed fee and ends with a mapping plan, dashboard specifications and a fixed quote.</p></div><a class="btn btn-tie" href="../contact.html" data-book data-subject="Paid Discovery">Book Paid Discovery <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a></aside>
+    </article>
+  </div>
+</section>
+<section class="sec-tight paper-2"><div class="wrap"><h2 class="rv" style="font-size:1.6rem">More field guides</h2><div class="grid g3" data-stagger><a class="card lib-card rv" href="chart-of-accounts-mapping.html"><span class="meta"><span>Field guide</span><span>11 min read</span></span><h3>Chart of Accounts Mapping for Multi-Entity Groups</h3><p>Designing a group reporting CoA, accounts versus dimensions, explicit and conditional mapping with effective dates, new-account controls and change governance, with a worked mapping table.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="card lib-card rv" href="consolidation-intercompany-eliminations.html"><span class="meta"><span>Field guide</span><span>12 min read</span></span><h3>Multi-Entity Consolidation and Intercompany Eliminations</h3><p>Every common elimination type, how to classify and resolve intercompany mismatches, NCI at a high level, and a fully worked three-entity consolidation example.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="card lib-card rv" href="foreign-currency-translation.html"><span class="meta"><span>Field guide</span><span>11 min read</span></span><h3>Foreign Currency Translation for Consolidated Reporting</h3><p>Functional versus presentation currency, the current-rate method under ASC 830 and IAS 21, how to recompute the CTA independently, monthly translation in FP&amp;A platforms and rate governance.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></div></div></section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+        <p>Finance systems implementation and integration. Every number ties out.</p>
+        <p>TiePoint Finance is a P CHAK Consulting company.<br>5900 Spout Springs Road, Unit 3C-1069, Flowery Branch, GA 30542<br><a data-email href="../contact.html" style="color:inherit">Contact page</a></p>
+      </div>
+      <nav class="foot-col" aria-label="Company"><h2>Company</h2><ul>
+        <li><a href="../index.html">Home</a></li><li><a href="../services.html">Services</a></li><li><a href="../method.html">The TiePoint Method</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Platforms"><h2>Platforms</h2><ul><li><a href="../platforms/index.html">All platforms</a></li>
+<li><a href="../platforms/datarails.html">Datarails</a></li>
+<li><a href="../platforms/netsuite.html">NetSuite</a></li>
+<li><a href="../platforms/business-central.html">Business Central</a></li>
+<li><a href="../platforms/cube.html">Cube</a></li>
+<li><a href="../platforms/vena.html">Vena</a></li>
+<li><a href="../platforms/planful.html">Planful</a></li>
+<li><a href="../platforms/adaptive-planning.html">Adaptive Planning</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Resources"><h2>Resources</h2><ul>
+        <li><a href="../insights/index.html">Insights</a></li><li><a href="../glossary.html">Glossary</a></li><li><a href="../method.html#questionnaire">Discovery questionnaire</a></li><li><a href="../demo.html">Demo dashboard</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Legal"><h2>Legal</h2><ul>
+        <li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a class="" href="../contact.html" data-book>Book a Discovery Call</a></li></ul></nav>
+    </div>
+    <div class="foot-mark" aria-hidden="true">Every number ties out.</div>
+    <div class="foot-legal">
+      <p>TiePoint Finance is an independent consultancy. We are not affiliated with, endorsed by or a certified partner of any software vendor named on this site. Contracts are with P CHAK Consulting LLC.</p>
+      <p>Datarails, NetSuite, Oracle, Microsoft, Dynamics 365, Business Central, Power BI, Excel, SAP, Sage Intacct, QuickBooks, Xero, Salesforce, HubSpot, Workday, Workday Adaptive Planning, Cube, Vena, Planful, Google and Google Sheets are trademarks or registered trademarks of their respective owners. They are used here only to describe the systems we work with.</p>
+      <p>Any figures shown in demos, diagrams and animations on this site are for illustration only. Figures are simulated and do not describe any client.</p>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year>2026</span> P CHAK Consulting LLC</span>
+      <span><a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></span>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ERP-to-FP&amp;A Integration Patterns | TiePoint Finance Insights</title>
+<meta name="description" content="Native connectors, iPaaS, APIs, saved searches, ODBC and SFTP: how each pattern works, what it costs you in reliability and control, and the specifics for...">
+<link rel="canonical" href="https://www.tiepointfinance.com/insights/erp-fpa-integration-patterns">
+<meta name="theme-color" content="#0A1220">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TiePoint Finance">
+<meta property="og:title" content="ERP-to-FP&amp;A Integration Patterns | TiePoint Finance Insights">
+<meta property="og:description" content="Native connectors, iPaaS, APIs, saved searches, ODBC and SFTP: how each pattern works, what it costs you in reliability and control, and the specifics for...">
+<meta property="og:url" content="https://www.tiepointfinance.com/insights/erp-fpa-integration-patterns">
+<meta property="og:image" content="https://www.tiepointfinance.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TiePoint Finance. Every number ties out.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ERP-to-FP&amp;A Integration Patterns | TiePoint Finance Insights">
+<meta name="twitter:description" content="Native connectors, iPaaS, APIs, saved searches, ODBC and SFTP: how each pattern works, what it costs you in reliability and control, and the specifics for...">
+<meta name="twitter:image" content="https://www.tiepointfinance.com/assets/og-image.png">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://www.tiepointfinance.com/#org", "name": "TiePoint Finance", "slogan": "Every number ties out.", "url": "https://www.tiepointfinance.com/", "logo": "https://www.tiepointfinance.com/assets/apple-touch-icon.png", "image": "https://www.tiepointfinance.com/assets/og-image.png", "description": "Independent finance systems implementation and integration: ERP, CRM, HRIS and bank data connected into FP&A platforms and Power BI, reconciled to the general ledger.", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}, "areaServed": "Worldwide", "knowsAbout": ["FP&A implementation", "Financial consolidation", "General ledger reconciliation", "ERP integration", "Power BI"], "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "url": "https://www.tiepointfinance.com/contact"}, "parentOrganization": {"@type": "Organization", "name": "P CHAK Consulting LLC", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tiepointfinance.com/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.tiepointfinance.com/insights/"}, {"@type": "ListItem", "position": 3, "name": "ERP-to-FP&A Integration Patterns", "item": "https://www.tiepointfinance.com/insights/erp-fpa-integration-patterns"}]}, {"@type": "Article", "headline": "ERP-to-FP&A Integration Patterns", "description": "Native connectors, iPaaS, APIs, saved searches, ODBC and SFTP: how each pattern works, what it costs you in reliability and control, and the specifics for...", "mainEntityOfPage": "https://www.tiepointfinance.com/insights/erp-fpa-integration-patterns", "author": {"@type": "Person", "name": "Priyankar Chakraborty"}, "publisher": {"@id": "https://www.tiepointfinance.com/#org"}, "image": "https://www.tiepointfinance.com/assets/og-image.png", "wordCount": 2454}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="../services.html">Services</a>
+      <a href="../method.html">Method</a>
+      <a href="../platforms/index.html">Platforms</a>
+      <a href="../insights/index.html" aria-current="page">Insights</a>
+      <a href="../glossary.html">Glossary</a>
+      <a href="../demo.html">Demo</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a class="nav-cta" href="../contact.html" data-book>Book a Discovery Call</a>
+    </nav>
+  </div>
+</header>
+<div class="progress" aria-hidden="true"></div>
+<main id="main">
+<section class="page-hero art-hero grain"><div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../index.html">Home</a></li><li><a href="../insights/index.html">Insights</a></li><li><span aria-current="page">Field guide</span></li></ol></nav>
+    <span class="eyebrow">Field guide</span>
+    <h1>ERP-to-FP&amp;A Integration Patterns</h1>
+    <p class="lede">Native connectors, iPaaS, APIs, saved searches, ODBC and SFTP: how each pattern works, what it costs you in reliability and control, and the specifics for NetSuite, Business Central, SAP, Sage Intacct, QuickBooks Online and Xero.</p>
+    <div class="art-meta"><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l2.5 2"/></svg>11 min read</span><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="7" r="3"/><path d="M4 17c.8-3 3.2-4.5 6-4.5s5.2 1.5 6 4.5"/></svg>Priyankar Chakraborty</span><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4.5A1.5 1.5 0 015.5 3H16v12H5.5A1.5 1.5 0 004 16.5zM4 16.5A1.5 1.5 0 005.5 18H16"/></svg>10 sections</span></div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap art-layout">
+    <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#the-integration-patterns">The integration patterns</a></li><li><a href="#what-to-extract">What to extract</a></li><li><a href="#refresh-cadence-and-incremental-versus-full-loads">Refresh cadence, and incremental versus full loads</a></li><li><a href="#data-quality-gates">Data quality gates</a></li><li><a href="#audit-trail">Audit trail</a></li><li><a href="#security">Security</a></li><li><a href="#erp-specifics">ERP specifics</a></li><li><a href="#artifact-integration-design-checklist-per-source">Artifact: integration design checklist (per source)</a></li><li><a href="#where-tiepoint-fits">Where TiePoint fits</a></li><li><a href="#sources-h">Sources</a></li></ol></nav>
+    <article class="article">
+      <aside class="takeaways" aria-label="Key takeaways"><h2>Key takeaways</h2><ul><li>Choose the integration pattern <strong>per source</strong>, by reliability and ownership, not by novelty. A well-run scheduled file can be more dependable than a fragile API script.</li><li>Extract <strong>trial-balance-grade data</strong>: balances or GL detail that can be tied to the ledger by entity, period and account. Pre-aggregated report exports are hard to reconcile.</li><li><strong>Incremental loads need a safety net.</strong> Late journals and back-dated postings are routine, so re-pull a rolling window of recent periods on every run.</li><li>Put <strong>data quality gates</strong> between extraction and publication: row counts, debit-credit balance, unmapped accounts, period coverage, and a trial balance tie.</li><li>Integration identities must be <strong>least-privilege, read-only where possible, and owned by you</strong>. Several ERPs now favor certificate-based or client-credential authentication for unattended integrations.</li></ul></aside>
+      
+<p class="who-for"><strong>Who this is for:</strong> finance systems managers, controllers and FP&amp;A leaders deciding how actuals should flow from one or more ERPs into a planning or reporting platform, and IT or data teams asked to support that flow.</p>
+
+<hr />
+<h2 id="the-integration-patterns">The integration patterns</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>How it works</th>
+<th>Strengths</th>
+<th>Watch-outs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Native connector</strong> (built by the FP&amp;A vendor)</td>
+<td>The platform connects to the ERP's API with its own connector and mapping layer</td>
+<td>Fastest to stand up; vendor maintains it</td>
+<td>You inherit the vendor's extraction logic. Confirm exactly which fields, books and periods it pulls</td>
+</tr>
+<tr>
+<td><strong>iPaaS</strong> (for example Workato)</td>
+<td>An integration platform runs "recipes" that read from the ERP and write to the target</td>
+<td>Reusable, monitored, handles many systems</td>
+<td>Another subscription and another skill set; per-record limits on some actions</td>
+</tr>
+<tr>
+<td><strong>Direct API</strong></td>
+<td>Custom code calls the ERP's REST or SOAP API</td>
+<td>Full control</td>
+<td>You own maintenance, rate limits, paging, retries and authentication renewals</td>
+</tr>
+<tr>
+<td><strong>Query / saved search</strong></td>
+<td>A saved query or report in the ERP is exported on a schedule or read by API</td>
+<td>Finance can see and adjust the logic</td>
+<td>Logic drifts if someone edits the saved search; needs change control</td>
+</tr>
+<tr>
+<td><strong>ODBC / JDBC</strong></td>
+<td>Read-only SQL access to an analytics data source</td>
+<td>Efficient for large volumes</td>
+<td>Driver installation, network access, schema knowledge</td>
+</tr>
+<tr>
+<td><strong>File / SFTP</strong></td>
+<td>ERP produces a file; the platform picks it up</td>
+<td>Works with any system, including on-premises</td>
+<td>Scheduling, file naming, partial files, and who notices when it does not arrive</td>
+</tr>
+<tr>
+<td><strong>Data warehouse</strong></td>
+<td>ERP data lands in a warehouse; the FP&amp;A platform reads from it</td>
+<td>One governed copy for BI and FP&amp;A</td>
+<td>Warehouse logic becomes part of the reconciliation chain</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How we choose.</strong> For each source, we ask four questions in Discover: Does a maintained native connector exist and does it pull what we need at the grain we need? Who will own the integration after handover? What volumes and refresh frequency are needed? And can we tie its output to the <a class="gl" href="../glossary.html#trial-balance">trial balance</a>? The answer is often a mix: a native connector for the main ERP, a file feed for a legacy ledger, and a warehouse connection for operational data.</p>
+<h2 id="what-to-extract">What to extract</h2>
+<h3>Balances versus detail</h3>
+<ul>
+<li><strong>Trial balance by entity, period and account (plus dimensions).</strong> The minimum for management reporting and the easiest to tie out.</li>
+<li><strong>GL detail (journal lines).</strong> Needed for drill-down, transaction-level analysis and allocations. Larger volumes, and must sum exactly to the balances.</li>
+<li><strong>Master data.</strong> Accounts, entities, departments and other dimensions, currencies, exchange rates, fiscal periods. These change, and a load without current master data produces unmapped lines.</li>
+</ul>
+<h3>Fields that must come with every line</h3>
+<p><a class="gl" href="../glossary.html#entity">Entity</a> (subsidiary or company), accounting book or ledger, fiscal period, posting date, account, all reporting dimensions, <a class="gl" href="../glossary.html#intercompany">intercompany</a> partner where relevant, amount in transaction currency, amount in <a class="gl" href="../glossary.html#functional-currency">functional currency</a>, currency codes, document reference, and a last-modified timestamp for incremental loads.</p>
+<h2 id="refresh-cadence-and-incremental-versus-full-loads">Refresh cadence, and incremental versus full loads</h2>
+<p><strong>Cadence.</strong> Match the cadence to the decisions the data supports. Daily refresh is common during close and for cash; monthly is enough for many planning cycles once periods are locked. More frequent is not automatically better: each refresh is a chance for a partially posted state to appear in a report.</p>
+<p><strong>Full load.</strong> Re-extract everything in scope each time. Simple and self-correcting, but slow at volume and heavier on API limits.</p>
+<p><strong>Incremental load.</strong> Extract only records changed since the last successful run, using a last-modified timestamp. Efficient, but fragile in specific ways:</p>
+<ul>
+<li>deleted or voided transactions may not appear as "changed",</li>
+<li>journals posted into a prior period carry a recent modification time but an old period,</li>
+<li>clock and time-zone differences between systems can skip records at the boundary.</li>
+</ul>
+<p><strong>Our default design:</strong> incremental for the open period, plus a <strong>rolling re-pull of the last few closed periods</strong> on every run, plus a <strong>full reload</strong> of the current fiscal year on a schedule (for example weekly during close season). Combined with the "Late Journal" test in our <a class="gl" href="../glossary.html#tie-out">tie-out</a> playbook (re-extract prior periods and compare to the stored snapshot), this catches the changes incremental logic misses.</p>
+<h2 id="data-quality-gates">Data quality gates</h2>
+<p>Data should not be published to users until it passes automated gates. A practical set:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Gate</th>
+<th>Test</th>
+<th>Action on failure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Completeness</strong></td>
+<td>Row counts and period coverage versus the previous run and versus the source</td>
+<td>Block publication; alert owner</td>
+</tr>
+<tr>
+<td><strong>Balance</strong></td>
+<td>Debits equal credits per entity and period</td>
+<td>Block</td>
+</tr>
+<tr>
+<td><strong>Mapping</strong></td>
+<td>Unmapped accounts and dimension values = 0</td>
+<td>Hold in suspense line; block release</td>
+</tr>
+<tr>
+<td><strong>Tie-out</strong></td>
+<td>Loaded totals equal the trial balance per entity, per month</td>
+<td>Block release of affected reports</td>
+</tr>
+<tr>
+<td><strong>Freshness</strong></td>
+<td>Load timestamp within the expected window</td>
+<td>Banner on reports; alert</td>
+</tr>
+<tr>
+<td><strong>Rates</strong></td>
+<td>Rate table present for every currency and period in scope</td>
+<td>Block translation</td>
+</tr>
+</tbody>
+</table></div>
+<p>These gates map directly onto the Five Tie-out Checks we use as the release gate in the TiePoint Method.</p>
+<h2 id="audit-trail">Audit trail</h2>
+<p>For every load, keep: the run identifier and timestamp; the source query or connector <a class="gl" href="../glossary.html#version">version</a>; parameters (entities, periods, books); row counts and control totals; the gate results; and who approved publication if approval is manual. Several FP&amp;A vendors describe sync logging in their own platforms (Cube, for example, states that every sync is logged), but keep your own control totals as well, so that the evidence does not depend on one tool.</p>
+<h2 id="security">Security</h2>
+<ul>
+<li><strong>Dedicated integration identity.</strong> Never an individual's login. The account belongs to the company and is documented in the runbook.</li>
+<li><strong>Least privilege.</strong> Read-only access to the records the integration needs, nothing more.</li>
+<li><strong>Strong, non-interactive authentication.</strong> Certificate-based or client-credential flows rather than shared passwords. Delegated sign-in flows can require multi-factor authentication, which is right for people and wrong for unattended jobs; use the ERP's supported service-to-service method instead.</li>
+<li><strong>MFA for every human</strong> who administers the integration, the FP&amp;A platform or the ERP role.</li>
+<li><strong>Credential ownership.</strong> Secrets and certificates are created and stored by the client, with expiry dates in a calendar. Expired certificates are a common cause of a "Stale Snapshot" failure.</li>
+<li><strong>Environment separation.</strong> Sandbox and production use separate credentials. Check whether a sandbox refresh wipes integration setup.</li>
+</ul>
+<h2 id="erp-specifics">ERP specifics</h2>
+<h3>Oracle NetSuite</h3>
+<ul>
+<li><strong>SuiteAnalytics Connect</strong> provides ODBC, JDBC and ADO.NET drivers and, in Oracle's words, "a read-only method for obtaining NetSuite data." It accesses data through the <strong>NetSuite2.com</strong> data source, which applies role-based access control. Oracle states that the older NetSuite.com data source is no longer available as of NetSuite 2026.1, and that connections must use certificate-based server authentication and provide the Account ID and Role ID. Oracle also advises that the Connect Service should be used with static data or data that doesn't change often, rather than real-time access.</li>
+<li><strong>SuiteQL over REST.</strong> Queries are sent by POST to the <code>/services/rest/query/v1/suiteql</code> endpoint with a required <code>Prefer: transient</code> header. Oracle documents a maximum of 100,000 results per SuiteQL query and recommends SuiteAnalytics Connect for larger result sets.</li>
+<li><strong>Authentication.</strong> NetSuite supports OAuth 2.0 client credentials (machine-to-machine): an integration record with the client credentials grant enabled, a certificate, and a mapping to an entity and role. Two operational details matter: a maximum of five active certificates per integration, entity and role combination; and the setup is not copied between accounts, and is cleared each time a sandbox is refreshed. Token-based authentication remains in use by many connectors; Workato's NetSuite connector, for example, documents token-based authentication.</li>
+<li><strong>Saved searches.</strong> Many connectors and iPaaS tools can trigger on or read saved search results (Workato lists saved search triggers). If a saved search is part of the integration, lock it down: restrict edit rights, name it clearly, and record its definition in the runbook.</li>
+<li><strong>Consolidated rates.</strong> NetSuite holds Current, Average and Historical consolidated rates per subsidiary and period. Pull them with the data rather than recalculating them.</li>
+</ul>
+<h3>Microsoft Dynamics 365 Business Central</h3>
+<ul>
+<li><strong>APIs.</strong> Business Central online exposes standard APIs (v2.0), enabled by default, including a <code>generalLedgerEntry</code> resource with posting date, account number, debit and credit amounts, dimension set lines and a read-only <code>lastModifiedDateTime</code> that supports incremental extraction. Standard APIs cannot be extended with extra fields; Microsoft advises copying the API code into a custom API if you need more.</li>
+<li><strong>Service-to-service authentication.</strong> Microsoft documents the OAuth 2.0 client credentials flow for unattended integrations: register an app in Microsoft Entra ID, then register it in Business Central's <strong>Microsoft Entra applications</strong> page and assign permission sets. Microsoft states that applications can't be assigned the SUPER permission set and should follow the least-privilege principle. Microsoft notes delegated flows can require MFA, which prevents unattended integrations.</li>
+<li><strong>Limits.</strong> Microsoft's operational limits for OData requests include a per-user rate of 6,000 requests in a 5-minute sliding window, 5 concurrent requests (extra requests queue), a maximum page size of 20,000 entities and an 8-minute operation timeout. Design paging and retries around these.</li>
+<li><strong>Consolidation.</strong> Business units can share data with the consolidated company by database, API or file, and accounts carry a consolidation translation method. If the FP&amp;A platform does the consolidation instead, decide which system is authoritative.</li>
+</ul>
+<h3>SAP S/4HANA</h3>
+<p>SAP provides standard OData APIs for balance reporting. An SAP Community article on S/4HANA Cloud balance reporting describes a <strong>Read Trial Balance</strong> API (based on the Trial Balance app, with aggregation level set through <code>$select</code>, for example by G/L account and profit center) and a <strong>Read Journal Entry Items</strong> API that returns line items which can be aggregated into balances. In SAP landscapes, confirm early: the ledger and company codes in scope, whether the organization already exposes finance data through a data platform or warehouse, and who in the SAP team owns the service user and its authorizations.</p>
+<h3>Sage Intacct</h3>
+<p>Sage Intacct's documented web services use an XML API over HTTP POST. Access requires a Web Services sender ID (authorized for each company) and company credentials. Sage strongly recommends a dedicated Web Services user, which typically has no UI access, and recommends session-based authentication. The documentation notes queries should return fewer than 1,000 records per page. Sage Intacct's dimensions (location, department, class, project and others) map naturally to FP&amp;A dimensions; Cube, for example, describes carrying Sage Intacct dimensions and statistical accounts into reports and plans.</p>
+<h3>QuickBooks Online</h3>
+<p>Intuit's developer blog (in a 2016 post; confirm the current figures in Intuit's developer documentation) states that API calls are throttled at <strong>500 requests per minute per realm ID</strong> (one QuickBooks company), including batch requests, and that an application cannot make more than <strong>10 concurrent requests</strong> to the same realm. Groups often run one QuickBooks company per legal entity, so the integration must handle many realms and consolidate them; Cube, for example, describes consolidating <a class="gl" href="../glossary.html#actuals">actuals</a> from every QuickBooks file into one view.</p>
+<h3>Xero</h3>
+<p>Xero documents per-tenant (per organization) limits of <strong>5 concurrent calls, 60 calls per minute and 5,000 calls per day</strong>, plus an app-wide limit of 10,000 calls per minute across all tenants. Exceeding a limit returns HTTP 429 with a Retry-After header. Xero recommends the <code>If-Modified-Since</code> header to retrieve only changed records, and supports paging (100 records per page) on major endpoints. For multi-entity groups on Xero, the daily limit per organization is the constraint to design around when you need full reloads.</p>
+<h2 id="artifact-integration-design-checklist-per-source">Artifact: integration design checklist (per source)</h2>
+<ul class="checklist">
+<li>Pattern chosen and reason recorded (native, iPaaS, API, query, ODBC, file, warehouse)</li>
+<li>Data scope: entities, books, periods, accounts, dimensions, currencies</li>
+<li>Grain: balances, GL detail, or both, and how detail sums to balances</li>
+<li>Master data included: accounts, dimensions, periods, rates</li>
+<li>Integration identity created in the client's name, read-only, least privilege</li>
+<li>Authentication method documented, with secret or certificate expiry dates</li>
+<li>Rate limits, paging and retry logic designed and tested</li>
+<li>Incremental logic plus rolling re-pull of recent closed periods</li>
+<li>Data quality gates defined, with action on failure</li>
+<li>Failure alerting to a named owner, and a report banner for stale data</li>
+<li>Audit trail: run ID, parameters, row counts, control totals</li>
+<li>Sandbox and production separated; effect of sandbox refresh known</li>
+<li>Runbook entry: how to rerun, how to rotate credentials, who to call</li>
+</ul>
+<h2 id="where-tiepoint-fits">Where TiePoint fits</h2>
+<p>Source connections are the first build step in the Connect &amp; Map phase of the TiePoint Method. We use the most reliable pattern for each system, set up read-only, least-privilege integration identities owned by you, build the quality gates, and document it all in the <a class="gl" href="../glossary.html#runbook">runbook</a> your team keeps.</p>
+<p>If you want this done for your team, start with a paid discovery. We will inventory your sources and give you an integration design and a fixed quote.</p>
+
+      <section class="sources" aria-labelledby="sources-h"><h2 id="sources-h">Sources</h2><ol><li>Oracle NetSuite Help Center, "SuiteAnalytics Connect": <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_3963845427.html" rel="noopener">https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_3963845427.html</a></li><li>Oracle NetSuite Help Center, "Executing SuiteQL Queries Through REST Web Services": <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157909186990.html" rel="noopener">https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157909186990.html</a></li><li>Oracle NetSuite Help Center, "OAuth 2.0 Client Credentials Setup": <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_162686838198.html" rel="noopener">https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_162686838198.html</a></li><li>Oracle NetSuite Help Center, "Consolidated Exchange Rate Types": <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1405625.html" rel="noopener">https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1405625.html</a></li><li>Workato Docs, NetSuite connector: <a href="https://docs.workato.com/connectors/netsuite.html" rel="noopener">https://docs.workato.com/connectors/netsuite.html</a></li><li>Workato Docs, NetSuite REST "Execute SuiteQL query" action: <a href="https://docs.workato.com/connectors/netsuite-rest/execute-suiteql-query-action.html" rel="noopener">https://docs.workato.com/connectors/netsuite-rest/execute-suiteql-query-action.html</a></li><li>Microsoft Learn, Business Central API (v2.0) overview: <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reference/v2.0/" rel="noopener">https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reference/v2.0/</a></li><li>Microsoft Learn, generalLedgerEntry resource: <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reference/v2.0/resources/dynamics_generalledgerentry" rel="noopener">https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reference/v2.0/resources/dynamics_generalledgerentry</a></li><li>Microsoft Learn, "Using Service to Service Authentication" (Business Central): <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/automation-apis-using-s2s-authentication" rel="noopener">https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/automation-apis-using-s2s-authentication</a></li><li>Microsoft Learn, "Operational limits for Business Central online": <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/operational-limits-online" rel="noopener">https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/operational-limits-online</a></li><li>Microsoft Learn, "Set up company consolidation" (Business Central): <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/finance-consolidated-company-reporting-setup" rel="noopener">https://learn.microsoft.com/en-us/dynamics365/business-central/finance-consolidated-company-reporting-setup</a></li><li>SAP Community, "SAP S/4HANA Cloud for Finance – Balance Reporting, Part 2": <a href="https://blogs.sap.com/2019/02/19/sap-s4hana-cloud-for-finance-balance-reporting-part-2-standard-reports-and-standard-api-for-balance-reporting/" rel="noopener">https://blogs.sap.com/2019/02/19/sap-s4hana-cloud-for-finance-balance-reporting-part-2-standard-reports-and-standard-api-for-balance-reporting/</a></li><li>Sage Intacct Developer, "XML Web Services Overview": <a href="https://developer.intacct.com/web-services/" rel="noopener">https://developer.intacct.com/web-services/</a></li><li>Intuit Developer Blog, QuickBooks Online API throttling: <a href="https://blogs.a.intuit.com/2016/08/08/idg-concurrent-api-use-changes-coming-soon" rel="noopener">https://blogs.a.intuit.com/2016/08/08/idg-concurrent-api-use-changes-coming-soon</a></li><li>Xero Developer, API rate limits: <a href="https://developer.xero.com/faq/limits" rel="noopener">https://developer.xero.com/faq/limits</a></li><li>Cube, Integrations: <a href="https://www.cubesoftware.com/integrations" rel="noopener">https://www.cubesoftware.com/integrations</a></li></ol></section>
+      <div class="disclaimer" role="note"><strong>Disclaimer.</strong> This guide is general information about finance systems and reporting practice. It is not accounting, tax, legal or investment advice. Product features change, so confirm details in each vendor's current documentation before you rely on them.</div>
+      <aside class="art-cta"><div><h2>Want this applied to your systems?</h2><p>Paid Discovery takes one to two weeks at a fixed fee and ends with a mapping plan, dashboard specifications and a fixed quote.</p></div><a class="btn btn-tie" href="../contact.html" data-book data-subject="Paid Discovery">Book Paid Discovery <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a></aside>
+    </article>
+  </div>
+</section>
+<section class="sec-tight paper-2"><div class="wrap"><h2 class="rv" style="font-size:1.6rem">More field guides</h2><div class="grid g3" data-stagger><a class="card lib-card rv" href="tie-out-playbook.html"><span class="meta"><span>Field guide</span><span>13 min read</span></span><h3>The Tie-out Playbook: Proving FP&amp;A and Dashboard Numbers Reconcile to the General Ledger</h3><p>The Five Tie-out Checks in detail, a twelve-pattern failure-mode catalog with detection tests, and a tie-out workbook template with a monthly release checklist.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="card lib-card rv" href="chart-of-accounts-mapping.html"><span class="meta"><span>Field guide</span><span>11 min read</span></span><h3>Chart of Accounts Mapping for Multi-Entity Groups</h3><p>Designing a group reporting CoA, accounts versus dimensions, explicit and conditional mapping with effective dates, new-account controls and change governance, with a worked mapping table.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="card lib-card rv" href="consolidation-intercompany-eliminations.html"><span class="meta"><span>Field guide</span><span>12 min read</span></span><h3>Multi-Entity Consolidation and Intercompany Eliminations</h3><p>Every common elimination type, how to classify and resolve intercompany mismatches, NCI at a high level, and a fully worked three-entity consolidation example.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></div></div></section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+        <p>Finance systems implementation and integration. Every number ties out.</p>
+        <p>TiePoint Finance is a P CHAK Consulting company.<br>5900 Spout Springs Road, Unit 3C-1069, Flowery Branch, GA 30542<br><a data-email href="../contact.html" style="color:inherit">Contact page</a></p>
+      </div>
+      <nav class="foot-col" aria-label="Company"><h2>Company</h2><ul>
+        <li><a href="../index.html">Home</a></li><li><a href="../services.html">Services</a></li><li><a href="../method.html">The TiePoint Method</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Platforms"><h2>Platforms</h2><ul><li><a href="../platforms/index.html">All platforms</a></li>
+<li><a href="../platforms/datarails.html">Datarails</a></li>
+<li><a href="../platforms/netsuite.html">NetSuite</a></li>
+<li><a href="../platforms/business-central.html">Business Central</a></li>
+<li><a href="../platforms/cube.html">Cube</a></li>
+<li><a href="../platforms/vena.html">Vena</a></li>
+<li><a href="../platforms/planful.html">Planful</a></li>
+<li><a href="../platforms/adaptive-planning.html">Adaptive Planning</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Resources"><h2>Resources</h2><ul>
+        <li><a href="../insights/index.html">Insights</a></li><li><a href="../glossary.html">Glossary</a></li><li><a href="../method.html#questionnaire">Discovery questionnaire</a></li><li><a href="../demo.html">Demo dashboard</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Legal"><h2>Legal</h2><ul>
+        <li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a class="" href="../contact.html" data-book>Book a Discovery Call</a></li></ul></nav>
+    </div>
+    <div class="foot-mark" aria-hidden="true">Every number ties out.</div>
+    <div class="foot-legal">
+      <p>TiePoint Finance is an independent consultancy. We are not affiliated with, endorsed by or a certified partner of any software vendor named on this site. Contracts are with P CHAK Consulting LLC.</p>
+      <p>Datarails, NetSuite, Oracle, Microsoft, Dynamics 365, Business Central, Power BI, Excel, SAP, Sage Intacct, QuickBooks, Xero, Salesforce, HubSpot, Workday, Workday Adaptive Planning, Cube, Vena, Planful, Google and Google Sheets are trademarks or registered trademarks of their respective owners. They are used here only to describe the systems we work with.</p>
+      <p>Any figures shown in demos, diagrams and animations on this site are for illustration only. Figures are simulated and do not describe any client.</p>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year>2026</span> P CHAK Consulting LLC</span>
+      <span><a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></span>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

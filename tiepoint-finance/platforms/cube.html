@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +7,7 @@
 <meta name="description" content="Independent Cube implementation for finance teams: source system connections, dimension and account mapping, planning models in Excel or Google Sheets, and reports tied to the ledger.">
 <link rel="canonical" href="https://www.tiepointfinance.com/platforms/cube">
 <meta name="theme-color" content="#0A1220">
+<meta name="color-scheme" content="light">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TiePoint Finance">
 <meta property="og:title" content="Cube FP&amp;A Implementation and Data Integration | TiePoint Finance">
@@ -23,170 +24,178 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/site.css">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Are you affiliated with Cube?","acceptedAnswer":{"@type":"Answer","text":"No. TiePoint Finance is an independent consultancy. We are not a Cube partner and don't resell the product."}},
-{"@type":"Question","name":"Will our ERP data flow into Cube?","acceptedAnswer":{"@type":"Answer","text":"Yes. Ledger systems are the usual starting point, and we add CRM, HR or bank data when planning or reporting depends on it."}},
-{"@type":"Question","name":"Can you rebuild our existing models for Cube?","acceptedAnswer":{"@type":"Answer","text":"Yes. We review your budget and forecast workbooks and rebuild them as Cube-connected sheets, simplifying where it helps."}},
-{"@type":"Question","name":"Excel or Google Sheets?","acceptedAnswer":{"@type":"Answer","text":"Either. We build in whichever your team already uses."}},
-{"@type":"Question","name":"How long does it take?","acceptedAnswer":{"@type":"Answer","text":"Our projects typically take 6 to 10 weeks. Discovery confirms the timeline for your setup and fixes the price."}}
-]}
-</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://www.tiepointfinance.com/#org", "name": "TiePoint Finance", "slogan": "Every number ties out.", "url": "https://www.tiepointfinance.com/", "logo": "https://www.tiepointfinance.com/assets/apple-touch-icon.png", "image": "https://www.tiepointfinance.com/assets/og-image.png", "description": "Independent finance systems implementation and integration: ERP, CRM, HRIS and bank data connected into FP&A platforms and Power BI, reconciled to the general ledger.", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}, "areaServed": "Worldwide", "knowsAbout": ["FP&A implementation", "Financial consolidation", "General ledger reconciliation", "ERP integration", "Power BI"], "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "url": "https://www.tiepointfinance.com/contact"}, "parentOrganization": {"@type": "Organization", "name": "P CHAK Consulting LLC", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tiepointfinance.com/"}, {"@type": "ListItem", "position": 2, "name": "Platforms", "item": "https://www.tiepointfinance.com/platforms/"}, {"@type": "ListItem", "position": 3, "name": "Cube", "item": "https://www.tiepointfinance.com/platforms/cube"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are you affiliated with Cube?", "acceptedAnswer": {"@type": "Answer", "text": "No. TiePoint Finance is an independent consultancy. We are not a Cube partner."}}, {"@type": "Question", "name": "Will our ERP data flow into Cube?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Ledger systems are the usual starting point, and we add CRM, HR or bank data when planning or reporting depends on it."}}, {"@type": "Question", "name": "Can you rebuild our existing models for Cube?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We review your budget and forecast workbooks and rebuild them as Cube-connected sheets, simplifying where it helps."}}, {"@type": "Question", "name": "Excel or Google Sheets?", "acceptedAnswer": {"@type": "Answer", "text": "Either. We build in whichever your team already uses."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "Our projects typically take 6 to 10 weeks. Discovery confirms the timeline for your setup and fixes the price."}}]}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap head-in">
-    <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#132036" stroke="rgba(238,240,234,.18)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" stroke="#EEF0EA" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" stroke="#19B795" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" fill="#19B795" stroke="#132036" stroke-width="1.2"/><path d="M7 24H25M7 27H25" stroke="#19B795" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+    <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
     <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="../services.html">Services</a>
+      <a href="../method.html">Method</a>
       <a href="../platforms/index.html" aria-current="page">Platforms</a>
+      <a href="../insights/index.html">Insights</a>
+      <a href="../glossary.html">Glossary</a>
       <a href="../demo.html">Demo</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
-      <a class="nav-cta" href="mailto:hello@tiepointfinance.com?subject=Discovery%20call%20request%20-%20TiePoint%20Finance&body=Hello%20TiePoint%20Finance%2C%0D%0A%0D%0ACompany%3A%0D%0ARole%3A%0D%0AERP%20and%20other%20source%20systems%3A%0D%0AFP%26A%20or%20BI%20tool%20(current%20or%20planned)%3A%0D%0ANumber%20of%20entities%20and%20currencies%3A%0D%0AWhat%20we%20want%20to%20fix%3A%0D%0A%0D%0AA%20few%20times%20that%20suit%20us%20for%20a%20call%3A%0D%0A">Book a Discovery Call</a>
+      <a class="nav-cta" href="../contact.html" data-book>Book a Discovery Call</a>
     </nav>
   </div>
 </header>
 <main id="main">
-<section class="page-hero">
-  <div class="wrap">
-    <div class="crumbs"><a href="../index.html">Home</a><span class="sep">/</span><a href="index.html">Platforms</a><span class="sep">/</span><span>Cube</span></div>
-    <span class="eyebrow">FP&amp;A platform &middot; spreadsheet-native</span>
-    <h1>Cube, built on data you can <span class="tied">defend.</span></h1>
-    <p class="lede">Cube keeps planning inside Excel or Google Sheets, connected to one central source of data. We set up that source properly: connections, dimensions, mappings and a reconciliation that proves it.</p>
-    <div class="actions"><a class="btn btn-tie" href="mailto:hello@tiepointfinance.com?subject=Discovery%20call%20request%20-%20Cube&body=Hello%20TiePoint%20Finance%2C%0D%0A%0D%0ACompany%3A%0D%0ARole%3A%0D%0AERP%20and%20other%20source%20systems%3A%0D%0AFP%26A%20or%20BI%20tool%20(current%20or%20planned)%3A%0D%0ANumber%20of%20entities%20and%20currencies%3A%0D%0AWhat%20we%20want%20to%20fix%3A%0D%0A%0D%0AA%20few%20times%20that%20suit%20us%20for%20a%20call%3A%0D%0A">Book a Discovery Call <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M9 1l4 4-4 4M13 5H1" stroke="currentColor" stroke-width="1.6"/></svg></a><a class="btn btn-line" href="../demo.html">See a demo dashboard</a></div>
-    <div class="facts"><div><span class="mono">Works in</span><strong>Excel and Google Sheets</strong></div><div><span class="mono">Typical sources</span><strong>ERP, CRM, HRIS, banks</strong></div><div><span class="mono">Our role</span><strong>Independent implementer</strong></div></div>
+<section class="page-hero grain"><div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap ph-grid">
+    <div>
+      <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../index.html">Home</a></li><li><a href="../platforms/index.html">Platforms</a></li><li><span aria-current="page">Cube</span></li></ol></nav>
+      <span class="eyebrow">FP&amp;A platform &middot; spreadsheet-native</span>
+      <h1>Cube, built on data you can <span class="tied">defend.</span></h1>
+      <p class="lede">Cube keeps planning inside Excel or Google Sheets, connected to one central source of data. We set up that source properly: connections, dimensions, mappings and a reconciliation that proves it.</p>
+      <div class="actions"><a class="btn btn-tie" href="../contact.html" data-book data-subject="Cube">Book a Discovery Call <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a><a class="btn btn-line" href="../demo.html">See a demo dashboard</a></div>
+    </div>
+    <figure class="diagram rv"><svg class="anim dk " viewBox="0 0 480 320" role="img" aria-label="Animation: Excel and Google Sheets workbooks sync in both directions with a central data source, with cells updating in turn." preserveAspectRatio="xMidYMid meet"><rect class="d-card" x="14" y="60" width="150" height="170" rx="12"/><path class="d-line" d="M14 86H164"/><text class="d-text" x="28" y="77">Excel</text><rect class="d-card2" x="26" y="98" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="26" y="98" width="36" height="18" rx="3" style="--d:0.00s"/><rect class="d-fill-line" x="32" y="105" width="20" height="4" rx="2"/><rect class="d-card2" x="68" y="98" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="68" y="98" width="36" height="18" rx="3" style="--d:0.10s"/><rect class="d-fill-line" x="74" y="105" width="20" height="4" rx="2"/><rect class="d-card2" x="110" y="98" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="110" y="98" width="36" height="18" rx="3" style="--d:0.20s"/><rect class="d-fill-line" x="116" y="105" width="20" height="4" rx="2"/><rect class="d-card2" x="26" y="122" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="26" y="122" width="36" height="18" rx="3" style="--d:0.15s"/><rect class="d-fill-line" x="32" y="129" width="20" height="4" rx="2"/><rect class="d-card2" x="68" y="122" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="68" y="122" width="36" height="18" rx="3" style="--d:0.25s"/><rect class="d-fill-line" x="74" y="129" width="20" height="4" rx="2"/><rect class="d-card2" x="110" y="122" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="110" y="122" width="36" height="18" rx="3" style="--d:0.35s"/><rect class="d-fill-line" x="116" y="129" width="20" height="4" rx="2"/><rect class="d-card2" x="26" y="146" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="26" y="146" width="36" height="18" rx="3" style="--d:0.30s"/><rect class="d-fill-line" x="32" y="153" width="20" height="4" rx="2"/><rect class="d-card2" x="68" y="146" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="68" y="146" width="36" height="18" rx="3" style="--d:0.40s"/><rect class="d-fill-line" x="74" y="153" width="20" height="4" rx="2"/><rect class="d-card2" x="110" y="146" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="110" y="146" width="36" height="18" rx="3" style="--d:0.50s"/><rect class="d-fill-line" x="116" y="153" width="20" height="4" rx="2"/><rect class="d-card2" x="26" y="170" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="26" y="170" width="36" height="18" rx="3" style="--d:0.45s"/><rect class="d-fill-line" x="32" y="177" width="20" height="4" rx="2"/><rect class="d-card2" x="68" y="170" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="68" y="170" width="36" height="18" rx="3" style="--d:0.55s"/><rect class="d-fill-line" x="74" y="177" width="20" height="4" rx="2"/><rect class="d-card2" x="110" y="170" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="110" y="170" width="36" height="18" rx="3" style="--d:0.65s"/><rect class="d-fill-line" x="116" y="177" width="20" height="4" rx="2"/><rect class="d-card2" x="26" y="194" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="26" y="194" width="36" height="18" rx="3" style="--d:0.60s"/><rect class="d-fill-line" x="32" y="201" width="20" height="4" rx="2"/><rect class="d-card2" x="68" y="194" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="68" y="194" width="36" height="18" rx="3" style="--d:0.70s"/><rect class="d-fill-line" x="74" y="201" width="20" height="4" rx="2"/><rect class="d-card2" x="110" y="194" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="110" y="194" width="36" height="18" rx="3" style="--d:0.80s"/><rect class="d-fill-line" x="116" y="201" width="20" height="4" rx="2"/><rect class="d-card" x="316" y="60" width="150" height="170" rx="12"/><path class="d-line" d="M316 86H466"/><text class="d-text" x="330" y="77">Google Sheets</text><rect class="d-card2" x="328" y="98" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="328" y="98" width="36" height="18" rx="3" style="--d:2.00s"/><rect class="d-fill-line" x="334" y="105" width="20" height="4" rx="2"/><rect class="d-card2" x="370" y="98" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="370" y="98" width="36" height="18" rx="3" style="--d:2.10s"/><rect class="d-fill-line" x="376" y="105" width="20" height="4" rx="2"/><rect class="d-card2" x="412" y="98" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="412" y="98" width="36" height="18" rx="3" style="--d:2.20s"/><rect class="d-fill-line" x="418" y="105" width="20" height="4" rx="2"/><rect class="d-card2" x="328" y="122" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="328" y="122" width="36" height="18" rx="3" style="--d:2.15s"/><rect class="d-fill-line" x="334" y="129" width="20" height="4" rx="2"/><rect class="d-card2" x="370" y="122" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="370" y="122" width="36" height="18" rx="3" style="--d:2.25s"/><rect class="d-fill-line" x="376" y="129" width="20" height="4" rx="2"/><rect class="d-card2" x="412" y="122" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="412" y="122" width="36" height="18" rx="3" style="--d:2.35s"/><rect class="d-fill-line" x="418" y="129" width="20" height="4" rx="2"/><rect class="d-card2" x="328" y="146" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="328" y="146" width="36" height="18" rx="3" style="--d:2.30s"/><rect class="d-fill-line" x="334" y="153" width="20" height="4" rx="2"/><rect class="d-card2" x="370" y="146" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="370" y="146" width="36" height="18" rx="3" style="--d:2.40s"/><rect class="d-fill-line" x="376" y="153" width="20" height="4" rx="2"/><rect class="d-card2" x="412" y="146" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="412" y="146" width="36" height="18" rx="3" style="--d:2.50s"/><rect class="d-fill-line" x="418" y="153" width="20" height="4" rx="2"/><rect class="d-card2" x="328" y="170" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="328" y="170" width="36" height="18" rx="3" style="--d:2.45s"/><rect class="d-fill-line" x="334" y="177" width="20" height="4" rx="2"/><rect class="d-card2" x="370" y="170" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="370" y="170" width="36" height="18" rx="3" style="--d:2.55s"/><rect class="d-fill-line" x="376" y="177" width="20" height="4" rx="2"/><rect class="d-card2" x="412" y="170" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="412" y="170" width="36" height="18" rx="3" style="--d:2.65s"/><rect class="d-fill-line" x="418" y="177" width="20" height="4" rx="2"/><rect class="d-card2" x="328" y="194" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="328" y="194" width="36" height="18" rx="3" style="--d:2.60s"/><rect class="d-fill-line" x="334" y="201" width="20" height="4" rx="2"/><rect class="d-card2" x="370" y="194" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="370" y="194" width="36" height="18" rx="3" style="--d:2.70s"/><rect class="d-fill-line" x="376" y="201" width="20" height="4" rx="2"/><rect class="d-card2" x="412" y="194" width="36" height="18" rx="3"/><rect class="d-fill-soft a-cell" x="412" y="194" width="36" height="18" rx="3" style="--d:2.80s"/><rect class="d-fill-line" x="418" y="201" width="20" height="4" rx="2"/><path class="d-line" d="M164 120 C200 120 200 140 214 140"/><path class="d-flow tie" d="M164 120 C200 120 200 140 214 140" style="--d:0s"/><path class="d-line" d="M214 170 C200 170 200 190 164 190"/><path class="d-flow " d="M214 170 C200 170 200 190 164 190" style="--d:.4s"/><path class="d-line" d="M316 120 C280 120 280 140 266 140"/><path class="d-flow tie" d="M316 120 C280 120 280 140 266 140" style="--d:.2s"/><path class="d-line" d="M266 170 C280 170 280 190 316 190"/><path class="d-flow " d="M266 170 C280 170 280 190 316 190" style="--d:.6s"/><circle class="d-line a-spin" cx="240" cy="155" r="50" stroke-dasharray="3 6" fill="none"/><path d="M240 122 L266.1 137.0 L240 152 L213.9 137.0Z" class="d-fill-acc" style="opacity:.9"/><path d="M213.9 137.0 L240 152 L240 182 L213.9 167.0Z" class="d-card"/><path d="M266.1 137.0 L240 152 L240 182 L266.1 167.0Z" class="d-card2"/><path d="M240 122 L266.1 137.0 L240 152 L213.9 137.0Z M213.9 137.0 L240 152 L240 182 L213.9 167.0Z M266.1 137.0 L240 152 L240 182 L266.1 167.0Z" fill="none" class="d-stroke-acc" style="stroke-width:1.2"/><text class="d-text mut" x="240" y="258" text-anchor="middle">CENTRAL DATA SOURCE</text><text class="d-text acc" x="240" y="276" text-anchor="middle">Actuals in sync</text></svg><figcaption><span>Cube &middot; how the data moves</span><span>Illustrative diagram</span></figcaption></figure>
   </div>
+  <div class="wrap"><div class="facts"><div><span class="mono">Works in</span><strong>Excel and Google Sheets</strong></div><div><span class="mono">Typical sources</span><strong>ERP, CRM, HRIS, banks</strong></div><div><span class="mono">Our role</span><strong>Independent implementer</strong></div></div></div>
 </section>
 
-<section class="sec">
+<section class="sec" aria-labelledby="p1-h">
   <div class="wrap split">
-    <div class="sticky"><span class="eyebrow rv">Context</span><h2 class="rv">Spreadsheet freedom needs a solid centre.</h2></div>
-    <div class="prose"><p class="rv">Cube's idea is simple: your team keeps working in spreadsheets while the numbers come from a single governed source. That only pays off if the source is structured well. Dimensions that don't match how the business reports, or accounts that map inconsistently, make every connected sheet harder to trust.</p><p class="rv">We design that centre with you. We connect your systems, build dimensions and hierarchies around how you actually report, map accounts and currencies, and tie actuals to your general ledger before the planning models go live.</p>
-      <div class="notice rv"><strong>Independent consultancy.</strong> TiePoint Finance is not affiliated with, endorsed by or a partner of the vendor of Cube. We work for your finance team.</div>
+    <div class="sticky"><span class="eyebrow rv">Context</span><h2 class="rv" id="p1-h">Spreadsheet freedom needs a solid center.</h2></div>
+    <div class="prose"><p class="rv">Cube's idea is simple: your team keeps working in spreadsheets while the numbers come from a single governed source. That only pays off if the source is structured well. Dimensions that don't match how the business reports, or accounts that map inconsistently, make every connected sheet harder to trust.</p><p class="rv">We design that center with you. We connect your systems, build dimensions and hierarchies around how you actually report, map accounts and currencies, and tie actuals to your general ledger before the planning models go live.</p>
+      <div class="notice rv"><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 9v5M10 6.2v.1"/></svg><span><strong>Independent consultancy.</strong> TiePoint Finance is not affiliated with, endorsed by or a partner of the vendor of Cube. We work for your finance team.</span></div>
     </div>
   </div>
 </section>
 
-<section class="sec paper-2">
+<section class="sec paper-2" aria-labelledby="p2-h">
   <div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow rv">What we handle</span><h2 class="rv">Cube work, start to finish.</h2></div><p class="rv">Typical sources we connect: NetSuite, Business Central, Sage Intacct, QuickBooks, Xero, Salesforce, HubSpot, Workday and bank data.</p></div>
-    <div class="grid g3">
-<div class="card rv"><span class="num">01</span><h3>Cube setup</h3><p>Dimensions, hierarchies and data structure designed around your reporting and planning process.</p></div>
-<div class="card rv"><span class="num">02</span><h3>Source connections</h3><p>ERP, CRM, HR and bank data connected so actuals arrive without manual uploads.</p></div>
-<div class="card rv"><span class="num">03</span><h3>Mapping</h3><p>Every ledger account and dimension assigned to one place in Cube, with FX and intercompany treatment decided up front.</p></div>
-<div class="card rv"><span class="num">04</span><h3>Planning models</h3><p>Budgets, forecasts and what-if scenarios in the spreadsheet tool your team prefers, drawing on current actuals.</p></div>
-<div class="card rv"><span class="num">05</span><h3>Reporting</h3><p>Income statement, plan versus actual, cash and KPI views for the leadership team and the board.</p></div>
-<div class="card rv"><span class="num">06</span><h3>Training and support</h3><p>Working sessions for your team, a written month-end routine, and optional support after go-live.</p></div>
+    <div class="sec-head">
+      <div><span class="eyebrow rv">What we handle</span><h2 class="rv" id="p2-h">Cube work, start to finish.</h2></div>
+      <p class="rv">Typical sources we connect: NetSuite, Business Central, Sage Intacct, QuickBooks, Xero, Salesforce, HubSpot, Workday and bank data.</p>
     </div>
+    <div class="grid g3" data-stagger=".06"><div class="card rv"><span class="num">01</span><h3>Cube setup</h3><p>Dimensions, hierarchies and data structure designed around your reporting and planning process.</p></div><div class="card rv"><span class="num">02</span><h3>Source connections</h3><p>ERP, CRM, HR and bank data connected so actuals arrive without manual uploads.</p></div><div class="card rv"><span class="num">03</span><h3>Mapping</h3><p>Every ledger account and dimension assigned to one place in Cube, with FX and intercompany treatment decided up front.</p></div><div class="card rv"><span class="num">04</span><h3>Planning models</h3><p>Budgets, forecasts and what-if scenarios in the spreadsheet tool your team prefers, drawing on current actuals.</p></div><div class="card rv"><span class="num">05</span><h3>Reporting</h3><p>Income statement, plan versus actual, cash and KPI views for the leadership team and the board.</p></div><div class="card rv"><span class="num">06</span><h3>Training and support</h3><p>Working sessions for your team, a written month-end routine, and optional support after go-live.</p></div></div>
   </div>
 </section>
 
-<section class="sec ink">
+<section class="sec" aria-labelledby="p3-h">
   <div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow rv">Before release</span><h2 class="rv">Every Cube report passes five checks.</h2></div><p class="rv">The same tie-out standard applies on every platform, for every entity and month in scope.</p></div>
-    <div class="ledger rv">
-    <div class="ledger-head" aria-hidden="true"><span>Check</span><span>What we confirm</span><span>Pass condition</span></div>
-    <div class="lrow"><span class="no">01</span><div><h3>Every GL account is mapped exactly once</h3><p>No account left unmapped, none counted twice. Unmapped balances are the quietest way a report goes wrong.</p></div><span class="rule">unmapped = <b>0</b></span></div>
-    <div class="lrow"><span class="no">02</span><div><h3>Totals tie to the trial balance</h3><p>For each entity and each month, the reporting totals agree with the trial balance from your ledger.</p></div><span class="rule">variance = <b>0.00</b></span></div>
-    <div class="lrow"><span class="no">03</span><div><h3>Intercompany nets to zero</h3><p>After eliminations, intercompany balances and transactions between your entities cancel out at group level.</p></div><span class="rule">IC net = <b>0.00</b></span></div>
-    <div class="lrow"><span class="no">04</span><div><h3>Correct FX rates and periods</h3><p>Each currency uses the rate type and period your policy calls for, so translated figures match the books.</p></div><span class="rule">rates = <b>policy</b></span></div>
-    <div class="lrow"><span class="no">05</span><div><h3>Large movements are explained</h3><p>Big month-over-month swings get a written reason before anyone sees them in a board pack.</p></div><span class="rule">unexplained = <b>0</b></span></div>
-  </div>
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Technical considerations</span><h2 class="rv" id="p3-h">What matters in a Cube project.</h2></div>
+      <p class="rv">The specifics we look at early, because they decide how clean the data will be. Product details change, so we confirm them against the vendor's current documentation during discovery.</p>
+    </div>
+    <div class="techgrid" data-stagger=".07"><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 9v5M10 6.2v.1"/></svg>Spreadsheet add-ins</h3><p>Cube connects Excel and Google Sheets to a central data source through add-ins, so planners keep their own spreadsheets.</p></div><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 9v5M10 6.2v.1"/></svg>Dimensions and hierarchies</h3><p>The central structure decides how every connected sheet slices data. We design it around how you report, not around one source system.</p></div><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 9v5M10 6.2v.1"/></svg>Actuals loading</h3><p>Actuals from your ERP land in the central source on a schedule. We map them once there, rather than inside each sheet.</p></div><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 9v5M10 6.2v.1"/></svg>Model hygiene</h3><p>We keep formulas and inputs separated so a refresh never overwrites a planner's assumptions.</p></div></div>
   </div>
 </section>
 
-<section class="sec">
+<section class="sec paper-2" aria-labelledby="p4-h">
   <div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow rv">How it runs</span><h2 class="rv">Four phases, signed off one at a time.</h2></div><p class="rv">Discovery takes one to two weeks at a fixed fee. Most projects finish in 6 to 10 weeks.</p></div>
-    <div class="phases">
-  <div class="phase rv"><div class="bar"><span class="dot">01</span><span class="gate">Sign-off</span></div>
-    <h3>Discovery</h3><span class="dur">1&ndash;2 weeks &middot; fixed fee</span>
-    <p>We study your systems, entities and reports, then hand you a written plan.</p>
-    <ul><li>Mapping plan</li><li>Dashboard specifications</li><li>Fixed implementation quote</li></ul></div>
-  <div class="phase rv"><div class="bar"><span class="dot">02</span><span class="gate">Sign-off</span></div>
-    <h3>Connect &amp; Map</h3><span class="dur">Build</span>
-    <p>Read-only connections to each source, and every account, entity, currency and dimension mapped into one structure.</p></div>
-  <div class="phase rv"><div class="bar"><span class="dot">03</span><span class="gate">Sign-off</span></div>
-    <h3>Validate &amp; Reconcile</h3><span class="dur">Prove it</span>
-    <p>We tie the loaded data back to your general ledger for recent closed months and clear every difference.</p></div>
-  <div class="phase rv"><div class="bar"><span class="dot">04</span><span class="gate">Sign-off</span></div>
-    <h3>Dashboards &amp; Handover</h3><span class="dur">Release</span>
-    <p>Reports go live only after they tie out. Your team gets training and a runbook they can follow at month-end.</p></div>
-</div>
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Pitfalls</span><h2 class="rv" id="p4-h">Common problems, and how we avoid them.</h2></div>
+      <p class="rv">These come up in Cube projects regardless of who runs them.</p>
+    </div>
+    <div class="pit" data-stagger=".06"><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 3l7.5 13h-15z"/><path d="M10 8v4M10 14.2v.1"/></svg><span>Recreating every legacy tab</span></h3><p>We rebuild only what is used and retire the rest.</p></div><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 3l7.5 13h-15z"/><path d="M10 8v4M10 14.2v.1"/></svg><span>Mapping inside sheets</span></h3><p>Mapping lives in the central source so every sheet agrees.</p></div><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 3l7.5 13h-15z"/><path d="M10 8v4M10 14.2v.1"/></svg><span>Unclear version control</span></h3><p>We agree how budget, forecast and scenarios are named and locked.</p></div></div>
   </div>
 </section>
 
-<section class="sec paper-2">
+<section class="sec ink grain" aria-labelledby="p5-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Before release</span><h2 class="rv" id="p5-h">Every Cube report passes five checks.</h2></div>
+      <p class="rv">The same tie-out standard applies on every platform, for every entity and month in scope.</p>
+    </div>
+    <div class="ledger">
+    <div class="ledger-head" aria-hidden="true"><span>Check</span><span>Why it matters</span><span>Pass condition</span></div>
+    <ol style="list-style:none;margin:0;padding:0" data-stagger=".08">
+    <li class="lrow rv"><span class="no">01</span><div><h3>Every GL account is mapped exactly once</h3><p>Reports only add up if each ledger account lands in one reporting line, once.</p></div><span class="rule"><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>unmapped = <b>0</b></span></li><li class="lrow rv"><span class="no">02</span><div><h3>Totals tie to the trial balance</h3><p>The trial balance is the agreed source of truth, so every entity and every month is compared against it.</p></div><span class="rule"><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>variance = <b>0.00</b></span></li><li class="lrow rv"><span class="no">03</span><div><h3>Intercompany nets to zero</h3><p>A group should not report trading with itself. After eliminations, intercompany balances must cancel.</p></div><span class="rule"><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>IC net = <b>0.00</b></span></li><li class="lrow rv"><span class="no">04</span><div><h3>Correct FX rates and periods</h3><p>Translation uses different rate types for different balances, and each month needs its own rates.</p></div><span class="rule"><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>rates = <b>policy</b></span></li><li class="lrow rv"><span class="no">05</span><div><h3>Large movements are explained</h3><p>A number can tie to the ledger and still mislead. Big swings need a reason before a board sees them.</p></div><span class="rule"><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>unexplained = <b>0</b></span></li>
+    </ol>
+  </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="p6-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">The TiePoint Method</span><h2 class="rv" id="p6-h">Four phases, signed off one at a time.</h2></div>
+      <p class="rv">Discovery takes one to two weeks at a fixed fee. Most projects finish in 6 to 10 weeks.</p>
+    </div>
+    <div class="timeline" data-timeline role="group" aria-label="The TiePoint Method: four phases, each ending in a client sign-off gate">
+    <div class="tl-track" aria-hidden="true"><div class="tl-fill"></div></div>
+    <ol class="phases" style="list-style:none;margin:0;padding:0">
+    <li class="phase"><div class="bar"><span class="dot">01</span><span class="gate"><svg class="ic " width="10" height="10" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>Gate 1 sign-off</span></div>
+      <h3>Discover</h3><span class="dur">1&ndash;2 weeks &middot; fixed fee</span>
+      <p>We study your systems, entities, reports and close calendar, then put the plan in writing.</p><ul><li>Mapping plan</li><li>Dashboard specifications</li><li>Fixed implementation quote</li></ul></li><li class="phase"><div class="bar"><span class="dot">02</span><span class="gate"><svg class="ic " width="10" height="10" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>Gate 2 sign-off</span></div>
+      <h3>Connect &amp; Map</h3><span class="dur">Build</span>
+      <p>Read-only connections to each source, and every account, entity, currency and dimension mapped into one structure.</p><ul><li>Working source connections</li><li>Mapping tables</li><li>Consolidation rules</li></ul></li><li class="phase"><div class="bar"><span class="dot">03</span><span class="gate"><svg class="ic " width="10" height="10" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>Gate 3 sign-off</span></div>
+      <h3>Validate &amp; Tie-out</h3><span class="dur">Prove it</span>
+      <p>We tie the loaded data back to your general ledger for recent closed months and clear every difference.</p><ul><li>Tie-out workbook by entity and month</li><li>Cleared variance log</li></ul></li><li class="phase"><div class="bar"><span class="dot">04</span><span class="gate"><svg class="ic " width="10" height="10" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>Gate 4 sign-off</span></div>
+      <h3>Deliver &amp; Handover</h3><span class="dur">Release</span>
+      <p>Reports go live only after they tie out. Your team is trained and has a runbook it can follow at month-end.</p><ul><li>Dashboards and board pack</li><li>Training sessions</li><li>Month-end runbook</li></ul></li>
+    </ol>
+  </div>
+  </div>
+</section>
+
+<section class="sec paper-2" aria-labelledby="p7-h">
   <div class="wrap split">
-    <div class="sticky"><span class="eyebrow rv">FAQ</span><h2 class="rv">Cube questions, answered plainly.</h2>
-      <p class="rv" style="color:var(--mut)">Other platforms we work with:</p><div class="chips rv"><a class="chip" href="datarails.html" style="text-decoration:none">Datarails</a><a class="chip" href="netsuite.html" style="text-decoration:none">NetSuite</a><a class="chip" href="business-central.html" style="text-decoration:none">Business Central</a><a class="chip" href="vena.html" style="text-decoration:none">Vena</a><a class="chip" href="planful.html" style="text-decoration:none">Planful</a><a class="chip" href="adaptive-planning.html" style="text-decoration:none">Adaptive Planning</a></div></div>
-    <div class="faq rv">
-<details><summary>Are you affiliated with Cube?</summary><p>No. TiePoint Finance is an independent consultancy. We are not a Cube partner and don't resell the product.</p></details>
-<details><summary>Will our ERP data flow into Cube?</summary><p>Yes. Ledger systems are the usual starting point, and we add CRM, HR or bank data when planning or reporting depends on it.</p></details>
-<details><summary>Can you rebuild our existing models for Cube?</summary><p>Yes. We review your budget and forecast workbooks and rebuild them as Cube-connected sheets, simplifying where it helps.</p></details>
-<details><summary>Excel or Google Sheets?</summary><p>Either. We build in whichever your team already uses.</p></details>
-<details><summary>How long does it take?</summary><p>Our projects typically take 6 to 10 weeks. Discovery confirms the timeline for your setup and fixes the price.</p></details>
-    </div>
+    <div class="sticky"><span class="eyebrow rv">Before you start</span><h2 class="rv" id="p7-h">Questions to ask before a Cube project.</h2><p class="lede rv">Answer these first and scope, timeline and risk become much clearer. The full list is in the <a href="../method.html#questionnaire" style="color:var(--accent-strong)">discovery questionnaire</a>.</p></div>
+    <ol class="asklist rv"><li>Do planners work in Excel, Google Sheets, or both?</li><li>Which models are used every month, and which only at budget time?</li><li>How should budget, forecast and scenarios be versioned?</li><li>Which sources besides the ERP feed planning?</li></ol>
+  </div>
+</section>
+<section class="sec-tight"><div class="wrap"><span class="eyebrow rv">Go deeper</span><h2 class="rv" style="font-size:clamp(1.6rem,1.2rem + 1.4vw,2.2rem)">Related field guides</h2><div class="related" data-stagger><a class="card rv" href="../insights/choosing-an-fpa-platform.html"><span class="mono">Field guide &middot; 9 min read</span><h3>Choosing an FP&amp;A Platform: Datarails, Cube, Vena, Planful and Adaptive from Workday</h3><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="card rv" href="../insights/tie-out-playbook.html"><span class="mono">Field guide &middot; 13 min read</span><h3>The Tie-out Playbook: Proving FP&amp;A and Dashboard Numbers Reconcile to the General Ledger</h3><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></div></div></section>
+<section class="sec" aria-labelledby="p8-h">
+  <div class="wrap split">
+    <div class="sticky"><span class="eyebrow rv">FAQ</span><h2 class="rv" id="p8-h">Cube questions, answered plainly.</h2>
+      <p class="rv" style="color:var(--muted)">Other platforms we work with:</p><div class="chips rv"><a class="chip" href="datarails.html">Datarails</a><a class="chip" href="netsuite.html">NetSuite</a><a class="chip" href="business-central.html">Business Central</a><a class="chip" href="vena.html">Vena</a><a class="chip" href="planful.html">Planful</a><a class="chip" href="adaptive-planning.html">Adaptive Planning</a></div></div>
+    <div class="rv"><div class="faq"><details><summary>Are you affiliated with Cube?<span class="pm" aria-hidden="true"></span></summary><p class="faq-a">No. TiePoint Finance is an independent consultancy. We are not a Cube partner.</p></details><details><summary>Will our ERP data flow into Cube?<span class="pm" aria-hidden="true"></span></summary><p class="faq-a">Yes. Ledger systems are the usual starting point, and we add CRM, HR or bank data when planning or reporting depends on it.</p></details><details><summary>Can you rebuild our existing models for Cube?<span class="pm" aria-hidden="true"></span></summary><p class="faq-a">Yes. We review your budget and forecast workbooks and rebuild them as Cube-connected sheets, simplifying where it helps.</p></details><details><summary>Excel or Google Sheets?<span class="pm" aria-hidden="true"></span></summary><p class="faq-a">Either. We build in whichever your team already uses.</p></details><details><summary>How long does it take?<span class="pm" aria-hidden="true"></span></summary><p class="faq-a">Our projects typically take 6 to 10 weeks. Discovery confirms the timeline for your setup and fixes the price.</p></details></div></div>
   </div>
 </section>
 </main>
-<section class="cta">
+<section class="cta grain" aria-labelledby="cta-h">
+  <div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap">
     <span class="eyebrow rv">Next step</span>
-    <h2 class="rv">Walk us through your Cube setup.</h2>
+    <h2 class="rv" id="cta-h">Walk us through your Cube setup.</h2>
     <p class="rv">Which systems feed it, how many entities you report on and what isn't working yet. We'll reply by email to arrange a discovery call.</p>
     <div class="actions rv">
-      <a class="btn btn-tie" href="mailto:hello@tiepointfinance.com?subject=Discovery%20call%20request%20-%20Cube&body=Hello%20TiePoint%20Finance%2C%0D%0A%0D%0ACompany%3A%0D%0ARole%3A%0D%0AERP%20and%20other%20source%20systems%3A%0D%0AFP%26A%20or%20BI%20tool%20(current%20or%20planned)%3A%0D%0ANumber%20of%20entities%20and%20currencies%3A%0D%0AWhat%20we%20want%20to%20fix%3A%0D%0A%0D%0AA%20few%20times%20that%20suit%20us%20for%20a%20call%3A%0D%0A">Book a Discovery Call <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M9 1l4 4-4 4M13 5H1" stroke="currentColor" stroke-width="1.6"/></svg></a>
-      <a class="btn btn-line" href="../demo.html">Explore the demo</a>
+      <a class="btn btn-tie" href="../contact.html" data-book data-subject="Cube">Book a Discovery Call <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+      <a class="btn btn-line" href="../method.html#questionnaire">See the discovery questions</a>
     </div>
-    <div class="addr rv">hello@tiepointfinance.com &middot; 5900 Spout Springs Road, Unit 3C-1069, Flowery Branch, GA 30542</div>
+    <div class="addr rv">P CHAK Consulting LLC &middot; 5900 Spout Springs Road, Unit 3C-1069, Flowery Branch, GA 30542</div>
   </div>
 </section>
 <footer class="site-foot">
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#132036" stroke="rgba(238,240,234,.18)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" stroke="#EEF0EA" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" stroke="#19B795" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" fill="#19B795" stroke="#132036" stroke-width="1.2"/><path d="M7 24H25M7 27H25" stroke="#19B795" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+        <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
         <p>Finance systems implementation and integration. Every number ties out.</p>
-        <p>TiePoint Finance is a P CHAK Consulting company.<br>5900 Spout Springs Road, Unit 3C-1069, Flowery Branch, GA 30542<br><a href="mailto:hello@tiepointfinance.com" style="color:inherit">hello@tiepointfinance.com</a></p>
+        <p>TiePoint Finance is a P CHAK Consulting company.<br>5900 Spout Springs Road, Unit 3C-1069, Flowery Branch, GA 30542<br><a data-email href="../contact.html" style="color:inherit">Contact page</a></p>
       </div>
-      <div class="foot-col">
-        <span class="mono">Company</span>
-        <a href="../index.html">Home</a>
-        <a href="../services.html">Services</a>
-        <a href="../demo.html">Demo dashboard</a>
-        <a href="../about.html">About</a>
-        <a href="../contact.html">Contact</a>
-      </div>
-      <div class="foot-col">
-        <span class="mono">Platforms</span>
-        <a href="../platforms/index.html">All platforms</a>
-      <a href="../platforms/datarails.html">Datarails</a>
-      <a href="../platforms/netsuite.html">NetSuite</a>
-      <a href="../platforms/business-central.html">Business Central</a>
-      <a href="../platforms/cube.html">Cube</a>
-      <a href="../platforms/vena.html">Vena</a>
-      <a href="../platforms/planful.html">Planful</a>
-      <a href="../platforms/adaptive-planning.html">Adaptive Planning</a>
-      </div>
-      <div class="foot-col">
-        <span class="mono">Legal</span>
-        <a href="../privacy.html">Privacy</a>
-        <a href="../terms.html">Terms</a>
-        <a href="mailto:hello@tiepointfinance.com?subject=Discovery%20call%20request%20-%20TiePoint%20Finance&body=Hello%20TiePoint%20Finance%2C%0D%0A%0D%0ACompany%3A%0D%0ARole%3A%0D%0AERP%20and%20other%20source%20systems%3A%0D%0AFP%26A%20or%20BI%20tool%20(current%20or%20planned)%3A%0D%0ANumber%20of%20entities%20and%20currencies%3A%0D%0AWhat%20we%20want%20to%20fix%3A%0D%0A%0D%0AA%20few%20times%20that%20suit%20us%20for%20a%20call%3A%0D%0A">Book a Discovery Call</a>
-      </div>
+      <nav class="foot-col" aria-label="Company"><h2>Company</h2><ul>
+        <li><a href="../index.html">Home</a></li><li><a href="../services.html">Services</a></li><li><a href="../method.html">The TiePoint Method</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Platforms"><h2>Platforms</h2><ul><li><a href="../platforms/index.html">All platforms</a></li>
+<li><a href="../platforms/datarails.html">Datarails</a></li>
+<li><a href="../platforms/netsuite.html">NetSuite</a></li>
+<li><a href="../platforms/business-central.html">Business Central</a></li>
+<li><a href="../platforms/cube.html">Cube</a></li>
+<li><a href="../platforms/vena.html">Vena</a></li>
+<li><a href="../platforms/planful.html">Planful</a></li>
+<li><a href="../platforms/adaptive-planning.html">Adaptive Planning</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Resources"><h2>Resources</h2><ul>
+        <li><a href="../insights/index.html">Insights</a></li><li><a href="../glossary.html">Glossary</a></li><li><a href="../method.html#questionnaire">Discovery questionnaire</a></li><li><a href="../demo.html">Demo dashboard</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Legal"><h2>Legal</h2><ul>
+        <li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a class="" href="../contact.html" data-book>Book a Discovery Call</a></li></ul></nav>
     </div>
+    <div class="foot-mark" aria-hidden="true">Every number ties out.</div>
     <div class="foot-legal">
       <p>TiePoint Finance is an independent consultancy. We are not affiliated with, endorsed by or a certified partner of any software vendor named on this site. Contracts are with P CHAK Consulting LLC.</p>
-      <p>Datarails, NetSuite, Oracle, Microsoft, Dynamics 365, Business Central, Power BI, Excel, SAP, Sage Intacct, QuickBooks, Xero, Salesforce, HubSpot, Workday, Workday Adaptive Planning, Cube, Vena, Planful and Google Sheets are trademarks or registered trademarks of their respective owners. They are used here only to describe the systems we work with.</p>
-      <p>Any figures shown in demos and animations on this site are for illustration only. Figures are simulated and do not describe any client.</p>
+      <p>Datarails, NetSuite, Oracle, Microsoft, Dynamics 365, Business Central, Power BI, Excel, SAP, Sage Intacct, QuickBooks, Xero, Salesforce, HubSpot, Workday, Workday Adaptive Planning, Cube, Vena, Planful, Google and Google Sheets are trademarks or registered trademarks of their respective owners. They are used here only to describe the systems we work with.</p>
+      <p>Any figures shown in demos, diagrams and animations on this site are for illustration only. Figures are simulated and do not describe any client.</p>
     </div>
     <div class="foot-bottom">
       <span>&copy; <span data-year>2026</span> P CHAK Consulting LLC</span>

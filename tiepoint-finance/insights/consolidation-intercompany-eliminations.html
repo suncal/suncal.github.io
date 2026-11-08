@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multi-Entity Consolidation and Intercompany Eliminations | TiePoint Finance Insights</title>
+<meta name="description" content="How eliminations work, how to match and resolve intercompany differences, and how to prove the consolidated numbers are right, with a fully worked example.">
+<link rel="canonical" href="https://www.tiepointfinance.com/insights/consolidation-intercompany-eliminations">
+<meta name="theme-color" content="#0A1220">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TiePoint Finance">
+<meta property="og:title" content="Multi-Entity Consolidation and Intercompany Eliminations | TiePoint Finance Insights">
+<meta property="og:description" content="How eliminations work, how to match and resolve intercompany differences, and how to prove the consolidated numbers are right, with a fully worked example.">
+<meta property="og:url" content="https://www.tiepointfinance.com/insights/consolidation-intercompany-eliminations">
+<meta property="og:image" content="https://www.tiepointfinance.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TiePoint Finance. Every number ties out.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Multi-Entity Consolidation and Intercompany Eliminations | TiePoint Finance Insights">
+<meta name="twitter:description" content="How eliminations work, how to match and resolve intercompany differences, and how to prove the consolidated numbers are right, with a fully worked example.">
+<meta name="twitter:image" content="https://www.tiepointfinance.com/assets/og-image.png">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://www.tiepointfinance.com/#org", "name": "TiePoint Finance", "slogan": "Every number ties out.", "url": "https://www.tiepointfinance.com/", "logo": "https://www.tiepointfinance.com/assets/apple-touch-icon.png", "image": "https://www.tiepointfinance.com/assets/og-image.png", "description": "Independent finance systems implementation and integration: ERP, CRM, HRIS and bank data connected into FP&A platforms and Power BI, reconciled to the general ledger.", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}, "areaServed": "Worldwide", "knowsAbout": ["FP&A implementation", "Financial consolidation", "General ledger reconciliation", "ERP integration", "Power BI"], "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "url": "https://www.tiepointfinance.com/contact"}, "parentOrganization": {"@type": "Organization", "name": "P CHAK Consulting LLC", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tiepointfinance.com/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.tiepointfinance.com/insights/"}, {"@type": "ListItem", "position": 3, "name": "Multi-Entity Consolidation and Intercompany Eliminations", "item": "https://www.tiepointfinance.com/insights/consolidation-intercompany-eliminations"}]}, {"@type": "Article", "headline": "Multi-Entity Consolidation and Intercompany Eliminations", "description": "How eliminations work, how to match and resolve intercompany differences, and how to prove the consolidated numbers are right, with a fully worked example.", "mainEntityOfPage": "https://www.tiepointfinance.com/insights/consolidation-intercompany-eliminations", "author": {"@type": "Person", "name": "Priyankar Chakraborty"}, "publisher": {"@id": "https://www.tiepointfinance.com/#org"}, "image": "https://www.tiepointfinance.com/assets/og-image.png", "wordCount": 2589}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="../services.html">Services</a>
+      <a href="../method.html">Method</a>
+      <a href="../platforms/index.html">Platforms</a>
+      <a href="../insights/index.html" aria-current="page">Insights</a>
+      <a href="../glossary.html">Glossary</a>
+      <a href="../demo.html">Demo</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a class="nav-cta" href="../contact.html" data-book>Book a Discovery Call</a>
+    </nav>
+  </div>
+</header>
+<div class="progress" aria-hidden="true"></div>
+<main id="main">
+<section class="page-hero art-hero grain"><div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../index.html">Home</a></li><li><a href="../insights/index.html">Insights</a></li><li><span aria-current="page">Field guide</span></li></ol></nav>
+    <span class="eyebrow">Field guide</span>
+    <h1>Multi-Entity Consolidation and Intercompany Eliminations</h1>
+    <p class="lede">How eliminations work, how to match and resolve intercompany differences, and how to prove the consolidated numbers are right, with a fully worked example.</p>
+    <div class="art-meta"><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l2.5 2"/></svg>12 min read</span><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="7" r="3"/><path d="M4 17c.8-3 3.2-4.5 6-4.5s5.2 1.5 6 4.5"/></svg>Priyankar Chakraborty</span><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4.5A1.5 1.5 0 015.5 3H16v12H5.5A1.5 1.5 0 004 16.5zM4 16.5A1.5 1.5 0 005.5 18H16"/></svg>9 sections</span></div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap art-layout">
+    <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#what-consolidation-is-trying-to-achieve">What consolidation is trying to achieve</a></li><li><a href="#the-consolidation-sequence">The consolidation sequence</a></li><li><a href="#the-elimination-types">The elimination types</a></li><li><a href="#matching-and-mismatch-resolution">Matching and mismatch resolution</a></li><li><a href="#partly-owned-subsidiaries-and-non-controlling-interest-high-">Partly owned subsidiaries and non-controlling interest (high level)</a></li><li><a href="#worked-example">Worked example</a></li><li><a href="#common-failure-modes-in-consolidation">Common failure modes in consolidation</a></li><li><a href="#where-tiepoint-fits">Where TiePoint fits</a></li><li><a href="#sources-h">Sources</a></li></ol></nav>
+    <article class="article">
+      <aside class="takeaways" aria-label="Key takeaways"><h2>Key takeaways</h2><ul><li>Both IFRS 10 and ASC 810 require intragroup balances and transactions to be eliminated <strong>in full</strong>, including profit still sitting in group assets such as inventory.</li><li>Most consolidation pain is not the elimination entry. It is <strong>matching</strong>: getting both sides of each intercompany relationship to agree before close.</li><li>Every intercompany difference is one of four things: <strong>timing, FX, classification or a genuine dispute</strong>. Classify before you fix.</li><li>Eliminations with offsetting P&amp;L lines (management fees, interest) do not change group profit. <strong>Unrealized profit</strong> does, and it is the elimination most often missed.</li><li>Check how your tool treats partly owned entities. <strong>Proportional inclusion is not the same</strong> as full consolidation with a non-controlling interest.</li><li>The release test is simple: after eliminations, intercompany nets to <strong>0.00</strong> at group level for every period.</li></ul></aside>
+      
+<p class="who-for"><strong>Who this is for:</strong> group controllers, consolidation accountants, FP&amp;A leaders, finance teams in global capability centers and shared service centers who prepare or review consolidated management reporting across several legal entities, and finance systems managers configuring consolidation in an ERP or FP&amp;A platform.</p>
+
+<hr />
+<h2 id="what-consolidation-is-trying-to-achieve">What consolidation is trying to achieve</h2>
+<p>Consolidated statements present a parent and its subsidiaries as a single economic <a class="gl" href="../glossary.html#entity">entity</a>. A group cannot sell to itself, lend to itself or earn a fee from itself, so anything that happened <em>between</em> group entities must be removed.</p>
+<p>The standards say this directly. IFRS 10 (paragraph B86(c)) requires an entity to "eliminate in full intragroup assets and liabilities, equity, income, expenses and cash flows" and to eliminate in full profits or losses resulting from intragroup transactions that are recognized in assets. Under US GAAP, ASC 810-10-45-1 states that "intra-entity balances and transactions shall be eliminated", and that any intra-entity profit or loss on assets remaining within the group shall be eliminated.</p>
+<h2 id="the-consolidation-sequence">The consolidation sequence</h2>
+<p>Order matters. Running steps out of sequence creates differences that look like errors but are really timing within your own process.</p>
+<ol>
+<li><strong>Local close.</strong> Each entity closes its own books, including revaluation of foreign-currency monetary balances.</li>
+<li><strong>Intercompany confirmation.</strong> Entities agree their intercompany balances and transactions with each counterparty (ideally on a cut-off date a few days before the main close).</li>
+<li><strong>Translation.</strong> Each entity's results are translated into the presentation currency under the group's FX policy (see our guide on foreign currency translation).</li>
+<li><strong>Aggregation.</strong> Translated results are added together on the group chart of accounts.</li>
+<li><strong>Eliminations.</strong> Intercompany balances, transactions, unrealized profit, and investment against equity are eliminated.</li>
+<li><strong>Non-controlling interest.</strong> The share of partly owned subsidiaries' net assets and profit that belongs to outside shareholders is calculated and presented.</li>
+<li><strong>Top-side adjustments.</strong> Group-level entries that do not belong in any single entity's ledger, kept in a separate, labeled layer.</li>
+<li><strong>Review and tie-out.</strong> The Five Tie-out Checks, including the intercompany zero-check.</li>
+</ol>
+<p>ERPs that consolidate natively enforce a similar sequence. In NetSuite, for example, the Eliminate <a class="gl" href="../glossary.html#intercompany">Intercompany</a> Transactions task is the last task in the Period Close Checklist and can be completed only after the Revalue Open Foreign Currency Balances and Calculate Consolidated Balances tasks.</p>
+<h2 id="the-elimination-types">The elimination types</h2>
+<p>Each <a class="gl" href="../glossary.html#elimination">elimination</a> below is shown as a template journal. "IC" means an intercompany account on the group <a class="gl" href="../glossary.html#chart-of-accounts">chart of accounts</a>.</p>
+<h3>1. Receivables and payables</h3>
+<p><strong>What:</strong> one entity's receivable from another group entity, and that entity's matching payable.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th></th>
+<th>Debit</th>
+<th>Credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IC payable (buyer)</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>IC receivable (seller)</td>
+<td></td>
+<td>X</td>
+</tr>
+</tbody>
+</table></div>
+<p>No effect on profit. The risk is in the <strong>match</strong>, covered below.</p>
+<h3>2. Intercompany revenue and cost</h3>
+<p><strong>What:</strong> sales of goods or services between group entities.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th></th>
+<th>Debit</th>
+<th>Credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IC revenue (seller)</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>IC cost of sales or expense (buyer)</td>
+<td></td>
+<td>X</td>
+</tr>
+</tbody>
+</table></div>
+<p>If the goods have all been sold on to external customers by period end, this entry is complete and has no effect on group profit. If some are still in the buyer's inventory, see unrealized profit below.</p>
+<h3>3. Loans and interest</h3>
+<p><strong>What:</strong> a group entity lends to another.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th></th>
+<th>Debit</th>
+<th>Credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IC loan payable (borrower)</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>IC loan receivable (lender)</td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>IC interest income (lender)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>IC interest expense (borrower)</td>
+<td></td>
+<td>Y</td>
+</tr>
+</tbody>
+</table></div>
+<p>Accrued interest receivable and payable are eliminated the same way. Watch for loans denominated in a currency other than one party's <a class="gl" href="../glossary.html#functional-currency">functional currency</a>: the revaluation gains and losses each side records will not offset neatly, and the residual needs a defined home under your FX policy.</p>
+<h3>4. Management fees, recharges and service income</h3>
+<p><strong>What:</strong> fees for shared services, cost recharges and cost-plus service arrangements (common for captive service centers and global business services organizations).</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th></th>
+<th>Debit</th>
+<th>Credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IC fee or service income (provider)</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>IC fee or service expense (recipient)</td>
+<td></td>
+<td>X</td>
+</tr>
+</tbody>
+</table></div>
+<p>No effect on group profit, but significant effect on entity-level profit, which is why transfer pricing policy matters for the entities even though it disappears in <a class="gl" href="../glossary.html#consolidation">consolidation</a>.</p>
+<h3>5. Dividends</h3>
+<p>Dividends paid by a subsidiary to its parent are eliminated against the parent's dividend income.</p>
+<h3>6. Investment in subsidiary against equity (high level)</h3>
+<p>The parent's investment in a subsidiary is eliminated against the subsidiary's equity at acquisition, with goodwill and any non-controlling interest recognized. This is usually set up once at acquisition and carried forward, and it is typically owned by the group accounting team rather than generated monthly from transactions. We mention it here so that the consolidated balance sheet <a class="gl" href="../glossary.html#tie-out">tie-out</a> accounts for it.</p>
+<h3>7. Unrealized profit in inventory (high level)</h3>
+<p><strong>What:</strong> goods sold between group entities at a margin and still held by the buyer at period end. From the group's point of view, that margin has not been earned yet.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th></th>
+<th>Debit</th>
+<th>Credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost of sales (group)</td>
+<td>U</td>
+<td></td>
+</tr>
+<tr>
+<td>Inventory (buyer)</td>
+<td></td>
+<td>U</td>
+</tr>
+</tbody>
+</table></div>
+<p>where U = unsold intercompany inventory × seller's margin percentage.</p>
+<p>The entry reverses in the following period as the goods are sold externally. A tax effect may also arise, and PwC's guidance notes that intercompany profit is eliminated from the asset on a before-tax basis with tax effects considered separately. Agree the treatment with your group accounting and tax advisers.</p>
+<h2 id="matching-and-mismatch-resolution">Matching and mismatch resolution</h2>
+<h3>Build the matching keys first</h3>
+<p>Matching works only if every intercompany line carries:</p>
+<ul>
+<li>the <strong>counterparty</strong> (the IC partner dimension),</li>
+<li>the <strong>intercompany account type</strong> (receivable, revenue, loan and so on, mapped to dedicated group accounts),</li>
+<li>a <strong>reference</strong> both sides can see (invoice number, loan agreement, recharge schedule),</li>
+<li>the <strong>transaction currency and amount</strong>, as well as each side's functional currency amount.</li>
+</ul>
+<p>Without the counterparty on the line, you can only compare totals, and differences between three or more entities become impossible to untangle.</p>
+<h3>Classify every difference before fixing it</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Example</th>
+<th>Typical resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Timing</strong></td>
+<td>Seller invoiced on 30 June; buyer booked on 2 July. Goods or cash in transit.</td>
+<td>Under a common policy, the receiving side accrues or records the in-transit item. At group level, a top-side entry to cash or inventory in transit.</td>
+</tr>
+<tr>
+<td><strong>FX</strong></td>
+<td>Each side translated a USD-denominated balance at different rates, or one side revalued and the other did not.</td>
+<td>Agree the transaction-currency amount first. The residual after translation goes to the account your FX policy specifies.</td>
+</tr>
+<tr>
+<td><strong>Classification</strong></td>
+<td>Buyer booked the charge to an external supplier account or a non-IC expense line.</td>
+<td>Reclassify at source so that next month matches automatically.</td>
+</tr>
+<tr>
+<td><strong>Dispute</strong></td>
+<td>Buyer disagrees with the amount invoiced.</td>
+<td>Escalate to the owners named in the intercompany policy; agree before close or record per policy.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Rules that prevent most differences</h3>
+<ul>
+<li><strong>An intercompany cut-off date</strong> a few days before close, after which no new IC invoices are raised for the period.</li>
+<li><strong>One side leads.</strong> A common policy is that the seller's invoice is authoritative and the buyer books to it.</li>
+<li><strong>Transaction currency agreement.</strong> Both sides agree the amount in the transaction currency, not in their own functional currencies.</li>
+<li><strong>A tolerance for <em>process</em>, not for <em>results</em>.</strong> A small tolerance can decide which differences are investigated before close. The consolidated intercompany balance after eliminations must still be 0.00, with any residual explicitly booked and explained.</li>
+</ul>
+<h2 id="partly-owned-subsidiaries-and-non-controlling-interest-high-">Partly owned subsidiaries and non-controlling interest (high level)</h2>
+<p>When the parent controls a subsidiary but owns less than 100%, the subsidiary is still consolidated in full (100% of its assets, liabilities, income and expenses), and the outside shareholders' share is presented as <strong>non-controlling interest (NCI)</strong> in equity, with profit attributed between the parent and the NCI.</p>
+<p>Two practical points:</p>
+<ol>
+<li><strong>Elimination of unrealized profit is in full regardless of NCI.</strong> ASC 810-10-45-18 states that the amount of intra-entity income to be eliminated "is not affected by the existence of a noncontrolling interest". The guidance permits the elimination to be allocated between the parent and NCI. PwC's guide explains that when the parent sells to a partly owned subsidiary (downstream), the elimination is usually attributed entirely to the parent, while for sales from a partly owned subsidiary to the parent (upstream), either full attribution to the parent or proportionate allocation between the parent and NCI is acceptable. Confirm your policy with your auditors.</li>
+<li><strong>Check what your tool means by "consolidation percentage".</strong> Business Central's consolidation, for example, includes the stated percentage of each business unit: its documentation's example says that if you own 70% of a company, consolidation includes $70 of a $100 invoice. That is proportional inclusion, which is not the same as full consolidation with NCI presented separately. Some FP&amp;A platforms handle NCI explicitly (Planful's consolidation process, for instance, calculates non-controlling interest, and Workday's Adaptive Planning consolidation uses a consolidation percentage sheet to choose methods and track minority interest). Whatever the tool, test its output against a hand calculation for one partly owned entity before you rely on it.</li>
+</ol>
+<h2 id="worked-example">Worked example</h2>
+<p><em>Illustrative example. All entities, amounts and percentages are made up. One currency (USD) is used throughout to keep the focus on eliminations; our FX guide covers translation.</em></p>
+<p><strong>The group</strong></p>
+<ul>
+<li><strong>Parent</strong> (P): owns 100% of Sub A and 80% of Sub B.</li>
+<li><strong>Sub A</strong> (A): distributor. Buys goods from P.</li>
+<li><strong>Sub B</strong> (B): service business. Pays P a management fee and has borrowed from P.</li>
+</ul>
+<p><strong>Intercompany activity in the period</strong></p>
+<ol>
+<li>P sold goods to A for 1,000. P's cost was 700, so P's margin is 30% of the selling price. By period end A had sold 60% of these goods externally; 400 (at transfer price) is still in A's inventory. A has paid 600 and owes P 400.</li>
+<li>P charged B a management fee of 200. B has paid 50, which P has not yet received (cash in transit at period end). So P shows a receivable of 200; B shows a payable of 150.</li>
+<li>P lent B 5,000. Interest for the period is 50, accrued and unpaid on both sides.</li>
+</ol>
+<h3>Step 1: Entity P&amp;Ls and aggregation</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Line</th>
+<th>P</th>
+<th>A</th>
+<th>B</th>
+<th>Aggregate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue – external</td>
+<td>10,000</td>
+<td>2,000</td>
+<td>3,000</td>
+<td>15,000</td>
+</tr>
+<tr>
+<td>Revenue – intercompany</td>
+<td>1,000</td>
+<td>–</td>
+<td>–</td>
+<td>1,000</td>
+</tr>
+<tr>
+<td>Cost of sales</td>
+<td>(6,700)</td>
+<td>(1,400)</td>
+<td>(1,500)</td>
+<td>(9,600)</td>
+</tr>
+<tr>
+<td>Management fee income</td>
+<td>200</td>
+<td>–</td>
+<td>–</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Management fee expense</td>
+<td>–</td>
+<td>–</td>
+<td>(200)</td>
+<td>(200)</td>
+</tr>
+<tr>
+<td>Interest income</td>
+<td>50</td>
+<td>–</td>
+<td>–</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Interest expense</td>
+<td>–</td>
+<td>–</td>
+<td>(50)</td>
+<td>(50)</td>
+</tr>
+<tr>
+<td>Operating expenses</td>
+<td>(2,000)</td>
+<td>(300)</td>
+<td>(750)</td>
+<td>(3,050)</td>
+</tr>
+<tr>
+<td><strong>Net income</strong></td>
+<td><strong>2,550</strong></td>
+<td><strong>300</strong></td>
+<td><strong>500</strong></td>
+<td><strong>3,350</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>(P's cost of sales of 6,700 includes the 700 cost of the goods sold to A. A's cost of sales of 1,400 includes 600 for the 60% of P's goods it sold on.)</p>
+<h3>Step 2: Match intercompany balances</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Relationship</th>
+<th>P side</th>
+<th>Counterparty side</th>
+<th>Difference</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P receivable / A payable (goods)</td>
+<td>400</td>
+<td>400</td>
+<td>0</td>
+<td>–</td>
+</tr>
+<tr>
+<td>P receivable / B payable (fee)</td>
+<td>200</td>
+<td>150</td>
+<td>50</td>
+<td>Timing: cash in transit</td>
+</tr>
+<tr>
+<td>P loan receivable / B loan payable</td>
+<td>5,000</td>
+<td>5,000</td>
+<td>0</td>
+<td>–</td>
+</tr>
+<tr>
+<td>P interest receivable / B interest payable</td>
+<td>50</td>
+<td>50</td>
+<td>0</td>
+<td>–</td>
+</tr>
+<tr>
+<td>P IC revenue / A IC purchases</td>
+<td>1,000</td>
+<td>1,000</td>
+<td>0</td>
+<td>–</td>
+</tr>
+<tr>
+<td>P fee income / B fee expense</td>
+<td>200</td>
+<td>200</td>
+<td>0</td>
+<td>–</td>
+</tr>
+<tr>
+<td>P interest income / B interest expense</td>
+<td>50</td>
+<td>50</td>
+<td>0</td>
+<td>–</td>
+</tr>
+</tbody>
+</table></div>
+<p>The 50 difference is classified as timing. The fix is not to force the receivable down in P's ledger; it is a group-level entry recognizing cash in transit.</p>
+<h3>Step 3: Elimination and adjustment journals</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Ref</th>
+<th>Entry</th>
+<th>Debit</th>
+<th>Credit</th>
+<th>Effect on group profit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Cash in transit / IC receivable (P from B)</td>
+<td>50</td>
+<td>50</td>
+<td>none</td>
+</tr>
+<tr>
+<td>E1</td>
+<td>IC revenue / Cost of sales (P to A goods)</td>
+<td>1,000</td>
+<td>1,000</td>
+<td>none</td>
+</tr>
+<tr>
+<td>E2</td>
+<td>Cost of sales / Inventory (unrealized profit: 400 × 30% = 120)</td>
+<td>120</td>
+<td>120</td>
+<td>−120</td>
+</tr>
+<tr>
+<td>E3</td>
+<td>Management fee income / Management fee expense</td>
+<td>200</td>
+<td>200</td>
+<td>none</td>
+</tr>
+<tr>
+<td>E4</td>
+<td>Interest income / Interest expense</td>
+<td>50</td>
+<td>50</td>
+<td>none</td>
+</tr>
+<tr>
+<td>E5</td>
+<td>IC payable (A) / IC receivable (P)</td>
+<td>400</td>
+<td>400</td>
+<td>none</td>
+</tr>
+<tr>
+<td>E6</td>
+<td>IC payable (B) / IC receivable (P), after T1</td>
+<td>150</td>
+<td>150</td>
+<td>none</td>
+</tr>
+<tr>
+<td>E7</td>
+<td>IC loan payable (B) / IC loan receivable (P)</td>
+<td>5,000</td>
+<td>5,000</td>
+<td>none</td>
+</tr>
+<tr>
+<td>E8</td>
+<td>Interest payable (B) / Interest receivable (P)</td>
+<td>50</td>
+<td>50</td>
+<td>none</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Step 4: Consolidated P&amp;L</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Line</th>
+<th>Aggregate</th>
+<th>Eliminations</th>
+<th>Consolidated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue – external</td>
+<td>15,000</td>
+<td>–</td>
+<td>15,000</td>
+</tr>
+<tr>
+<td>Revenue – intercompany</td>
+<td>1,000</td>
+<td>(1,000) E1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Cost of sales</td>
+<td>(9,600)</td>
+<td>+1,000 E1, (120) E2</td>
+<td>(8,720)</td>
+</tr>
+<tr>
+<td>Management fee income / expense (net)</td>
+<td>0</td>
+<td>200 − 200 E3</td>
+<td>0 (both lines zero)</td>
+</tr>
+<tr>
+<td>Interest income / expense (net)</td>
+<td>0</td>
+<td>50 − 50 E4</td>
+<td>0 (both lines zero)</td>
+</tr>
+<tr>
+<td>Operating expenses</td>
+<td>(3,050)</td>
+<td>–</td>
+<td>(3,050)</td>
+</tr>
+<tr>
+<td><strong>Net income</strong></td>
+<td><strong>3,350</strong></td>
+<td><strong>(120)</strong></td>
+<td><strong>3,230</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Check: aggregate net income 3,350 less unrealized profit 120 = 3,230. Only E2 changed group profit.</p>
+<h3>Step 5: Non-controlling interest</h3>
+<p>B is 80% owned. B's net income is 500, so NCI's share is 20% × 500 = 100. The unrealized profit arose on a sale from P to A (a wholly owned subsidiary), so none of it is attributed to NCI.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th></th>
+<th>Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consolidated net income</td>
+<td>3,230</td>
+</tr>
+<tr>
+<td>Attributable to NCI</td>
+<td>100</td>
+</tr>
+<tr>
+<td><strong>Attributable to owners of the parent</strong></td>
+<td><strong>3,130</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3>Step 6: The intercompany zero-check</h3>
+<p>After T1 and E1 to E8, every intercompany account (receivables, payables, loans, interest, IC revenue, IC cost, fee income and expense) sums to 0.00 at group level. That is Check 3 of the Five Tie-out Checks, and it is the test we require to pass before any consolidated report is released.</p>
+<h2 id="common-failure-modes-in-consolidation">Common failure modes in consolidation</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Failure mode</th>
+<th>Symptom</th>
+<th>Detection test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Missing partner</strong></td>
+<td>IC balances that cannot be matched to a counterparty</td>
+<td>Every IC group account requires a partner value; count lines without one</td>
+</tr>
+<tr>
+<td><strong>One-sided booking</strong></td>
+<td>Difference equals a single invoice amount</td>
+<td>Pair test by reference number</td>
+</tr>
+<tr>
+<td><strong>Forgotten margin</strong></td>
+<td>Group gross margin overstated in periods of IC inventory build-up</td>
+<td>Report IC inventory held at period end, by seller, every month</td>
+</tr>
+<tr>
+<td><strong>Double elimination</strong></td>
+<td>Group revenue understated by an IC amount</td>
+<td>ERP elimination entries and platform elimination rules both active; compare elimination totals to IC totals</td>
+</tr>
+<tr>
+<td><strong>Proportional by accident</strong></td>
+<td>Partly owned entity appears at less than 100% with no NCI line</td>
+<td>Hand-calculate one partly owned entity and compare</td>
+</tr>
+<tr>
+<td><strong>FX residual parked in IC</strong></td>
+<td>Small, persistent IC differences that move with exchange rates</td>
+<td>Agree IC in transaction currency; review residual account monthly</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="where-tiepoint-fits">Where TiePoint fits</h2>
+<p>In the TiePoint Method, consolidation logic is designed in Connect &amp; Map and proved in Validate/Tie-out. We set up intercompany partner tagging, elimination rules and ownership structures to match how your accounting team already closes, and we do not release consolidated reporting until intercompany nets to zero for every period in scope.</p>
+<p>If you want this done for your team, start with a paid discovery. We will map your entity structure and intercompany flows and give you a fixed quote for the build.</p>
+
+
+      <section class="sources" aria-labelledby="sources-h"><h2 id="sources-h">Sources</h2><ol><li>IFRS 10 paragraph B86 wording, as quoted in "Consolidation: Intragroup transactions" (I. Gow): <a href="https://iangow.github.io/consol/intragroup.html" rel="noopener">https://iangow.github.io/consol/intragroup.html</a></li><li>IFRS Foundation, IFRS 10 Consolidated Financial Statements (overview): <a href="https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/" rel="noopener">https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/</a></li><li>PwC Viewpoint, Consolidation guide, 8.2 Intercompany transactions (ASC 810-10-45-1, 810-10-45-18): <a href="https://viewpoint.pwc.com/dt/us/en/pwc/accounting_guides/consolidation_and_eq/consolidation_and_eq_US/chapter_8_intercomp_US/82_intercomp_tran_US.html" rel="noopener">https://viewpoint.pwc.com/dt/us/en/pwc/accounting_guides/consolidation_and_eq/consolidation_and_eq_US/chapter_8_intercomp_US/82_intercomp_tran_US.html</a></li><li>Oracle NetSuite Help Center, "Intercompany Elimination Overview": <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1498385.html" rel="noopener">https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1498385.html</a></li><li>Microsoft Learn, "Set up company consolidation" (Business Central consolidation percentage and eliminations report): <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/finance-consolidated-company-reporting-setup" rel="noopener">https://learn.microsoft.com/en-us/dynamics365/business-central/finance-consolidated-company-reporting-setup</a></li><li>Planful Help Center, "Using Consolidation Process": <a href="https://help.planful.com/docs/consolidation-process-1" rel="noopener">https://help.planful.com/docs/consolidation-process-1</a></li><li>Workday Adaptive Planning documentation, Consolidation: <a href="https://doc.workday.com/adaptive-planning/en-us/workday-adaptive-planning-documentation/modeling/managing-the-model/consolidation/mky1623709148369.html" rel="noopener">https://doc.workday.com/adaptive-planning/en-us/workday-adaptive-planning-documentation/modeling/managing-the-model/consolidation/mky1623709148369.html</a></li></ol></section>
+      <div class="disclaimer" role="note"><strong>Disclaimer.</strong> This guide is general information about consolidation practice. It is not accounting, tax or legal advice. Apply it with your auditors and advisers, who know your facts.</div>
+      <aside class="art-cta"><div><h2>Want this applied to your systems?</h2><p>Paid Discovery takes one to two weeks at a fixed fee and ends with a mapping plan, dashboard specifications and a fixed quote.</p></div><a class="btn btn-tie" href="../contact.html" data-book data-subject="Paid Discovery">Book Paid Discovery <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a></aside>
+    </article>
+  </div>
+</section>
+<section class="sec-tight paper-2"><div class="wrap"><h2 class="rv" style="font-size:1.6rem">More field guides</h2><div class="grid g3" data-stagger><a class="card lib-card rv" href="tie-out-playbook.html"><span class="meta"><span>Field guide</span><span>13 min read</span></span><h3>The Tie-out Playbook: Proving FP&amp;A and Dashboard Numbers Reconcile to the General Ledger</h3><p>The Five Tie-out Checks in detail, a twelve-pattern failure-mode catalog with detection tests, and a tie-out workbook template with a monthly release checklist.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="card lib-card rv" href="chart-of-accounts-mapping.html"><span class="meta"><span>Field guide</span><span>11 min read</span></span><h3>Chart of Accounts Mapping for Multi-Entity Groups</h3><p>Designing a group reporting CoA, accounts versus dimensions, explicit and conditional mapping with effective dates, new-account controls and change governance, with a worked mapping table.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="card lib-card rv" href="foreign-currency-translation.html"><span class="meta"><span>Field guide</span><span>11 min read</span></span><h3>Foreign Currency Translation for Consolidated Reporting</h3><p>Functional versus presentation currency, the current-rate method under ASC 830 and IAS 21, how to recompute the CTA independently, monthly translation in FP&amp;A platforms and rate governance.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></div></div></section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+        <p>Finance systems implementation and integration. Every number ties out.</p>
+        <p>TiePoint Finance is a P CHAK Consulting company.<br>5900 Spout Springs Road, Unit 3C-1069, Flowery Branch, GA 30542<br><a data-email href="../contact.html" style="color:inherit">Contact page</a></p>
+      </div>
+      <nav class="foot-col" aria-label="Company"><h2>Company</h2><ul>
+        <li><a href="../index.html">Home</a></li><li><a href="../services.html">Services</a></li><li><a href="../method.html">The TiePoint Method</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Platforms"><h2>Platforms</h2><ul><li><a href="../platforms/index.html">All platforms</a></li>
+<li><a href="../platforms/datarails.html">Datarails</a></li>
+<li><a href="../platforms/netsuite.html">NetSuite</a></li>
+<li><a href="../platforms/business-central.html">Business Central</a></li>
+<li><a href="../platforms/cube.html">Cube</a></li>
+<li><a href="../platforms/vena.html">Vena</a></li>
+<li><a href="../platforms/planful.html">Planful</a></li>
+<li><a href="../platforms/adaptive-planning.html">Adaptive Planning</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Resources"><h2>Resources</h2><ul>
+        <li><a href="../insights/index.html">Insights</a></li><li><a href="../glossary.html">Glossary</a></li><li><a href="../method.html#questionnaire">Discovery questionnaire</a></li><li><a href="../demo.html">Demo dashboard</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Legal"><h2>Legal</h2><ul>
+        <li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a class="" href="../contact.html" data-book>Book a Discovery Call</a></li></ul></nav>
+    </div>
+    <div class="foot-mark" aria-hidden="true">Every number ties out.</div>
+    <div class="foot-legal">
+      <p>TiePoint Finance is an independent consultancy. We are not affiliated with, endorsed by or a certified partner of any software vendor named on this site. Contracts are with P CHAK Consulting LLC.</p>
+      <p>Datarails, NetSuite, Oracle, Microsoft, Dynamics 365, Business Central, Power BI, Excel, SAP, Sage Intacct, QuickBooks, Xero, Salesforce, HubSpot, Workday, Workday Adaptive Planning, Cube, Vena, Planful, Google and Google Sheets are trademarks or registered trademarks of their respective owners. They are used here only to describe the systems we work with.</p>
+      <p>Any figures shown in demos, diagrams and animations on this site are for illustration only. Figures are simulated and do not describe any client.</p>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year>2026</span> P CHAK Consulting LLC</span>
+      <span><a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></span>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

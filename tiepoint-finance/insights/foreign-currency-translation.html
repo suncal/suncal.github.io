@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foreign Currency Translation for Consolidated Reporting | TiePoint Finance Insights</title>
+<meta name="description" content="Functional versus presentation currency, the current-rate method under ASC 830 and IAS 21, where the cumulative translation adjustment comes from, and how...">
+<link rel="canonical" href="https://www.tiepointfinance.com/insights/foreign-currency-translation">
+<meta name="theme-color" content="#0A1220">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TiePoint Finance">
+<meta property="og:title" content="Foreign Currency Translation for Consolidated Reporting | TiePoint Finance Insights">
+<meta property="og:description" content="Functional versus presentation currency, the current-rate method under ASC 830 and IAS 21, where the cumulative translation adjustment comes from, and how...">
+<meta property="og:url" content="https://www.tiepointfinance.com/insights/foreign-currency-translation">
+<meta property="og:image" content="https://www.tiepointfinance.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TiePoint Finance. Every number ties out.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Foreign Currency Translation for Consolidated Reporting | TiePoint Finance Insights">
+<meta name="twitter:description" content="Functional versus presentation currency, the current-rate method under ASC 830 and IAS 21, where the cumulative translation adjustment comes from, and how...">
+<meta name="twitter:image" content="https://www.tiepointfinance.com/assets/og-image.png">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://www.tiepointfinance.com/#org", "name": "TiePoint Finance", "slogan": "Every number ties out.", "url": "https://www.tiepointfinance.com/", "logo": "https://www.tiepointfinance.com/assets/apple-touch-icon.png", "image": "https://www.tiepointfinance.com/assets/og-image.png", "description": "Independent finance systems implementation and integration: ERP, CRM, HRIS and bank data connected into FP&A platforms and Power BI, reconciled to the general ledger.", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}, "areaServed": "Worldwide", "knowsAbout": ["FP&A implementation", "Financial consolidation", "General ledger reconciliation", "ERP integration", "Power BI"], "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "url": "https://www.tiepointfinance.com/contact"}, "parentOrganization": {"@type": "Organization", "name": "P CHAK Consulting LLC", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tiepointfinance.com/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.tiepointfinance.com/insights/"}, {"@type": "ListItem", "position": 3, "name": "Foreign Currency Translation for Consolidated Reporting", "item": "https://www.tiepointfinance.com/insights/foreign-currency-translation"}]}, {"@type": "Article", "headline": "Foreign Currency Translation for Consolidated Reporting", "description": "Functional versus presentation currency, the current-rate method under ASC 830 and IAS 21, where the cumulative translation adjustment comes from, and how...", "mainEntityOfPage": "https://www.tiepointfinance.com/insights/foreign-currency-translation", "author": {"@type": "Person", "name": "Priyankar Chakraborty"}, "publisher": {"@id": "https://www.tiepointfinance.com/#org"}, "image": "https://www.tiepointfinance.com/assets/og-image.png", "wordCount": 2484}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="../services.html">Services</a>
+      <a href="../method.html">Method</a>
+      <a href="../platforms/index.html">Platforms</a>
+      <a href="../insights/index.html" aria-current="page">Insights</a>
+      <a href="../glossary.html">Glossary</a>
+      <a href="../demo.html">Demo</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a class="nav-cta" href="../contact.html" data-book>Book a Discovery Call</a>
+    </nav>
+  </div>
+</header>
+<div class="progress" aria-hidden="true"></div>
+<main id="main">
+<section class="page-hero art-hero grain"><div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../index.html">Home</a></li><li><a href="../insights/index.html">Insights</a></li><li><span aria-current="page">Field guide</span></li></ol></nav>
+    <span class="eyebrow">Field guide</span>
+    <h1>Foreign Currency Translation for Consolidated Reporting</h1>
+    <p class="lede">Functional versus presentation currency, the current-rate method under ASC 830 and IAS 21, where the cumulative translation adjustment comes from, and how to govern rates so your FP&amp;A platform matches your books.</p>
+    <div class="art-meta"><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l2.5 2"/></svg>11 min read</span><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="7" r="3"/><path d="M4 17c.8-3 3.2-4.5 6-4.5s5.2 1.5 6 4.5"/></svg>Priyankar Chakraborty</span><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4.5A1.5 1.5 0 015.5 3H16v12H5.5A1.5 1.5 0 004 16.5zM4 16.5A1.5 1.5 0 005.5 18H16"/></svg>11 sections</span></div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap art-layout">
+    <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#two-currencies-two-questions">Two currencies, two questions</a></li><li><a href="#translation-versus-remeasurement-high-level">Translation versus remeasurement (high level)</a></li><li><a href="#the-current-rate-method-rates-by-line">The current-rate method: rates by line</a></li><li><a href="#where-the-cta-comes-from-and-how-to-recompute-it">Where the CTA comes from, and how to recompute it</a></li><li><a href="#worked-example">Worked example</a></li><li><a href="#monthly-translation-in-fp-a-platforms">Monthly translation in FP&amp;A platforms</a></li><li><a href="#rate-sourcing-and-governance">Rate sourcing and governance</a></li><li><a href="#special-situations-to-flag-early">Special situations to flag early</a></li><li><a href="#checklist-fx-readiness-for-a-consolidation-build">Checklist: FX readiness for a consolidation build</a></li><li><a href="#where-tiepoint-fits">Where TiePoint fits</a></li><li><a href="#sources-h">Sources</a></li></ol></nav>
+    <article class="article">
+      <aside class="takeaways" aria-label="Key takeaways"><h2>Key takeaways</h2><ul><li>Translation starts with a judgment, not a rate: each entity's <strong>functional currency</strong> (the currency of its primary economic environment). Everything else follows from it.</li><li>Under the current-rate method, <strong>assets and liabilities</strong> use the closing rate, <strong>income and expenses</strong> use transaction-date rates (an average is a permitted approximation when rates are stable), and <strong>equity</strong> is carried at historical rates. The difference goes to the <strong>cumulative translation adjustment (CTA)</strong> in other comprehensive income.</li><li>The CTA is not a plug. You can <strong>recompute it independently</strong>, and you should, every period.</li><li>Translate <strong>each month at that month's rates</strong> and accumulate. Retranslating year-to-date figures at a year-to-date average gives a different answer.</li><li>Most FX differences between an FP&amp;A platform and the ERP come from <strong>rate governance</strong>, not from the accounting: a different source, a different average method, or a different rate type on an account.</li></ul></aside>
+      
+<p class="who-for"><strong>Who this is for:</strong> group controllers, FP&amp;A leaders and finance systems managers consolidating entities with different functional currencies, and anyone who has watched a consolidated balance sheet refuse to balance by an amount that moves with exchange rates.</p>
+
+<hr />
+<h2 id="two-currencies-two-questions">Two currencies, two questions</h2>
+<p><strong><a class="gl" href="../glossary.html#functional-currency">Functional currency</a></strong> is, in IAS 21's words, "the currency of the primary economic environment in which the <a class="gl" href="../glossary.html#entity">entity</a> operates." ASC 830 uses the same concept. Determining it is an entity-by-entity judgment. IAS 21 (paragraph 9) points first to the currency that mainly influences sales prices for goods and services, and the currency that mainly influences labor, material and other costs. ASC 830 sets out a list of economic indicators covering similar ground (cash flows, sales prices and markets, expenses, financing and <a class="gl" href="../glossary.html#intercompany">intercompany</a> activity).</p>
+<p><strong><a class="gl" href="../glossary.html#presentation-currency">Presentation currency</a></strong> (IAS 21) or <strong>reporting currency</strong> (ASC 830) is the currency the consolidated statements are presented in. IAS 21 permits an entity to present its financial statements in any currency.</p>
+<p>A practical consequence for systems: an entity's <strong>ledger currency</strong> is not necessarily its <strong>functional currency</strong>. If a captive service center keeps its books in its local currency but its functional currency were determined to be USD (an unusual conclusion, but possible), its results would first be <em>remeasured</em> into USD before any translation. The configuration of the ERP and the FP&amp;A platform must reflect the accounting conclusion, not the other way round.</p>
+<h2 id="translation-versus-remeasurement-high-level">Translation versus remeasurement (high level)</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th></th>
+<th>Remeasurement</th>
+<th>Translation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Restate amounts into the entity's functional currency, as if the books had been kept in it</td>
+<td>Convert functional-currency statements into the group's presentation or reporting currency</td>
+</tr>
+<tr>
+<td><strong>When</strong></td>
+<td>Foreign-currency transactions and balances; books kept in a currency other than the functional currency</td>
+<td>Consolidating an entity whose functional currency differs from the presentation currency</td>
+</tr>
+<tr>
+<td><strong>Monetary items</strong></td>
+<td>Closing rate</td>
+<td>Closing rate</td>
+</tr>
+<tr>
+<td><strong>Non-monetary items at historical cost</strong></td>
+<td>Historical rate</td>
+<td>Closing rate (as part of all assets and liabilities)</td>
+</tr>
+<tr>
+<td><strong>Where differences go</strong></td>
+<td>Profit or loss (net income)</td>
+<td>Other comprehensive income (CTA)</td>
+</tr>
+</tbody>
+</table></div>
+<p>At the transaction level, IAS 21 (paragraph 23) requires foreign-currency monetary items to be translated at the <a class="gl" href="../glossary.html#closing-rate">closing rate</a>, and non-monetary items measured at historical cost at the exchange rate at the date of the transaction. Under ASC 830, where a foreign entity's books are not kept in its functional currency, PwC's guide (citing ASC 830-10-45-17) describes a two-step process: remeasure into the functional currency first, then translate into the reporting currency.</p>
+<p>The rest of this guide is about <strong>translation</strong>.</p>
+<h2 id="the-current-rate-method-rates-by-line">The current-rate method: rates by line</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>IAS 21</th>
+<th>ASC 830 (per PwC Viewpoint)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Assets and liabilities</td>
+<td>Closing rate at the date of each statement of financial position (para 39(a))</td>
+<td>Exchange rate at the end of the reporting period</td>
+</tr>
+<tr>
+<td>Income and expenses</td>
+<td>Exchange rates at the dates of the transactions (para 39(b)); an average rate for the period is often used as an approximation, but is inappropriate if rates fluctuate significantly (para 40)</td>
+<td>Rate on the date the income or expense is recognized; a weighted-average rate for the period is generally appropriate</td>
+</tr>
+<tr>
+<td>Share capital and other contributed equity</td>
+<td>Not specified line by line; historical rates are standard practice</td>
+<td>Historical rates on the dates the equity entries were recorded</td>
+</tr>
+<tr>
+<td>Retained earnings</td>
+<td>Built from translated profit each period</td>
+<td>Opening balance at historical rates; current-period change at the rates used for that period's income statement</td>
+</tr>
+<tr>
+<td>Resulting differences</td>
+<td>Recognized in OCI and accumulated in a separate component of equity (paras 39(c), 41)</td>
+<td>Cumulative translation adjustment in accumulated OCI</td>
+</tr>
+</tbody>
+</table></div>
+<p>Further points that matter in practice:</p>
+<ul>
+<li><strong>NCI share of the CTA.</strong> IAS 21 paragraph 41 requires accumulated exchange differences attributable to non-controlling interests to be allocated to them.</li>
+<li><strong>Goodwill and fair value adjustments.</strong> IAS 21 paragraph 47 treats goodwill and fair value adjustments arising on the acquisition of a foreign operation as assets and liabilities of that foreign operation, so they are translated at the closing rate. PwC's ASC 830 guidance similarly describes pushing parent-level accounts relating to a foreign entity (goodwill, intangibles, certain reserves and adjustments) down to that entity so they are treated consistently.</li>
+<li><strong>Disposal.</strong> On disposal of a foreign operation, IAS 21 paragraph 48 requires the cumulative exchange differences relating to it to be reclassified from equity to profit or loss. Under ASC 830, translation adjustments are released to net income on sale or substantially complete liquidation of the foreign entity.</li>
+</ul>
+<h2 id="where-the-cta-comes-from-and-how-to-recompute-it">Where the CTA comes from, and how to recompute it</h2>
+<p>Translation applies one rate to the balance sheet and different rates to the P&amp;L and equity. The translated balance sheet therefore does not balance by itself, and the difference is the CTA. Its <strong>movement in a period</strong> has three main sources:</p>
+<ol>
+<li><strong>Opening net assets × (closing rate − opening rate).</strong> The entity's net assets at the start of the period were translated at last period's closing rate; they are now translated at this period's closing rate.</li>
+<li><strong>Net income × (closing rate − rate used for the P&amp;L).</strong> Profit was translated at average (or transaction) rates but sits in net assets at the closing rate.</li>
+<li><strong>Equity transactions during the period × (closing rate − rate on the transaction date).</strong> Capital injections, dividends and similar items.</li>
+</ol>
+<p>PwC's illustrative example in its foreign currency guide decomposes the CTA in exactly this way. This decomposition is the most useful independent test in FX reporting: if the CTA your platform produces does not equal your recomputation, some line is being translated at the wrong rate or the wrong rate type.</p>
+<h2 id="worked-example">Worked example</h2>
+<p><em>Illustrative example. Made-up entity and round numbers. Rates are expressed as USD per GBP.</em></p>
+<p>A UK subsidiary with GBP functional currency is consolidated into a USD-presenting group for the year ended 31 December Year 2.</p>
+<p><strong>Rates</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Rate</th>
+<th>USD per GBP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Closing, 31 Dec Year 1 (opening)</td>
+<td>1.20</td>
+</tr>
+<tr>
+<td>Closing, 31 Dec Year 2</td>
+<td>1.30</td>
+</tr>
+<tr>
+<td>Average, Year 2</td>
+<td>1.25</td>
+</tr>
+<tr>
+<td>Historical rate when share capital was issued</td>
+<td>1.40</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Subsidiary <a class="gl" href="../glossary.html#trial-balance">trial balance</a> at 31 Dec Year 2 (GBP)</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th></th>
+<th>GBP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cash</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Receivables</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Property, plant and equipment</td>
+<td>500</td>
+</tr>
+<tr>
+<td><strong>Total assets</strong></td>
+<td><strong>1,000</strong></td>
+</tr>
+<tr>
+<td>Payables</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Share capital</td>
+<td>400</td>
+</tr>
+<tr>
+<td>Retained earnings, opening</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Net income, Year 2 (revenue 1,000 less expenses 900)</td>
+<td>100</td>
+</tr>
+<tr>
+<td><strong>Total liabilities and equity</strong></td>
+<td><strong>1,000</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Opening retained earnings in USD, built up from prior years' translated profits, are 230.</p>
+<p><strong>Step 1: Translate the income statement at the <a class="gl" href="../glossary.html#average-rate">average rate</a></strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th></th>
+<th>GBP</th>
+<th>Rate</th>
+<th>USD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>1,000</td>
+<td>1.25</td>
+<td>1,250</td>
+</tr>
+<tr>
+<td>Expenses</td>
+<td>(900)</td>
+<td>1.25</td>
+<td>(1,125)</td>
+</tr>
+<tr>
+<td><strong>Net income</strong></td>
+<td><strong>100</strong></td>
+<td></td>
+<td><strong>125</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Step 2: Translate the balance sheet</strong></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th></th>
+<th>GBP</th>
+<th>Rate</th>
+<th>USD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total assets</td>
+<td>1,000</td>
+<td>1.30 closing</td>
+<td>1,300</td>
+</tr>
+<tr>
+<td>Payables</td>
+<td>300</td>
+<td>1.30 closing</td>
+<td>390</td>
+</tr>
+<tr>
+<td>Share capital</td>
+<td>400</td>
+<td>1.40 historical</td>
+<td>560</td>
+</tr>
+<tr>
+<td>Retained earnings, opening</td>
+<td>200</td>
+<td>historical (carried)</td>
+<td>230</td>
+</tr>
+<tr>
+<td>Net income</td>
+<td>100</td>
+<td>from Step 1</td>
+<td>125</td>
+</tr>
+<tr>
+<td>Subtotal liabilities and equity before CTA</td>
+<td></td>
+<td></td>
+<td>1,305</td>
+</tr>
+<tr>
+<td><strong>CTA balance (balancing figure)</strong></td>
+<td></td>
+<td></td>
+<td><strong>(5)</strong></td>
+</tr>
+<tr>
+<td><strong>Total liabilities and equity</strong></td>
+<td></td>
+<td></td>
+<td><strong>1,300</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Equivalently: net assets at closing rate are 700 × 1.30 = 910; equity at historical and translated amounts is 560 + 230 + 125 = 915; CTA balance = 910 − 915 = (5).</p>
+<p><strong>Step 3: Recompute the CTA independently</strong></p>
+<p>Opening CTA: opening net assets were 600 GBP (share capital 400 + opening retained earnings 200). At the opening closing rate that is 600 × 1.20 = 720 USD, against equity of 560 + 230 = 790 USD. Opening CTA balance = (70).</p>
+<p>Movement in Year 2:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Calculation</th>
+<th>USD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opening net assets</td>
+<td>600 × (1.30 − 1.20)</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Net income</td>
+<td>100 × (1.30 − 1.25)</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Equity transactions</td>
+<td>none in the year</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Total movement</strong></td>
+<td></td>
+<td><strong>65</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Closing CTA = opening (70) + movement 65 = <strong>(5)</strong>. This agrees with Step 2. The movement of 65 is what appears in other comprehensive income for the year. If the platform showed anything else, we would look for an account translated at the wrong rate type.</p>
+<h2 id="monthly-translation-in-fp-a-platforms">Monthly translation in FP&amp;A platforms</h2>
+<p>Management reporting runs monthly, and that raises a design decision accounting standards leave to policy.</p>
+<ul>
+<li><strong>Translate each month's activity at that month's average rate, then accumulate.</strong> The year-to-date P&amp;L in USD is the sum of twelve translated months. This matches how most ERPs translate period activity.</li>
+<li><strong>Do not retranslate year-to-date local-currency totals at a year-to-date average</strong> unless your policy explicitly says so. It produces a different number, and the difference reappears as an unexplained CTA movement.</li>
+<li><strong>Know how your "average" is calculated.</strong> NetSuite's consolidated Average rate, for example, is a weighted average based on transaction amounts in the period, not a simple average of daily rates. Business Central uses an "Average Rate (Manual)" method for income statement accounts, entered by the user. An FP&amp;A platform that computes its own simple average from a market feed will not tie to either.</li>
+<li><strong>Confirm the rate type on every account.</strong> NetSuite assigns each account a General Rate Type: Current for balance sheet accounts other than equity, Average for income statement accounts, Historical for equity. Business Central's Consol. Translation Method offers Average Rate (Manual), Closing Rate, Historical Rate, Composite Rate (typically for retained earnings) and Equity Rate. Mapping the right method to each group account is part of the chart of accounts design, not an afterthought.</li>
+<li><strong>Prefer importing the ERP's rates.</strong> Cube, for example, documents an option to apply NetSuite's consolidated exchange rates by account during import, with income statement accounts defaulting to average and balance sheet accounts to current. Using the ledger's own rates is the simplest way to make Check 4 of the Five Tie-out Checks pass.</li>
+</ul>
+<h2 id="rate-sourcing-and-governance">Rate sourcing and governance</h2>
+<p>An FX policy for reporting should answer, in writing:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Typical decision points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Source</strong></td>
+<td>Which provider or central bank; one source for all currency pairs</td>
+</tr>
+<tr>
+<td><strong>Fixing time</strong></td>
+<td>Which daily fixing or cut-off (for example, a specified time and market)</td>
+</tr>
+<tr>
+<td><strong>Closing rate</strong></td>
+<td>Rate on the last business day of the period, or the period-end calendar date</td>
+</tr>
+<tr>
+<td><strong>Average rate</strong></td>
+<td>Simple average of daily rates, average of month-end rates, or transaction-weighted (as computed by the ERP)</td>
+</tr>
+<tr>
+<td><strong>Historical rates</strong></td>
+<td>How equity rates are recorded and maintained, and who keeps the register</td>
+</tr>
+<tr>
+<td><strong>Approval</strong></td>
+<td>Who approves the period's rate table, and when it is locked</td>
+</tr>
+<tr>
+<td><strong>Changes</strong></td>
+<td>What happens if a rate is corrected after lock: re-run, or adjust prospectively</td>
+</tr>
+<tr>
+<td><strong>Significant fluctuation</strong></td>
+<td>When an average is no longer appropriate (IAS 21 para 40), and what to use instead</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Controls we recommend:</strong></p>
+<ol>
+<li>One approved rate table per period, locked before consolidation.</li>
+<li>A comparison of the FP&amp;A platform's rate table to the ERP's, every period, for every currency pair and rate type.</li>
+<li>A register of historical equity rates, reconciled to the equity accounts.</li>
+<li>The CTA recomputation above, for each foreign operation, every period.</li>
+<li>A documented treatment for any residual translation rounding.</li>
+</ol>
+<h2 id="special-situations-to-flag-early">Special situations to flag early</h2>
+<ul>
+<li><strong>Highly inflationary economies.</strong> ASC 830-10-45-11 describes a highly inflationary economy as one with cumulative inflation of approximately 100 percent or more over a 3-year period. Under US GAAP, a foreign entity in such an economy is remeasured as if its functional currency were the reporting currency. Under IFRS, IAS 29 applies. These cases need specific accounting advice and a different system configuration.</li>
+<li><strong>Lack of exchangeability.</strong> The IASB's amendments to IAS 21 (Lack of Exchangeability, issued August 2023) set out how to assess whether a currency is exchangeable and which rate to use when it is not. They apply for annual reporting periods beginning on or after 1 January 2025.</li>
+<li><strong>Intercompany loans that are part of the net investment.</strong> Exchange differences on monetary items that form part of a net investment in a foreign operation can follow a different path in the consolidated statements. Identify these loans explicitly in the intercompany register.</li>
+<li><strong>Change of functional currency.</strong> If an entity's circumstances change, the change is applied prospectively. Plan the system cut-over with your accountants.</li>
+</ul>
+<h2 id="checklist-fx-readiness-for-a-consolidation-build">Checklist: FX readiness for a consolidation build</h2>
+<ul class="checklist">
+<li>Functional currency documented for every entity, with the reasoning</li>
+<li>Presentation or reporting currency confirmed</li>
+<li>Ledger currency versus functional currency confirmed (remeasurement needed?)</li>
+<li>Rate source, fixing time and average method written into the FX policy</li>
+<li>Rate type assigned to every group account (closing, average, historical, composite)</li>
+<li>Historical equity rates register in place</li>
+<li>Monthly translation approach agreed (month by month, then accumulate)</li>
+<li>Platform rate table reconciled to ERP rate table for every period in scope</li>
+<li>CTA recomputed independently for each foreign operation</li>
+<li>Net-investment loans, hyperinflationary entities and unusual currencies flagged</li>
+</ul>
+<h2 id="where-tiepoint-fits">Where TiePoint fits</h2>
+<p>FX is Check 4 of the Five <a class="gl" href="../glossary.html#tie-out">Tie-out</a> Checks: every currency uses the rate type and period your policy calls for, so translated figures match the books. In the TiePoint Method we configure rate types account by account in Connect &amp; Map, import or reconcile rates to your ERP, and prove each foreign operation's translation and CTA in Validate/Tie-out before release.</p>
+<p>If you want this done for your team, start with a paid discovery. We will document your entities' currencies and current rate process and give you a fixed quote for the build.</p>
+
+
+      <section class="sources" aria-labelledby="sources-h"><h2 id="sources-h">Sources</h2><ol><li>IFRS Foundation, IAS 21 The Effects of Changes in Foreign Exchange Rates (standard page and history): <a href="https://www.ifrs.org/issued-standards/list-of-standards/ias-21-the-effects-of-changes-in-foreign-exchange-rates/" rel="noopener">https://www.ifrs.org/issued-standards/list-of-standards/ias-21-the-effects-of-changes-in-foreign-exchange-rates/</a></li><li>IAS 21 standard text (paragraphs 8, 9, 21–23, 39–41, 47, 48), as reproduced at: <a href="https://ktkt.uel.edu.vn/Resources/Docs/SubDomain/ktkt/VanBan/IAS/ias21_en.pdf" rel="noopener">https://ktkt.uel.edu.vn/Resources/Docs/SubDomain/ktkt/VanBan/IAS/ias21_en.pdf</a></li><li>IFRS Foundation, "IASB sets out accounting requirements for when a currency is not exchangeable" (August 2023): <a href="https://www.ifrs.org/news-and-events/news/2023/08/iasb-sets-out-accounting-requirements-for-when-currency-not-exchangeable/" rel="noopener">https://www.ifrs.org/news-and-events/news/2023/08/iasb-sets-out-accounting-requirements-for-when-currency-not-exchangeable/</a></li><li>PwC Viewpoint, Foreign currency guide, 5.2 Translation process: <a href="https://viewpoint.pwc.com/dt/us/en/pwc/accounting_guides/foreign_currency/foreign_currency__2_US/chapter_5_translatin_US/52_translation_proce_US.html" rel="noopener">https://viewpoint.pwc.com/dt/us/en/pwc/accounting_guides/foreign_currency/foreign_currency__2_US/chapter_5_translatin_US/52_translation_proce_US.html</a></li><li>PwC Viewpoint, Foreign currency guide, 5.3 (translation rates, CTA example): <a href="https://viewpoint.pwc.com/dt/us/en/pwc/accounting_guides/foreign_currency/foreign_currency__2_US/chapter_5_translatin_US/53_translation_when__US.html" rel="noopener">https://viewpoint.pwc.com/dt/us/en/pwc/accounting_guides/foreign_currency/foreign_currency__2_US/chapter_5_translatin_US/53_translation_when__US.html</a></li><li>PwC Viewpoint, Foreign currency guide, 6.2 (highly inflationary economies, ASC 830-10-45-11): <a href="https://viewpoint.pwc.com/dt/us/en/pwc/accounting_guides/foreign_currency/foreign_currency__2_US/chapter_6_foreign_en_US/62_determining_wheth_US.html" rel="noopener">https://viewpoint.pwc.com/dt/us/en/pwc/accounting_guides/foreign_currency/foreign_currency__2_US/chapter_6_foreign_en_US/62_determining_wheth_US.html</a></li><li>GAAP Dynamics, "Overview of foreign currency translation under ASC 830": <a href="https://www.gaapdynamics.com/overview-of-foreign-currency-translation-under-asc-830/" rel="noopener">https://www.gaapdynamics.com/overview-of-foreign-currency-translation-under-asc-830/</a></li><li>EisnerAmper, "Foreign Currency Matters Under ASC 830": <a href="https://eisneramper.com/foreign-currency-translation-fas-52" rel="noopener">https://eisneramper.com/foreign-currency-translation-fas-52</a></li><li>Oracle NetSuite Help Center, "Consolidated Exchange Rate Types": <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1405625.html" rel="noopener">https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1405625.html</a></li><li>Oracle NetSuite Help Center, "Calculating Consolidated Exchange Rates Automatically": <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1406908.html" rel="noopener">https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N1406908.html</a></li><li>Microsoft Learn, "Set up company consolidation" (Business Central translation methods): <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/finance-consolidated-company-reporting-setup" rel="noopener">https://learn.microsoft.com/en-us/dynamics365/business-central/finance-consolidated-company-reporting-setup</a></li><li>Cube Help Center, Multi-Currency by Account for NetSuite: <a href="https://help.cubesoftware.com/hc/en-us/articles/14845577060500" rel="noopener">https://help.cubesoftware.com/hc/en-us/articles/14845577060500</a></li></ol></section>
+      <div class="disclaimer" role="note"><strong>Disclaimer.</strong> This guide is general information about foreign currency reporting. It is not accounting, tax or legal advice. Functional currency and translation decisions should be made with your auditors and advisers.</div>
+      <aside class="art-cta"><div><h2>Want this applied to your systems?</h2><p>Paid Discovery takes one to two weeks at a fixed fee and ends with a mapping plan, dashboard specifications and a fixed quote.</p></div><a class="btn btn-tie" href="../contact.html" data-book data-subject="Paid Discovery">Book Paid Discovery <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a></aside>
+    </article>
+  </div>
+</section>
+<section class="sec-tight paper-2"><div class="wrap"><h2 class="rv" style="font-size:1.6rem">More field guides</h2><div class="grid g3" data-stagger><a class="card lib-card rv" href="tie-out-playbook.html"><span class="meta"><span>Field guide</span><span>13 min read</span></span><h3>The Tie-out Playbook: Proving FP&amp;A and Dashboard Numbers Reconcile to the General Ledger</h3><p>The Five Tie-out Checks in detail, a twelve-pattern failure-mode catalog with detection tests, and a tie-out workbook template with a monthly release checklist.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="card lib-card rv" href="chart-of-accounts-mapping.html"><span class="meta"><span>Field guide</span><span>11 min read</span></span><h3>Chart of Accounts Mapping for Multi-Entity Groups</h3><p>Designing a group reporting CoA, accounts versus dimensions, explicit and conditional mapping with effective dates, new-account controls and change governance, with a worked mapping table.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="card lib-card rv" href="consolidation-intercompany-eliminations.html"><span class="meta"><span>Field guide</span><span>12 min read</span></span><h3>Multi-Entity Consolidation and Intercompany Eliminations</h3><p>Every common elimination type, how to classify and resolve intercompany mismatches, NCI at a high level, and a fully worked three-entity consolidation example.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></div></div></section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+        <p>Finance systems implementation and integration. Every number ties out.</p>
+        <p>TiePoint Finance is a P CHAK Consulting company.<br>5900 Spout Springs Road, Unit 3C-1069, Flowery Branch, GA 30542<br><a data-email href="../contact.html" style="color:inherit">Contact page</a></p>
+      </div>
+      <nav class="foot-col" aria-label="Company"><h2>Company</h2><ul>
+        <li><a href="../index.html">Home</a></li><li><a href="../services.html">Services</a></li><li><a href="../method.html">The TiePoint Method</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Platforms"><h2>Platforms</h2><ul><li><a href="../platforms/index.html">All platforms</a></li>
+<li><a href="../platforms/datarails.html">Datarails</a></li>
+<li><a href="../platforms/netsuite.html">NetSuite</a></li>
+<li><a href="../platforms/business-central.html">Business Central</a></li>
+<li><a href="../platforms/cube.html">Cube</a></li>
+<li><a href="../platforms/vena.html">Vena</a></li>
+<li><a href="../platforms/planful.html">Planful</a></li>
+<li><a href="../platforms/adaptive-planning.html">Adaptive Planning</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Resources"><h2>Resources</h2><ul>
+        <li><a href="../insights/index.html">Insights</a></li><li><a href="../glossary.html">Glossary</a></li><li><a href="../method.html#questionnaire">Discovery questionnaire</a></li><li><a href="../demo.html">Demo dashboard</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Legal"><h2>Legal</h2><ul>
+        <li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a class="" href="../contact.html" data-book>Book a Discovery Call</a></li></ul></nav>
+    </div>
+    <div class="foot-mark" aria-hidden="true">Every number ties out.</div>
+    <div class="foot-legal">
+      <p>TiePoint Finance is an independent consultancy. We are not affiliated with, endorsed by or a certified partner of any software vendor named on this site. Contracts are with P CHAK Consulting LLC.</p>
+      <p>Datarails, NetSuite, Oracle, Microsoft, Dynamics 365, Business Central, Power BI, Excel, SAP, Sage Intacct, QuickBooks, Xero, Salesforce, HubSpot, Workday, Workday Adaptive Planning, Cube, Vena, Planful, Google and Google Sheets are trademarks or registered trademarks of their respective owners. They are used here only to describe the systems we work with.</p>
+      <p>Any figures shown in demos, diagrams and animations on this site are for illustration only. Figures are simulated and do not describe any client.</p>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year>2026</span> P CHAK Consulting LLC</span>
+      <span><a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></span>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

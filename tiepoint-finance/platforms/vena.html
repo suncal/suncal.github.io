@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +7,7 @@
 <meta name="description" content="Independent Vena implementation for finance teams: ERP integrations, data model design, planning templates, multi-entity consolidation and reporting reconciled to your ledger.">
 <link rel="canonical" href="https://www.tiepointfinance.com/platforms/vena">
 <meta name="theme-color" content="#0A1220">
+<meta name="color-scheme" content="light">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TiePoint Finance">
 <meta property="og:title" content="Vena Implementation, Integration and Consolidation | TiePoint Finance">
@@ -23,170 +24,178 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/site.css">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Does TiePoint Finance partner with Vena?","acceptedAnswer":{"@type":"Answer","text":"No. We are independent and not affiliated with Vena. Where Vena's own onboarding team is involved, we coordinate with them on your behalf."}},
-{"@type":"Question","name":"Vena is already live for us. Where would you start?","acceptedAnswer":{"@type":"Answer","text":"Yes. We start with a review of the model, templates and integrations, fix whatever causes errors or rework, and then add the reporting you are missing."}},
-{"@type":"Question","name":"How does our ERP data get into Vena?","acceptedAnswer":{"@type":"Answer","text":"Yes. We set up the integration so ledger actuals refresh on a schedule rather than through exported files."}},
-{"@type":"Question","name":"Do you build Power BI reports on Vena data?","acceptedAnswer":{"@type":"Answer","text":"Yes, where it suits your reporting. We make sure the Power BI figures agree with Vena and with the ledger."}},
-{"@type":"Question","name":"How long does a Vena project take?","acceptedAnswer":{"@type":"Answer","text":"Most land in the 6 to 10 week range; the number of entities, sources and templates decides where. The fixed quote from discovery sets it."}}
-]}
-</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://www.tiepointfinance.com/#org", "name": "TiePoint Finance", "slogan": "Every number ties out.", "url": "https://www.tiepointfinance.com/", "logo": "https://www.tiepointfinance.com/assets/apple-touch-icon.png", "image": "https://www.tiepointfinance.com/assets/og-image.png", "description": "Independent finance systems implementation and integration: ERP, CRM, HRIS and bank data connected into FP&A platforms and Power BI, reconciled to the general ledger.", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}, "areaServed": "Worldwide", "knowsAbout": ["FP&A implementation", "Financial consolidation", "General ledger reconciliation", "ERP integration", "Power BI"], "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "url": "https://www.tiepointfinance.com/contact"}, "parentOrganization": {"@type": "Organization", "name": "P CHAK Consulting LLC", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tiepointfinance.com/"}, {"@type": "ListItem", "position": 2, "name": "Platforms", "item": "https://www.tiepointfinance.com/platforms/"}, {"@type": "ListItem", "position": 3, "name": "Vena", "item": "https://www.tiepointfinance.com/platforms/vena"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does TiePoint Finance partner with Vena?", "acceptedAnswer": {"@type": "Answer", "text": "No. We are independent and not affiliated with Vena. Where Vena's own onboarding team is involved, we coordinate with them on your behalf."}}, {"@type": "Question", "name": "Vena is already live for us. Where would you start?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We start with a review of the model, templates and integrations, fix whatever causes errors or rework, and then add the reporting you are missing."}}, {"@type": "Question", "name": "How does our ERP data get into Vena?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We set up the integration so ledger actuals refresh on a schedule rather than through exported files."}}, {"@type": "Question", "name": "Do you build Power BI reports on Vena data?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, where it suits your reporting. We make sure the Power BI figures agree with Vena and with the ledger."}}, {"@type": "Question", "name": "How long does a Vena project take?", "acceptedAnswer": {"@type": "Answer", "text": "Most land in the 6 to 10 week range; the number of entities, sources and templates decides where. The fixed quote from discovery sets it."}}]}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap head-in">
-    <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#132036" stroke="rgba(238,240,234,.18)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" stroke="#EEF0EA" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" stroke="#19B795" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" fill="#19B795" stroke="#132036" stroke-width="1.2"/><path d="M7 24H25M7 27H25" stroke="#19B795" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+    <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
     <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="../services.html">Services</a>
+      <a href="../method.html">Method</a>
       <a href="../platforms/index.html" aria-current="page">Platforms</a>
+      <a href="../insights/index.html">Insights</a>
+      <a href="../glossary.html">Glossary</a>
       <a href="../demo.html">Demo</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
-      <a class="nav-cta" href="mailto:hello@tiepointfinance.com?subject=Discovery%20call%20request%20-%20TiePoint%20Finance&body=Hello%20TiePoint%20Finance%2C%0D%0A%0D%0ACompany%3A%0D%0ARole%3A%0D%0AERP%20and%20other%20source%20systems%3A%0D%0AFP%26A%20or%20BI%20tool%20(current%20or%20planned)%3A%0D%0ANumber%20of%20entities%20and%20currencies%3A%0D%0AWhat%20we%20want%20to%20fix%3A%0D%0A%0D%0AA%20few%20times%20that%20suit%20us%20for%20a%20call%3A%0D%0A">Book a Discovery Call</a>
+      <a class="nav-cta" href="../contact.html" data-book>Book a Discovery Call</a>
     </nav>
   </div>
 </header>
 <main id="main">
-<section class="page-hero">
-  <div class="wrap">
-    <div class="crumbs"><a href="../index.html">Home</a><span class="sep">/</span><a href="index.html">Platforms</a><span class="sep">/</span><span>Vena</span></div>
-    <span class="eyebrow">FP&amp;A platform &middot; Excel-native</span>
-    <h1>Vena, modelled to <span class="tied">tie out.</span></h1>
-    <p class="lede">Vena brings governed planning and reporting into Excel. We design the data model, connect your ERP, build the templates and consolidation, and reconcile it all to your general ledger.</p>
-    <div class="actions"><a class="btn btn-tie" href="mailto:hello@tiepointfinance.com?subject=Discovery%20call%20request%20-%20Vena&body=Hello%20TiePoint%20Finance%2C%0D%0A%0D%0ACompany%3A%0D%0ARole%3A%0D%0AERP%20and%20other%20source%20systems%3A%0D%0AFP%26A%20or%20BI%20tool%20(current%20or%20planned)%3A%0D%0ANumber%20of%20entities%20and%20currencies%3A%0D%0AWhat%20we%20want%20to%20fix%3A%0D%0A%0D%0AA%20few%20times%20that%20suit%20us%20for%20a%20call%3A%0D%0A">Book a Discovery Call <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M9 1l4 4-4 4M13 5H1" stroke="currentColor" stroke-width="1.6"/></svg></a><a class="btn btn-line" href="../demo.html">See a demo dashboard</a></div>
-    <div class="facts"><div><span class="mono">Works in</span><strong>Excel, with Power BI reporting</strong></div><div><span class="mono">Typical sources</span><strong>ERP, CRM, HRIS, banks</strong></div><div><span class="mono">Our role</span><strong>Independent implementer</strong></div></div>
+<section class="page-hero grain"><div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap ph-grid">
+    <div>
+      <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../index.html">Home</a></li><li><a href="../platforms/index.html">Platforms</a></li><li><span aria-current="page">Vena</span></li></ol></nav>
+      <span class="eyebrow">FP&amp;A platform &middot; Excel-native</span>
+      <h1>Vena, modelled to <span class="tied">tie out.</span></h1>
+      <p class="lede">Vena brings governed planning and reporting into Excel. We design the data model, connect your ERP, build the templates and consolidation, and reconcile it all to your general ledger.</p>
+      <div class="actions"><a class="btn btn-tie" href="../contact.html" data-book data-subject="Vena">Book a Discovery Call <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a><a class="btn btn-line" href="../demo.html">See a demo dashboard</a></div>
+    </div>
+    <figure class="diagram rv"><svg class="anim dk " viewBox="0 0 480 320" role="img" aria-label="Animation: a budget template's inputs fill in, then move through submit, review, approve and lock steps, each ticking off in turn." preserveAspectRatio="xMidYMid meet"><rect class="d-card" x="14" y="36" width="200" height="250" rx="12"/><path class="d-line" d="M14 62H214"/><text class="d-text" x="28" y="53">Budget template</text><rect class="d-fill-line" x="28" y="82" width="60" height="5" rx="2.5"/><rect class="d-card2" x="130" y="74" width="70" height="20" rx="3"/><rect class="d-fill-soft a-cell" x="130" y="74" width="70" height="20" rx="3" style="--d:0.0s"/><rect class="d-fill-line" x="28" y="110" width="50" height="5" rx="2.5"/><rect class="d-card2" x="130" y="102" width="70" height="20" rx="3"/><rect class="d-fill-soft a-cell" x="130" y="102" width="70" height="20" rx="3" style="--d:0.2s"/><rect class="d-fill-line" x="28" y="138" width="40" height="5" rx="2.5"/><rect class="d-card2" x="130" y="130" width="70" height="20" rx="3"/><rect class="d-fill-soft a-cell" x="130" y="130" width="70" height="20" rx="3" style="--d:0.4s"/><rect class="d-fill-line" x="28" y="166" width="60" height="5" rx="2.5"/><rect class="d-card2" x="130" y="158" width="70" height="20" rx="3"/><rect class="d-fill-soft a-cell" x="130" y="158" width="70" height="20" rx="3" style="--d:0.6s"/><rect class="d-fill-line" x="28" y="194" width="50" height="5" rx="2.5"/><rect class="d-card2" x="130" y="186" width="70" height="20" rx="3"/><rect class="d-fill-soft a-cell" x="130" y="186" width="70" height="20" rx="3" style="--d:0.8s"/><rect class="d-fill-line" x="28" y="222" width="40" height="5" rx="2.5"/><rect class="d-card2" x="130" y="214" width="70" height="20" rx="3"/><rect class="d-fill-soft a-cell" x="130" y="214" width="70" height="20" rx="3" style="--d:1.0s"/><rect class="d-fill-line" x="28" y="250" width="60" height="5" rx="2.5"/><rect class="d-card2" x="130" y="242" width="70" height="20" rx="3"/><rect class="d-fill-soft a-cell" x="130" y="242" width="70" height="20" rx="3" style="--d:1.2s"/><path class="d-line" d="M214 80 C250 80 250 66 282 66"/><path class="d-flow tie" d="M214 80 C250 80 250 66 282 66" style="--d:0s"/><path class="d-line" d="M300 66V258"/><path class="d-stroke-acc a-draw" d="M300 66V258" style="--len:192;animation-duration:8s"/><g class="a-node" style="--d:0.0s"><circle class="d-card" cx="300" cy="66" r="15"/><circle class="d-stroke-acc" cx="300" cy="66" r="15"/></g><g transform="translate(300 66)"><path class="d-stroke-acc a-tick" d="M-4 0.5l2.6 2.6L4.2-3.2" style="--d:0.6s;animation-duration:8s"/></g><text class="d-text" x="326" y="64">Submit</text><text class="d-text mut" x="326" y="78">Step 1 of 4</text><g class="a-node" style="--d:1.4s"><circle class="d-card" cx="300" cy="130" r="15"/><circle class="d-stroke-acc" cx="300" cy="130" r="15"/></g><g transform="translate(300 130)"><path class="d-stroke-acc a-tick" d="M-4 0.5l2.6 2.6L4.2-3.2" style="--d:2.0s;animation-duration:8s"/></g><text class="d-text" x="326" y="128">Review</text><text class="d-text mut" x="326" y="142">Step 2 of 4</text><g class="a-node" style="--d:2.8s"><circle class="d-card" cx="300" cy="194" r="15"/><circle class="d-stroke-acc" cx="300" cy="194" r="15"/></g><g transform="translate(300 194)"><path class="d-stroke-acc a-tick" d="M-4 0.5l2.6 2.6L4.2-3.2" style="--d:3.4s;animation-duration:8s"/></g><text class="d-text" x="326" y="192">Approve</text><text class="d-text mut" x="326" y="206">Step 3 of 4</text><g class="a-node" style="--d:4.199999999999999s"><circle class="d-card" cx="300" cy="258" r="15"/><circle class="d-stroke-acc" cx="300" cy="258" r="15"/></g><g transform="translate(300 258)"><path class="d-stroke-acc a-tick" d="M-4 0.5l2.6 2.6L4.2-3.2" style="--d:4.799999999999999s;animation-duration:8s"/></g><text class="d-text" x="326" y="256">Lock and load</text><text class="d-text mut" x="326" y="270">Step 4 of 4</text></svg><figcaption><span>Vena &middot; how the data moves</span><span>Illustrative diagram</span></figcaption></figure>
   </div>
+  <div class="wrap"><div class="facts"><div><span class="mono">Works in</span><strong>Excel, with Power BI reporting</strong></div><div><span class="mono">Typical sources</span><strong>ERP, CRM, HRIS, banks</strong></div><div><span class="mono">Our role</span><strong>Independent implementer</strong></div></div></div>
 </section>
 
-<section class="sec">
+<section class="sec" aria-labelledby="p1-h">
   <div class="wrap split">
-    <div class="sticky"><span class="eyebrow rv">Context</span><h2 class="rv">The template is the visible part. The model decides everything.</h2></div>
+    <div class="sticky"><span class="eyebrow rv">Context</span><h2 class="rv" id="p1-h">The template is the visible part. The model decides everything.</h2></div>
     <div class="prose"><p class="rv">Vena gives finance teams workflows, approvals and templates in a tool they already know. How useful it becomes depends on the data model under those templates: the dimensions, hierarchies and integration rules that decide where every number lands.</p><p class="rv">We start there. We design the model with your team, integrate your ERP and other sources, build planning and reporting templates, and set up consolidation with intercompany eliminations. Every report is checked against your ledger before release.</p>
-      <div class="notice rv"><strong>Independent consultancy.</strong> TiePoint Finance is not affiliated with, endorsed by or a partner of the vendor of Vena. We work for your finance team.</div>
+      <div class="notice rv"><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 9v5M10 6.2v.1"/></svg><span><strong>Independent consultancy.</strong> TiePoint Finance is not affiliated with, endorsed by or a partner of the vendor of Vena. We work for your finance team.</span></div>
     </div>
   </div>
 </section>
 
-<section class="sec paper-2">
+<section class="sec paper-2" aria-labelledby="p2-h">
   <div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow rv">What we handle</span><h2 class="rv">Vena work, start to finish.</h2></div><p class="rv">Typical sources we connect: NetSuite, Business Central, Sage Intacct, QuickBooks, SAP, Salesforce, Workday and bank data.</p></div>
-    <div class="grid g3">
-<div class="card rv"><span class="num">01</span><h3>Data model design</h3><p>Dimensions and hierarchies shaped with your team so templates and reports draw on one consistent structure.</p></div>
-<div class="card rv"><span class="num">02</span><h3>ERP integrations</h3><p>Ledger actuals from NetSuite, Business Central, Sage Intacct, QuickBooks or another ERP landing in Vena on a schedule.</p></div>
-<div class="card rv"><span class="num">03</span><h3>Planning templates</h3><p>Budget, forecast and workforce templates, with the review and approval steps your process needs.</p></div>
-<div class="card rv"><span class="num">04</span><h3>Consolidation</h3><p>Group roll-ups across entities and currencies, including intercompany eliminations.</p></div>
-<div class="card rv"><span class="num">05</span><h3>Reporting</h3><p>Statements, plan versus actual and KPI packs in Excel, with Power BI where it adds value.</p></div>
-<div class="card rv"><span class="num">06</span><h3>Training and support</h3><p>Hands-on sessions, written guides and optional help at month-end.</p></div>
+    <div class="sec-head">
+      <div><span class="eyebrow rv">What we handle</span><h2 class="rv" id="p2-h">Vena work, start to finish.</h2></div>
+      <p class="rv">Typical sources we connect: NetSuite, Business Central, Sage Intacct, QuickBooks, SAP, Salesforce, Workday and bank data.</p>
     </div>
+    <div class="grid g3" data-stagger=".06"><div class="card rv"><span class="num">01</span><h3>Data model design</h3><p>Dimensions and hierarchies shaped with your team so templates and reports draw on one consistent structure.</p></div><div class="card rv"><span class="num">02</span><h3>ERP integrations</h3><p>Ledger actuals from NetSuite, Business Central, Sage Intacct, QuickBooks or another ERP landing in Vena on a schedule.</p></div><div class="card rv"><span class="num">03</span><h3>Planning templates</h3><p>Budget, forecast and workforce templates, with the review and approval steps your process needs.</p></div><div class="card rv"><span class="num">04</span><h3>Consolidation</h3><p>Group roll-ups across entities and currencies, including intercompany eliminations.</p></div><div class="card rv"><span class="num">05</span><h3>Reporting</h3><p>Statements, plan versus actual and KPI packs in Excel, with Power BI where it adds value.</p></div><div class="card rv"><span class="num">06</span><h3>Training and support</h3><p>Hands-on sessions, written guides and optional help at month-end.</p></div></div>
   </div>
 </section>
 
-<section class="sec ink">
+<section class="sec" aria-labelledby="p3-h">
   <div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow rv">Before release</span><h2 class="rv">Every Vena report passes five checks.</h2></div><p class="rv">The same tie-out standard applies on every platform, for every entity and month in scope.</p></div>
-    <div class="ledger rv">
-    <div class="ledger-head" aria-hidden="true"><span>Check</span><span>What we confirm</span><span>Pass condition</span></div>
-    <div class="lrow"><span class="no">01</span><div><h3>Every GL account is mapped exactly once</h3><p>No account left unmapped, none counted twice. Unmapped balances are the quietest way a report goes wrong.</p></div><span class="rule">unmapped = <b>0</b></span></div>
-    <div class="lrow"><span class="no">02</span><div><h3>Totals tie to the trial balance</h3><p>For each entity and each month, the reporting totals agree with the trial balance from your ledger.</p></div><span class="rule">variance = <b>0.00</b></span></div>
-    <div class="lrow"><span class="no">03</span><div><h3>Intercompany nets to zero</h3><p>After eliminations, intercompany balances and transactions between your entities cancel out at group level.</p></div><span class="rule">IC net = <b>0.00</b></span></div>
-    <div class="lrow"><span class="no">04</span><div><h3>Correct FX rates and periods</h3><p>Each currency uses the rate type and period your policy calls for, so translated figures match the books.</p></div><span class="rule">rates = <b>policy</b></span></div>
-    <div class="lrow"><span class="no">05</span><div><h3>Large movements are explained</h3><p>Big month-over-month swings get a written reason before anyone sees them in a board pack.</p></div><span class="rule">unexplained = <b>0</b></span></div>
-  </div>
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Technical considerations</span><h2 class="rv" id="p3-h">What matters in a Vena project.</h2></div>
+      <p class="rv">The specifics we look at early, because they decide how clean the data will be. Product details change, so we confirm them against the vendor's current documentation during discovery.</p>
+    </div>
+    <div class="techgrid" data-stagger=".07"><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 9v5M10 6.2v.1"/></svg>Templates</h3><p>Vena is built around Excel-based templates. Template design decides what contributors can change and where their inputs land in the data model.</p></div><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 9v5M10 6.2v.1"/></svg>Workflow</h3><p>Vena lets you route templates through submission and approval steps. We set those steps to match who actually reviews each part of the plan.</p></div><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 9v5M10 6.2v.1"/></svg>Data model</h3><p>Dimensions and hierarchies are the backbone of reporting and planning. We design them before building templates.</p></div><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 9v5M10 6.2v.1"/></svg>Integration</h3><p>Actuals load from your ERP through Vena's integration options or scheduled files. We reconcile what lands before templates rely on it.</p></div></div>
   </div>
 </section>
 
-<section class="sec">
+<section class="sec paper-2" aria-labelledby="p4-h">
   <div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow rv">How it runs</span><h2 class="rv">Four phases, signed off one at a time.</h2></div><p class="rv">Discovery takes one to two weeks at a fixed fee. Most projects finish in 6 to 10 weeks.</p></div>
-    <div class="phases">
-  <div class="phase rv"><div class="bar"><span class="dot">01</span><span class="gate">Sign-off</span></div>
-    <h3>Discovery</h3><span class="dur">1&ndash;2 weeks &middot; fixed fee</span>
-    <p>We study your systems, entities and reports, then hand you a written plan.</p>
-    <ul><li>Mapping plan</li><li>Dashboard specifications</li><li>Fixed implementation quote</li></ul></div>
-  <div class="phase rv"><div class="bar"><span class="dot">02</span><span class="gate">Sign-off</span></div>
-    <h3>Connect &amp; Map</h3><span class="dur">Build</span>
-    <p>Read-only connections to each source, and every account, entity, currency and dimension mapped into one structure.</p></div>
-  <div class="phase rv"><div class="bar"><span class="dot">03</span><span class="gate">Sign-off</span></div>
-    <h3>Validate &amp; Reconcile</h3><span class="dur">Prove it</span>
-    <p>We tie the loaded data back to your general ledger for recent closed months and clear every difference.</p></div>
-  <div class="phase rv"><div class="bar"><span class="dot">04</span><span class="gate">Sign-off</span></div>
-    <h3>Dashboards &amp; Handover</h3><span class="dur">Release</span>
-    <p>Reports go live only after they tie out. Your team gets training and a runbook they can follow at month-end.</p></div>
-</div>
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Pitfalls</span><h2 class="rv" id="p4-h">Common problems, and how we avoid them.</h2></div>
+      <p class="rv">These come up in Vena projects regardless of who runs them.</p>
+    </div>
+    <div class="pit" data-stagger=".06"><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 3l7.5 13h-15z"/><path d="M10 8v4M10 14.2v.1"/></svg><span>Templates designed before the model</span></h3><p>We settle dimensions and hierarchies first.</p></div><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 3l7.5 13h-15z"/><path d="M10 8v4M10 14.2v.1"/></svg><span>Approval steps nobody follows</span></h3><p>We map workflow to real reviewers and deadlines.</p></div><div class="card rv"><h3><svg class="ic " width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 3l7.5 13h-15z"/><path d="M10 8v4M10 14.2v.1"/></svg><span>Actuals that never get reconciled</span></h3><p>The five checks run before templates go out.</p></div></div>
   </div>
 </section>
 
-<section class="sec paper-2">
+<section class="sec ink grain" aria-labelledby="p5-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Before release</span><h2 class="rv" id="p5-h">Every Vena report passes five checks.</h2></div>
+      <p class="rv">The same tie-out standard applies on every platform, for every entity and month in scope.</p>
+    </div>
+    <div class="ledger">
+    <div class="ledger-head" aria-hidden="true"><span>Check</span><span>Why it matters</span><span>Pass condition</span></div>
+    <ol style="list-style:none;margin:0;padding:0" data-stagger=".08">
+    <li class="lrow rv"><span class="no">01</span><div><h3>Every GL account is mapped exactly once</h3><p>Reports only add up if each ledger account lands in one reporting line, once.</p></div><span class="rule"><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>unmapped = <b>0</b></span></li><li class="lrow rv"><span class="no">02</span><div><h3>Totals tie to the trial balance</h3><p>The trial balance is the agreed source of truth, so every entity and every month is compared against it.</p></div><span class="rule"><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>variance = <b>0.00</b></span></li><li class="lrow rv"><span class="no">03</span><div><h3>Intercompany nets to zero</h3><p>A group should not report trading with itself. After eliminations, intercompany balances must cancel.</p></div><span class="rule"><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>IC net = <b>0.00</b></span></li><li class="lrow rv"><span class="no">04</span><div><h3>Correct FX rates and periods</h3><p>Translation uses different rate types for different balances, and each month needs its own rates.</p></div><span class="rule"><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>rates = <b>policy</b></span></li><li class="lrow rv"><span class="no">05</span><div><h3>Large movements are explained</h3><p>A number can tie to the ledger and still mislead. Big swings need a reason before a board sees them.</p></div><span class="rule"><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>unexplained = <b>0</b></span></li>
+    </ol>
+  </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="p6-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">The TiePoint Method</span><h2 class="rv" id="p6-h">Four phases, signed off one at a time.</h2></div>
+      <p class="rv">Discovery takes one to two weeks at a fixed fee. Most projects finish in 6 to 10 weeks.</p>
+    </div>
+    <div class="timeline" data-timeline role="group" aria-label="The TiePoint Method: four phases, each ending in a client sign-off gate">
+    <div class="tl-track" aria-hidden="true"><div class="tl-fill"></div></div>
+    <ol class="phases" style="list-style:none;margin:0;padding:0">
+    <li class="phase"><div class="bar"><span class="dot">01</span><span class="gate"><svg class="ic " width="10" height="10" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>Gate 1 sign-off</span></div>
+      <h3>Discover</h3><span class="dur">1&ndash;2 weeks &middot; fixed fee</span>
+      <p>We study your systems, entities, reports and close calendar, then put the plan in writing.</p><ul><li>Mapping plan</li><li>Dashboard specifications</li><li>Fixed implementation quote</li></ul></li><li class="phase"><div class="bar"><span class="dot">02</span><span class="gate"><svg class="ic " width="10" height="10" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>Gate 2 sign-off</span></div>
+      <h3>Connect &amp; Map</h3><span class="dur">Build</span>
+      <p>Read-only connections to each source, and every account, entity, currency and dimension mapped into one structure.</p><ul><li>Working source connections</li><li>Mapping tables</li><li>Consolidation rules</li></ul></li><li class="phase"><div class="bar"><span class="dot">03</span><span class="gate"><svg class="ic " width="10" height="10" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>Gate 3 sign-off</span></div>
+      <h3>Validate &amp; Tie-out</h3><span class="dur">Prove it</span>
+      <p>We tie the loaded data back to your general ledger for recent closed months and clear every difference.</p><ul><li>Tie-out workbook by entity and month</li><li>Cleared variance log</li></ul></li><li class="phase"><div class="bar"><span class="dot">04</span><span class="gate"><svg class="ic " width="10" height="10" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5l3.5 3.5L16 5.5"/></svg>Gate 4 sign-off</span></div>
+      <h3>Deliver &amp; Handover</h3><span class="dur">Release</span>
+      <p>Reports go live only after they tie out. Your team is trained and has a runbook it can follow at month-end.</p><ul><li>Dashboards and board pack</li><li>Training sessions</li><li>Month-end runbook</li></ul></li>
+    </ol>
+  </div>
+  </div>
+</section>
+
+<section class="sec paper-2" aria-labelledby="p7-h">
   <div class="wrap split">
-    <div class="sticky"><span class="eyebrow rv">FAQ</span><h2 class="rv">Vena questions, answered plainly.</h2>
-      <p class="rv" style="color:var(--mut)">Other platforms we work with:</p><div class="chips rv"><a class="chip" href="datarails.html" style="text-decoration:none">Datarails</a><a class="chip" href="netsuite.html" style="text-decoration:none">NetSuite</a><a class="chip" href="business-central.html" style="text-decoration:none">Business Central</a><a class="chip" href="cube.html" style="text-decoration:none">Cube</a><a class="chip" href="planful.html" style="text-decoration:none">Planful</a><a class="chip" href="adaptive-planning.html" style="text-decoration:none">Adaptive Planning</a></div></div>
-    <div class="faq rv">
-<details><summary>Does TiePoint Finance partner with Vena?</summary><p>No. We are independent and not affiliated with Vena. Where Vena's own onboarding team is involved, we coordinate with them on your behalf.</p></details>
-<details><summary>Vena is already live for us. Where would you start?</summary><p>Yes. We start with a review of the model, templates and integrations, fix whatever causes errors or rework, and then add the reporting you are missing.</p></details>
-<details><summary>How does our ERP data get into Vena?</summary><p>Yes. We set up the integration so ledger actuals refresh on a schedule rather than through exported files.</p></details>
-<details><summary>Do you build Power BI reports on Vena data?</summary><p>Yes, where it suits your reporting. We make sure the Power BI figures agree with Vena and with the ledger.</p></details>
-<details><summary>How long does a Vena project take?</summary><p>Most land in the 6 to 10 week range; the number of entities, sources and templates decides where. The fixed quote from discovery sets it.</p></details>
-    </div>
+    <div class="sticky"><span class="eyebrow rv">Before you start</span><h2 class="rv" id="p7-h">Questions to ask before a Vena project.</h2><p class="lede rv">Answer these first and scope, timeline and risk become much clearer. The full list is in the <a href="../method.html#questionnaire" style="color:var(--accent-strong)">discovery questionnaire</a>.</p></div>
+    <ol class="asklist rv"><li>Who contributes to the budget, and who approves each part?</li><li>Which templates exist today and which can be retired?</li><li>How many entities and currencies are in scope?</li><li>Which reports must come out of Vena and which out of Power BI?</li></ol>
+  </div>
+</section>
+<section class="sec-tight"><div class="wrap"><span class="eyebrow rv">Go deeper</span><h2 class="rv" style="font-size:clamp(1.6rem,1.2rem + 1.4vw,2.2rem)">Related field guides</h2><div class="related" data-stagger><a class="card rv" href="../insights/choosing-an-fpa-platform.html"><span class="mono">Field guide &middot; 9 min read</span><h3>Choosing an FP&amp;A Platform: Datarails, Cube, Vena, Planful and Adaptive from Workday</h3><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></div></div></section>
+<section class="sec" aria-labelledby="p8-h">
+  <div class="wrap split">
+    <div class="sticky"><span class="eyebrow rv">FAQ</span><h2 class="rv" id="p8-h">Vena questions, answered plainly.</h2>
+      <p class="rv" style="color:var(--muted)">Other platforms we work with:</p><div class="chips rv"><a class="chip" href="datarails.html">Datarails</a><a class="chip" href="netsuite.html">NetSuite</a><a class="chip" href="business-central.html">Business Central</a><a class="chip" href="cube.html">Cube</a><a class="chip" href="planful.html">Planful</a><a class="chip" href="adaptive-planning.html">Adaptive Planning</a></div></div>
+    <div class="rv"><div class="faq"><details><summary>Does TiePoint Finance partner with Vena?<span class="pm" aria-hidden="true"></span></summary><p class="faq-a">No. We are independent and not affiliated with Vena. Where Vena's own onboarding team is involved, we coordinate with them on your behalf.</p></details><details><summary>Vena is already live for us. Where would you start?<span class="pm" aria-hidden="true"></span></summary><p class="faq-a">Yes. We start with a review of the model, templates and integrations, fix whatever causes errors or rework, and then add the reporting you are missing.</p></details><details><summary>How does our ERP data get into Vena?<span class="pm" aria-hidden="true"></span></summary><p class="faq-a">Yes. We set up the integration so ledger actuals refresh on a schedule rather than through exported files.</p></details><details><summary>Do you build Power BI reports on Vena data?<span class="pm" aria-hidden="true"></span></summary><p class="faq-a">Yes, where it suits your reporting. We make sure the Power BI figures agree with Vena and with the ledger.</p></details><details><summary>How long does a Vena project take?<span class="pm" aria-hidden="true"></span></summary><p class="faq-a">Most land in the 6 to 10 week range; the number of entities, sources and templates decides where. The fixed quote from discovery sets it.</p></details></div></div>
   </div>
 </section>
 </main>
-<section class="cta">
+<section class="cta grain" aria-labelledby="cta-h">
+  <div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap">
     <span class="eyebrow rv">Next step</span>
-    <h2 class="rv">Walk us through your Vena setup.</h2>
+    <h2 class="rv" id="cta-h">Walk us through your Vena setup.</h2>
     <p class="rv">Which systems feed it, how many entities you report on and what isn't working yet. We'll reply by email to arrange a discovery call.</p>
     <div class="actions rv">
-      <a class="btn btn-tie" href="mailto:hello@tiepointfinance.com?subject=Discovery%20call%20request%20-%20Vena&body=Hello%20TiePoint%20Finance%2C%0D%0A%0D%0ACompany%3A%0D%0ARole%3A%0D%0AERP%20and%20other%20source%20systems%3A%0D%0AFP%26A%20or%20BI%20tool%20(current%20or%20planned)%3A%0D%0ANumber%20of%20entities%20and%20currencies%3A%0D%0AWhat%20we%20want%20to%20fix%3A%0D%0A%0D%0AA%20few%20times%20that%20suit%20us%20for%20a%20call%3A%0D%0A">Book a Discovery Call <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M9 1l4 4-4 4M13 5H1" stroke="currentColor" stroke-width="1.6"/></svg></a>
-      <a class="btn btn-line" href="../demo.html">Explore the demo</a>
+      <a class="btn btn-tie" href="../contact.html" data-book data-subject="Vena">Book a Discovery Call <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+      <a class="btn btn-line" href="../method.html#questionnaire">See the discovery questions</a>
     </div>
-    <div class="addr rv">hello@tiepointfinance.com &middot; 5900 Spout Springs Road, Unit 3C-1069, Flowery Branch, GA 30542</div>
+    <div class="addr rv">P CHAK Consulting LLC &middot; 5900 Spout Springs Road, Unit 3C-1069, Flowery Branch, GA 30542</div>
   </div>
 </section>
 <footer class="site-foot">
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#132036" stroke="rgba(238,240,234,.18)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" stroke="#EEF0EA" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" stroke="#19B795" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" fill="#19B795" stroke="#132036" stroke-width="1.2"/><path d="M7 24H25M7 27H25" stroke="#19B795" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+        <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
         <p>Finance systems implementation and integration. Every number ties out.</p>
-        <p>TiePoint Finance is a P CHAK Consulting company.<br>5900 Spout Springs Road, Unit 3C-1069, Flowery Branch, GA 30542<br><a href="mailto:hello@tiepointfinance.com" style="color:inherit">hello@tiepointfinance.com</a></p>
+        <p>TiePoint Finance is a P CHAK Consulting company.<br>5900 Spout Springs Road, Unit 3C-1069, Flowery Branch, GA 30542<br><a data-email href="../contact.html" style="color:inherit">Contact page</a></p>
       </div>
-      <div class="foot-col">
-        <span class="mono">Company</span>
-        <a href="../index.html">Home</a>
-        <a href="../services.html">Services</a>
-        <a href="../demo.html">Demo dashboard</a>
-        <a href="../about.html">About</a>
-        <a href="../contact.html">Contact</a>
-      </div>
-      <div class="foot-col">
-        <span class="mono">Platforms</span>
-        <a href="../platforms/index.html">All platforms</a>
-      <a href="../platforms/datarails.html">Datarails</a>
-      <a href="../platforms/netsuite.html">NetSuite</a>
-      <a href="../platforms/business-central.html">Business Central</a>
-      <a href="../platforms/cube.html">Cube</a>
-      <a href="../platforms/vena.html">Vena</a>
-      <a href="../platforms/planful.html">Planful</a>
-      <a href="../platforms/adaptive-planning.html">Adaptive Planning</a>
-      </div>
-      <div class="foot-col">
-        <span class="mono">Legal</span>
-        <a href="../privacy.html">Privacy</a>
-        <a href="../terms.html">Terms</a>
-        <a href="mailto:hello@tiepointfinance.com?subject=Discovery%20call%20request%20-%20TiePoint%20Finance&body=Hello%20TiePoint%20Finance%2C%0D%0A%0D%0ACompany%3A%0D%0ARole%3A%0D%0AERP%20and%20other%20source%20systems%3A%0D%0AFP%26A%20or%20BI%20tool%20(current%20or%20planned)%3A%0D%0ANumber%20of%20entities%20and%20currencies%3A%0D%0AWhat%20we%20want%20to%20fix%3A%0D%0A%0D%0AA%20few%20times%20that%20suit%20us%20for%20a%20call%3A%0D%0A">Book a Discovery Call</a>
-      </div>
+      <nav class="foot-col" aria-label="Company"><h2>Company</h2><ul>
+        <li><a href="../index.html">Home</a></li><li><a href="../services.html">Services</a></li><li><a href="../method.html">The TiePoint Method</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Platforms"><h2>Platforms</h2><ul><li><a href="../platforms/index.html">All platforms</a></li>
+<li><a href="../platforms/datarails.html">Datarails</a></li>
+<li><a href="../platforms/netsuite.html">NetSuite</a></li>
+<li><a href="../platforms/business-central.html">Business Central</a></li>
+<li><a href="../platforms/cube.html">Cube</a></li>
+<li><a href="../platforms/vena.html">Vena</a></li>
+<li><a href="../platforms/planful.html">Planful</a></li>
+<li><a href="../platforms/adaptive-planning.html">Adaptive Planning</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Resources"><h2>Resources</h2><ul>
+        <li><a href="../insights/index.html">Insights</a></li><li><a href="../glossary.html">Glossary</a></li><li><a href="../method.html#questionnaire">Discovery questionnaire</a></li><li><a href="../demo.html">Demo dashboard</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Legal"><h2>Legal</h2><ul>
+        <li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a class="" href="../contact.html" data-book>Book a Discovery Call</a></li></ul></nav>
     </div>
+    <div class="foot-mark" aria-hidden="true">Every number ties out.</div>
     <div class="foot-legal">
       <p>TiePoint Finance is an independent consultancy. We are not affiliated with, endorsed by or a certified partner of any software vendor named on this site. Contracts are with P CHAK Consulting LLC.</p>
-      <p>Datarails, NetSuite, Oracle, Microsoft, Dynamics 365, Business Central, Power BI, Excel, SAP, Sage Intacct, QuickBooks, Xero, Salesforce, HubSpot, Workday, Workday Adaptive Planning, Cube, Vena, Planful and Google Sheets are trademarks or registered trademarks of their respective owners. They are used here only to describe the systems we work with.</p>
-      <p>Any figures shown in demos and animations on this site are for illustration only. Figures are simulated and do not describe any client.</p>
+      <p>Datarails, NetSuite, Oracle, Microsoft, Dynamics 365, Business Central, Power BI, Excel, SAP, Sage Intacct, QuickBooks, Xero, Salesforce, HubSpot, Workday, Workday Adaptive Planning, Cube, Vena, Planful, Google and Google Sheets are trademarks or registered trademarks of their respective owners. They are used here only to describe the systems we work with.</p>
+      <p>Any figures shown in demos, diagrams and animations on this site are for illustration only. Figures are simulated and do not describe any client.</p>
     </div>
     <div class="foot-bottom">
       <span>&copy; <span data-year>2026</span> P CHAK Consulting LLC</span>

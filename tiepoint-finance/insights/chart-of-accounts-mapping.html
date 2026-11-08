@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chart of Accounts Mapping for Multi-Entity Groups | TiePoint Finance Insights</title>
+<meta name="description" content="How to design a group reporting chart of accounts, map every local ledger into it, and keep the mapping correct as entities, accounts and owners change.">
+<link rel="canonical" href="https://www.tiepointfinance.com/insights/chart-of-accounts-mapping">
+<meta name="theme-color" content="#0A1220">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TiePoint Finance">
+<meta property="og:title" content="Chart of Accounts Mapping for Multi-Entity Groups | TiePoint Finance Insights">
+<meta property="og:description" content="How to design a group reporting chart of accounts, map every local ledger into it, and keep the mapping correct as entities, accounts and owners change.">
+<meta property="og:url" content="https://www.tiepointfinance.com/insights/chart-of-accounts-mapping">
+<meta property="og:image" content="https://www.tiepointfinance.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TiePoint Finance. Every number ties out.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chart of Accounts Mapping for Multi-Entity Groups | TiePoint Finance Insights">
+<meta name="twitter:description" content="How to design a group reporting chart of accounts, map every local ledger into it, and keep the mapping correct as entities, accounts and owners change.">
+<meta name="twitter:image" content="https://www.tiepointfinance.com/assets/og-image.png">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://www.tiepointfinance.com/#org", "name": "TiePoint Finance", "slogan": "Every number ties out.", "url": "https://www.tiepointfinance.com/", "logo": "https://www.tiepointfinance.com/assets/apple-touch-icon.png", "image": "https://www.tiepointfinance.com/assets/og-image.png", "description": "Independent finance systems implementation and integration: ERP, CRM, HRIS and bank data connected into FP&A platforms and Power BI, reconciled to the general ledger.", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}, "areaServed": "Worldwide", "knowsAbout": ["FP&A implementation", "Financial consolidation", "General ledger reconciliation", "ERP integration", "Power BI"], "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "url": "https://www.tiepointfinance.com/contact"}, "parentOrganization": {"@type": "Organization", "name": "P CHAK Consulting LLC", "address": {"@type": "PostalAddress", "streetAddress": "5900 Spout Springs Road, Unit 3C-1069", "addressLocality": "Flowery Branch", "addressRegion": "GA", "postalCode": "30542", "addressCountry": "US"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tiepointfinance.com/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.tiepointfinance.com/insights/"}, {"@type": "ListItem", "position": 3, "name": "Chart of Accounts Mapping for Multi-Entity Groups", "item": "https://www.tiepointfinance.com/insights/chart-of-accounts-mapping"}]}, {"@type": "Article", "headline": "Chart of Accounts Mapping for Multi-Entity Groups", "description": "How to design a group reporting chart of accounts, map every local ledger into it, and keep the mapping correct as entities, accounts and owners change.", "mainEntityOfPage": "https://www.tiepointfinance.com/insights/chart-of-accounts-mapping", "author": {"@type": "Person", "name": "Priyankar Chakraborty"}, "publisher": {"@id": "https://www.tiepointfinance.com/#org"}, "image": "https://www.tiepointfinance.com/assets/og-image.png", "wordCount": 2371}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="../services.html">Services</a>
+      <a href="../method.html">Method</a>
+      <a href="../platforms/index.html">Platforms</a>
+      <a href="../insights/index.html" aria-current="page">Insights</a>
+      <a href="../glossary.html">Glossary</a>
+      <a href="../demo.html">Demo</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a class="nav-cta" href="../contact.html" data-book>Book a Discovery Call</a>
+    </nav>
+  </div>
+</header>
+<div class="progress" aria-hidden="true"></div>
+<main id="main">
+<section class="page-hero art-hero grain"><div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../index.html">Home</a></li><li><a href="../insights/index.html">Insights</a></li><li><span aria-current="page">Field guide</span></li></ol></nav>
+    <span class="eyebrow">Field guide</span>
+    <h1>Chart of Accounts Mapping for Multi-Entity Groups</h1>
+    <p class="lede">How to design a group reporting chart of accounts, map every local ledger into it, and keep the mapping correct as entities, accounts and owners change.</p>
+    <div class="art-meta"><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l2.5 2"/></svg>11 min read</span><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10" cy="7" r="3"/><path d="M4 17c.8-3 3.2-4.5 6-4.5s5.2 1.5 6 4.5"/></svg>Priyankar Chakraborty</span><span><svg class="ic " width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4.5A1.5 1.5 0 015.5 3H16v12H5.5A1.5 1.5 0 004 16.5zM4 16.5A1.5 1.5 0 005.5 18H16"/></svg>11 sections</span></div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap art-layout">
+    <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#why-mapping-is-where-consolidation-quality-is-decided">Why mapping is where consolidation quality is decided</a></li><li><a href="#part-1-designing-the-group-reporting-coa">Part 1: Designing the group reporting CoA</a></li><li><a href="#part-2-accounts-versus-dimensions">Part 2: Accounts versus dimensions</a></li><li><a href="#part-3-mapping-the-local-coas">Part 3: Mapping the local CoAs</a></li><li><a href="#part-4-worked-mapping-table-example">Part 4: Worked mapping-table example</a></li><li><a href="#part-5-new-and-unmapped-accounts">Part 5: New and unmapped accounts</a></li><li><a href="#part-6-governance-and-change-control">Part 6: Governance and change control</a></li><li><a href="#platform-notes">Platform notes</a></li><li><a href="#artifact-group-coa-design-checklist">Artifact: group CoA design checklist</a></li><li><a href="#where-tiepoint-fits">Where TiePoint fits</a></li><li><a href="#sources-h">Sources</a></li></ol></nav>
+    <article class="article">
+      <aside class="takeaways" aria-label="Key takeaways"><h2>Key takeaways</h2><ul><li>A group reporting chart of accounts (group CoA) is designed for <strong>reporting and analysis</strong>, not for booking. It should be smaller than any local CoA and shaped by the reports and cash flow you need to produce.</li><li>Decide early what is an <strong>account</strong> and what is a <strong>dimension</strong>. The rule we use: if it changes <em>what</em> the item is, it is an account. If it describes <em>who, where or what for</em>, it is a dimension.</li><li>Map <strong>explicitly, account by account</strong>, with effective dates. Ranges are convenient and are the most common source of double counting.</li><li>Every mapping design needs a defined path for <strong>new accounts</strong>: detect them on the next load, hold them in a visible suspense line, and block release until they are mapped.</li><li>Treat the mapping table as a <strong>controlled document</strong>: an owner, change requests, impact analysis, versioning, and a tie-out re-run after every change.</li></ul></aside>
+      
+<p class="who-for"><strong>Who this is for:</strong> group controllers, FP&amp;A leads and finance systems managers bringing several legal entities, often on different ERPs, into one planning or reporting platform; and finance teams in global capability centers and shared service centers who maintain the mapping on behalf of a global group.</p>
+
+<hr />
+<h2 id="why-mapping-is-where-consolidation-quality-is-decided">Why mapping is where consolidation quality is decided</h2>
+<p>In a multi-entity group, local ledgers are built for local needs: statutory formats, local tax accounts, the habits of whoever set the ledger up. The group needs one consistent view. The mapping is the translation between the two, and errors in it are hard to see. An account mapped to the wrong line does not make the totals wrong. It makes the <em>analysis</em> wrong: gross margin, opex ratios, EBITDA, the cash flow. That is why mapping completeness is the first of our Five <a class="gl" href="../glossary.html#tie-out">Tie-out</a> Checks (every GL account mapped exactly once), and why we spend real time on mapping design in the Connect &amp; Map phase of the TiePoint Method.</p>
+<h2 id="part-1-designing-the-group-reporting-coa">Part 1: Designing the group reporting CoA</h2>
+<h3>Start from the outputs</h3>
+<p>Design backwards from what the group has to produce:</p>
+<ul>
+<li>the management P&amp;L (and its KPIs: gross margin, contribution, EBITDA),</li>
+<li>the balance sheet at the level the board and lenders read it,</li>
+<li>the cash flow statement, usually by the indirect method,</li>
+<li>any covenant, segment or statutory reconciliation schedules,</li>
+<li>budget and forecast templates, which will be built on the same structure.</li>
+</ul>
+<p>Every group account should exist because at least one of these outputs needs it. If no report uses an account, it does not belong in the group CoA.</p>
+<h3>A four-level hierarchy</h3>
+<p>A structure that works in most FP&amp;A platforms:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Example</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Statement</td>
+<td>Income statement</td>
+<td>Top of the tree</td>
+</tr>
+<tr>
+<td>Section</td>
+<td>Operating expenses</td>
+<td>Subtotals in reports</td>
+</tr>
+<tr>
+<td>Reporting line</td>
+<td>Sales &amp; marketing</td>
+<td>Lines in the management P&amp;L</td>
+</tr>
+<tr>
+<td>Group account</td>
+<td>6210 Paid advertising</td>
+<td>The level local accounts map to</td>
+</tr>
+</tbody>
+</table></div>
+<p>Keep group account numbers in blocks that mirror the sections (for example 4xxx revenue, 5xxx cost of sales, 6xxx operating expenses). Readable numbering makes review faster and makes errors visible.</p>
+<h3>Design rules that save rework</h3>
+<ol>
+<li><strong>Use natural sign consistently.</strong> Decide whether the platform stores credits as negatives (ledger sign) or presents revenue and liabilities as positive (natural sign), and apply the conversion in one place only. Applying it in two places is a common source of the "Sign Flip" failure described in our tie-out guide.</li>
+<li><strong>Give the cash flow what it needs.</strong> The indirect cash flow is built from balance sheet movements. If capital expenditure, depreciation, working capital categories, debt and equity are not distinguishable in the group CoA, the cash flow will need manual adjustments every month. Separate, for example, trade receivables from other receivables and accrued liabilities from trade payables.</li>
+<li><strong>Separate intercompany accounts by type.</strong> Intercompany receivables, payables, revenue, cost, loans, interest and management fees each need their own group accounts, with the counterparty held in a dimension. This is what makes eliminations and the intercompany zero-check possible.</li>
+<li><strong>Keep realized and unrealized FX apart.</strong> Realized gains and losses, unrealized revaluation, and the translation adjustment in equity behave differently and are reviewed differently.</li>
+<li><strong>Hold statutory-only detail below the line.</strong> Local tax accounts and statutory reclassification accounts can map into a small number of group accounts. The detail stays available by drilling into the source account.</li>
+<li><strong>Plan for the budget.</strong> Planners will budget at the group account or reporting line level. If a line is too detailed to budget, it is probably too detailed for the group CoA.</li>
+</ol>
+<h2 id="part-2-accounts-versus-dimensions">Part 2: Accounts versus dimensions</h2>
+<p>The most expensive design mistake is encoding dimensions into accounts: "Travel – Sales", "Travel – Engineering", "Travel – UK". It multiplies accounts, breaks when the organization changes, and makes comparisons across entities impossible.</p>
+<p><strong>Our rule:</strong> if it changes <em>what the item is</em>, it is an account. If it describes <em>who incurred it, where, or for what</em>, it is a <a class="gl" href="../glossary.html#dimension">dimension</a>.</p>
+<p>Common dimensions in group reporting:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Typical source</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Department / cost center</td>
+<td>ERP department, class, cost center</td>
+<td>Needs its own group mapping: local departments rarely match across entities</td>
+</tr>
+<tr>
+<td>Location / site</td>
+<td>ERP location</td>
+<td>Often needed for multi-site P&amp;Ls</td>
+</tr>
+<tr>
+<td>Project / job</td>
+<td>Project or job module</td>
+<td>For services groups and capitalization</td>
+</tr>
+<tr>
+<td>Product line / segment</td>
+<td>Item, class or custom segment</td>
+<td>Drives margin analysis and segment reporting</td>
+</tr>
+<tr>
+<td>Customer or channel</td>
+<td>Customer record, CRM</td>
+<td>Usually summarized, not at full customer grain</td>
+</tr>
+<tr>
+<td>Intercompany partner</td>
+<td>Counterparty field on IC transactions</td>
+<td>Required for eliminations</td>
+</tr>
+</tbody>
+</table></div>
+<p>ERPs name these differently. NetSuite uses departments, classes and locations, plus custom segments. Business Central uses dimensions and dimension values, and its <a class="gl" href="../glossary.html#consolidation">consolidation</a> setup lets you map a business unit's dimension value to a different value in the consolidated company through a <strong>Consolidation Code</strong>. Your design should name the group dimension once and map each source field into it.</p>
+<p><strong>Dimension mapping is its own <a class="gl" href="../glossary.html#mapping-table">mapping table</a>.</strong> Treat local department codes exactly like local accounts: each one mapped once to a group department, with a defined home for lines that carry no department at all. Lines with blank dimensions that are silently dropped by a report filter are the "Dimension Leak" failure mode.</p>
+<h2 id="part-3-mapping-the-local-coas">Part 3: Mapping the local CoAs</h2>
+<h3>Mapping types</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+<th>Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One-to-one</td>
+<td>Local 4000 Sales → Group 4100 Product revenue</td>
+<td>The default</td>
+</tr>
+<tr>
+<td>Many-to-one</td>
+<td>Local 6110, 6120, 6130 → Group 6210 Paid advertising</td>
+<td>Fine, and the most common</td>
+</tr>
+<tr>
+<td>One-to-many (split)</td>
+<td>Local 6500 Consulting → partly Cost of sales, partly Opex</td>
+<td>Avoid where possible. Prefer a conditional rule on a dimension, or ask the entity to split the account at source</td>
+</tr>
+<tr>
+<td>Conditional</td>
+<td>Local 6400 Salaries, department = Delivery → Group 5200 Cost of services; any other department → Group 6100 Salaries</td>
+<td>Powerful and necessary; document and test each condition</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Explicit lists versus ranges</h3>
+<p>Ranges ("all accounts 6000–6999 map to Opex") are quick to write and fragile. They hide new accounts that should have been reviewed, and they double count when an explicit exception is added inside the range without being excluded from it. We map explicitly at account level and use ranges, if at all, only as a default that routes to a <strong>review</strong> line, never to a final reporting line.</p>
+<h3>Effective dating</h3>
+<p>Every mapping row needs an <strong>effective-from</strong> and <strong>effective-to</strong> period. Without it, a remapping silently restates history. With it, you can choose deliberately between:</p>
+<ul>
+<li><strong>Prospective change:</strong> the new mapping applies from a stated period; history stays as reported.</li>
+<li><strong>Restatement:</strong> the new mapping applies to all periods, and comparatives are restated, with a note in the next pack.</li>
+</ul>
+<p>Both are legitimate. What is not acceptable is restating history by accident.</p>
+<h2 id="part-4-worked-mapping-table-example">Part 4: Worked mapping-table example</h2>
+<p><em>Illustrative example. Entities, accounts and codes are invented.</em></p>
+<p>A group with three entities: a US parent on NetSuite (USD), a UK subsidiary on Xero (GBP) and a <a class="gl" href="../glossary.html#shared-service-center">shared service center</a> subsidiary (SC01) on a local ledger in its own currency, set up in April of Year 1.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Source account</th>
+<th>Source name</th>
+<th>Condition</th>
+<th>Group account</th>
+<th>Reporting line</th>
+<th>Sign</th>
+<th>Effective from</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US01</td>
+<td>4000</td>
+<td>Product Sales</td>
+<td>–</td>
+<td>4100</td>
+<td>Product revenue</td>
+<td>Flip</td>
+<td>Jan Y1</td>
+<td>US controller</td>
+</tr>
+<tr>
+<td>US01</td>
+<td>4050</td>
+<td>Sales – Intercompany</td>
+<td>IC partner required</td>
+<td>4900</td>
+<td>IC revenue (eliminated)</td>
+<td>Flip</td>
+<td>Jan Y1</td>
+<td>US controller</td>
+</tr>
+<tr>
+<td>UK01</td>
+<td>200</td>
+<td>Sales</td>
+<td>–</td>
+<td>4100</td>
+<td>Product revenue</td>
+<td>Flip</td>
+<td>Jan Y1</td>
+<td>UK FM</td>
+</tr>
+<tr>
+<td>UK01</td>
+<td>260</td>
+<td>Recharges to Group</td>
+<td>IC partner = US01</td>
+<td>4910</td>
+<td>IC management fee income</td>
+<td>Flip</td>
+<td>Jan Y1</td>
+<td>UK FM</td>
+</tr>
+<tr>
+<td>SC01</td>
+<td>300100</td>
+<td>Service revenue – group</td>
+<td>IC partner required</td>
+<td>4920</td>
+<td>IC service revenue</td>
+<td>Flip</td>
+<td>Apr Y1</td>
+<td>Service center FC</td>
+</tr>
+<tr>
+<td>US01</td>
+<td>6400</td>
+<td>Salaries &amp; Wages</td>
+<td>Dept = Delivery</td>
+<td>5200</td>
+<td>Cost of services</td>
+<td>As is</td>
+<td>Jan Y1</td>
+<td>US controller</td>
+</tr>
+<tr>
+<td>US01</td>
+<td>6400</td>
+<td>Salaries &amp; Wages</td>
+<td>Dept ≠ Delivery</td>
+<td>6100</td>
+<td>Salaries</td>
+<td>As is</td>
+<td>Jan Y1</td>
+<td>US controller</td>
+</tr>
+<tr>
+<td>UK01</td>
+<td>477</td>
+<td>Salaries</td>
+<td>–</td>
+<td>6100</td>
+<td>Salaries</td>
+<td>As is</td>
+<td>Jan Y1</td>
+<td>UK FM</td>
+</tr>
+<tr>
+<td>SC01</td>
+<td>500200</td>
+<td>Salaries and allowances</td>
+<td>–</td>
+<td>6100</td>
+<td>Salaries</td>
+<td>As is</td>
+<td>Apr Y1</td>
+<td>Service center FC</td>
+</tr>
+<tr>
+<td>SC01</td>
+<td>500900</td>
+<td>Pension and retirement benefits</td>
+<td>–</td>
+<td>6120</td>
+<td>Employee benefits</td>
+<td>As is</td>
+<td>Apr Y1</td>
+<td>Service center FC</td>
+</tr>
+<tr>
+<td>US01</td>
+<td>6810</td>
+<td>Software subscriptions</td>
+<td>–</td>
+<td>6420</td>
+<td>Software &amp; IT</td>
+<td>As is</td>
+<td>Jan Y1</td>
+<td>US controller</td>
+</tr>
+<tr>
+<td>UK01</td>
+<td>463</td>
+<td>IT Software and Consumables</td>
+<td>–</td>
+<td>6420</td>
+<td>Software &amp; IT</td>
+<td>As is</td>
+<td>Jan Y1</td>
+<td>UK FM</td>
+</tr>
+<tr>
+<td>US01</td>
+<td>7900</td>
+<td>Unrealized FX Gain/Loss</td>
+<td>–</td>
+<td>7920</td>
+<td>FX – unrealized</td>
+<td>Flip</td>
+<td>Jan Y1</td>
+<td>US controller</td>
+</tr>
+</tbody>
+</table></div>
+<p>Points to notice:</p>
+<ul>
+<li><strong>Sign handling is a column, applied once.</strong> Revenue and gains are flipped to natural sign; expenses are left as is.</li>
+<li><strong>Intercompany accounts map to dedicated group accounts</strong> and require a partner value. A row with no partner fails validation.</li>
+<li><strong>The conditional salaries rule</strong> (US01 6400) has two rows that together cover every case: "Delivery" and "not Delivery". A rule with gaps is an unmapped account in disguise.</li>
+<li><strong>The service center's rows are effective from April</strong>, the month the entity was set up, so the mapping history starts with its first period in the group and no earlier periods are affected.</li>
+<li><strong>Owners are named roles,</strong> not individuals, so the table survives staff changes.</li>
+</ul>
+<p><strong>Validation tests to run on this table every time it changes:</strong></p>
+<ol>
+<li>Every (entity, account) with activity has at least one row covering every period in scope.</li>
+<li>No (entity, account, condition, period) appears twice.</li>
+<li>Conditional rules are exhaustive (the conditions cover all values, including blank).</li>
+<li>Every IC group account row requires a partner value.</li>
+<li>Sign convention is consistent per group account type.</li>
+</ol>
+<h2 id="part-5-new-and-unmapped-accounts">Part 5: New and unmapped accounts</h2>
+<p>New accounts are created all the time: a new bank account, a new expense type, a new statutory requirement. The design question is not <em>whether</em> an unmapped account will appear, but <em>how fast you will know</em>.</p>
+<p>A control pattern we recommend:</p>
+<ol>
+<li><strong>Detect on every load.</strong> The unmapped test (an anti-join of accounts with activity against the mapping table) runs on every refresh, not only at month-end.</li>
+<li><strong>Hold, do not guess.</strong> Unmapped balances land in a visible "Unmapped – review" line that appears in every P&amp;L and balance sheet view until it is cleared. Never auto-map new accounts by number range into a final line.</li>
+<li><strong>Alert the owner.</strong> The mapping owner for that entity is notified with the account number, name, type and current balance.</li>
+<li><strong>Block release.</strong> No report is released for a period with a non-zero unmapped line. This is the "unmapped = 0" pass condition in Check 1.</li>
+<li><strong>Fix upstream too.</strong> Where the ERP allows it, add a field to the account creation request ("group reporting account") so that the mapping is decided when the account is created, not when it first appears in a report.</li>
+</ol>
+<h2 id="part-6-governance-and-change-control">Part 6: Governance and change control</h2>
+<p>The mapping table should be governed like any other financial control.</p>
+<p><strong>Ownership.</strong> One named role owns the group CoA and the mapping standard (usually the group controller or the finance systems manager). Each <a class="gl" href="../glossary.html#entity">entity</a> has a mapping owner responsible for its rows.</p>
+<p><strong>Change request.</strong> Any change records: the rows affected, the reason, the proposed effective period, whether history is restated, and who requested it.</p>
+<p><strong>Impact analysis.</strong> Before approval, list which reports, KPIs, budgets and covenant calculations use the affected group accounts, and quantify the change for the periods affected.</p>
+<p><strong>Approval and versioning.</strong> Changes are approved by the owner, given a <a class="gl" href="../glossary.html#version">version</a> number, and logged. The version in force is recorded in each month's tie-out evidence pack.</p>
+<p><strong>Test.</strong> After the change, re-run the Five Tie-out Checks for the affected periods.</p>
+<p><strong>Communicate.</strong> If history is restated, say so in the next management pack, with the amount.</p>
+<p><strong>Periodic review.</strong> Once a quarter, review the table for accounts with no activity, conditional rules that no longer match the organization, and owners who have changed.</p>
+<h2 id="platform-notes">Platform notes</h2>
+<ul>
+<li><strong>Business Central</strong> supports mapping at consolidation: each business unit's posting accounts can be mapped to consolidated accounts through the <strong>Consol. Debit Acc.</strong> and <strong>Consol. Credit Acc.</strong> fields; if left blank, the same account number is assumed. That default is convenient and risky when numbering differs between companies: an account number that exists in both companies but means different things will be consolidated without warning.</li>
+<li><strong>NetSuite OneWorld</strong> lets one account be associated with one or more subsidiaries, so groups that run all entities in a single NetSuite account often share one CoA. A group CoA mapping is still useful for reporting lines, for entities outside NetSuite, and for keeping the reporting structure independent of the booking structure.</li>
+<li><strong>FP&amp;A platforms</strong> generally hold their own mapping layer. Cube, for example, describes mapping source data once to your chart of accounts and dimensions, and Datarails describes a Data Mapper for standardizing data from different entities and formats. Whichever platform you use, keep the mapping table exportable so it can be reviewed and versioned outside the tool.</li>
+</ul>
+<h2 id="artifact-group-coa-design-checklist">Artifact: group CoA design checklist</h2>
+<ul class="checklist">
+<li>Group CoA derived from the required outputs (P&amp;L, balance sheet, cash flow, KPIs, covenants)</li>
+<li>Four-level hierarchy defined (statement, section, reporting line, group account)</li>
+<li>Natural sign convention decided and applied in one place</li>
+<li>Cash flow categories distinguishable in balance sheet accounts</li>
+<li>Separate IC accounts by type, with partner dimension required</li>
+<li>Realized FX, unrealized FX and CTA kept apart</li>
+<li>Accounts versus dimensions rule applied; no dimensions encoded in account names</li>
+<li>Dimension mapping tables built, including a home for blank values</li>
+<li>Explicit account-level mapping with effective dates</li>
+<li>Conditional rules exhaustive and tested</li>
+<li>Unmapped detection on every load, suspense line visible, release blocked if non-zero</li>
+<li>Owner, change request, approval, versioning and quarterly review in place</li>
+</ul>
+<h2 id="where-tiepoint-fits">Where TiePoint fits</h2>
+<p><a class="gl" href="../glossary.html#chart-of-accounts">Chart of accounts</a> mapping is the core of the Connect &amp; Map phase in the TiePoint Method. We design the group structure with your controllers, build mapping tables your team can maintain, set up the new-account controls, and prove the result with the Five Tie-out Checks before any dashboard is built on top.</p>
+<p>If you want this done for your team, start with a paid discovery. You will get a mapping plan for every entity in scope and a fixed quote for the implementation.</p>
+
+      <section class="sources" aria-labelledby="sources-h"><h2 id="sources-h">Sources</h2><ol><li>Microsoft Learn, "Set up company consolidation" (Business Central consolidation accounts, dimensions and Consolidation Code): <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/finance-consolidated-company-reporting-setup" rel="noopener">https://learn.microsoft.com/en-us/dynamics365/business-central/finance-consolidated-company-reporting-setup</a></li><li>Oracle NetSuite Help Center, "Account Setup in OneWorld": <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N275342.html" rel="noopener">https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N275342.html</a></li><li>Cube, Integrations (mapping source data to chart of accounts and dimensions): <a href="https://www.cubesoftware.com/integrations" rel="noopener">https://www.cubesoftware.com/integrations</a></li><li>Datarails, Consolidation (Data Mapper): <a href="https://www.datarails.com/solutions/consolidation/" rel="noopener">https://www.datarails.com/solutions/consolidation/</a></li></ol></section>
+      <div class="disclaimer" role="note"><strong>Disclaimer.</strong> This guide is general information about finance systems and reporting practice. It is not accounting, tax, legal or investment advice. Product features change, so confirm details in each vendor's current documentation before you rely on them.</div>
+      <aside class="art-cta"><div><h2>Want this applied to your systems?</h2><p>Paid Discovery takes one to two weeks at a fixed fee and ends with a mapping plan, dashboard specifications and a fixed quote.</p></div><a class="btn btn-tie" href="../contact.html" data-book data-subject="Paid Discovery">Book Paid Discovery <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a></aside>
+    </article>
+  </div>
+</section>
+<section class="sec-tight paper-2"><div class="wrap"><h2 class="rv" style="font-size:1.6rem">More field guides</h2><div class="grid g3" data-stagger><a class="card lib-card rv" href="tie-out-playbook.html"><span class="meta"><span>Field guide</span><span>13 min read</span></span><h3>The Tie-out Playbook: Proving FP&amp;A and Dashboard Numbers Reconcile to the General Ledger</h3><p>The Five Tie-out Checks in detail, a twelve-pattern failure-mode catalog with detection tests, and a tie-out workbook template with a monthly release checklist.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="card lib-card rv" href="consolidation-intercompany-eliminations.html"><span class="meta"><span>Field guide</span><span>12 min read</span></span><h3>Multi-Entity Consolidation and Intercompany Eliminations</h3><p>Every common elimination type, how to classify and resolve intercompany mismatches, NCI at a high level, and a fully worked three-entity consolidation example.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="card lib-card rv" href="foreign-currency-translation.html"><span class="meta"><span>Field guide</span><span>11 min read</span></span><h3>Foreign Currency Translation for Consolidated Reporting</h3><p>Functional versus presentation currency, the current-rate method under ASC 830 and IAS 21, how to recompute the CTA independently, monthly translation in FP&amp;A platforms and rate governance.</p><span class="go">Read the guide <svg class="ic " width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></div></div></section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="../index.html" aria-label="TiePoint Finance home"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" style="fill:var(--ink-3);stroke:var(--line-ink)"/><path d="M7 7.5L15.5 14M7 20.5L15.5 14" style="stroke:var(--on-ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 14H25" style="stroke:var(--accent)" stroke-width="1.8" stroke-linecap="round"/><circle cx="15.5" cy="14" r="3" style="fill:var(--accent);stroke:var(--ink-3)" stroke-width="1.2"/><path d="M7 24H25M7 27H25" style="stroke:var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg><span class="brand-name">TiePoint <b>Finance</b></span></a>
+        <p>Finance systems implementation and integration. Every number ties out.</p>
+        <p>TiePoint Finance is a P CHAK Consulting company.<br>5900 Spout Springs Road, Unit 3C-1069, Flowery Branch, GA 30542<br><a data-email href="../contact.html" style="color:inherit">Contact page</a></p>
+      </div>
+      <nav class="foot-col" aria-label="Company"><h2>Company</h2><ul>
+        <li><a href="../index.html">Home</a></li><li><a href="../services.html">Services</a></li><li><a href="../method.html">The TiePoint Method</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Platforms"><h2>Platforms</h2><ul><li><a href="../platforms/index.html">All platforms</a></li>
+<li><a href="../platforms/datarails.html">Datarails</a></li>
+<li><a href="../platforms/netsuite.html">NetSuite</a></li>
+<li><a href="../platforms/business-central.html">Business Central</a></li>
+<li><a href="../platforms/cube.html">Cube</a></li>
+<li><a href="../platforms/vena.html">Vena</a></li>
+<li><a href="../platforms/planful.html">Planful</a></li>
+<li><a href="../platforms/adaptive-planning.html">Adaptive Planning</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Resources"><h2>Resources</h2><ul>
+        <li><a href="../insights/index.html">Insights</a></li><li><a href="../glossary.html">Glossary</a></li><li><a href="../method.html#questionnaire">Discovery questionnaire</a></li><li><a href="../demo.html">Demo dashboard</a></li></ul></nav>
+      <nav class="foot-col" aria-label="Legal"><h2>Legal</h2><ul>
+        <li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a class="" href="../contact.html" data-book>Book a Discovery Call</a></li></ul></nav>
+    </div>
+    <div class="foot-mark" aria-hidden="true">Every number ties out.</div>
+    <div class="foot-legal">
+      <p>TiePoint Finance is an independent consultancy. We are not affiliated with, endorsed by or a certified partner of any software vendor named on this site. Contracts are with P CHAK Consulting LLC.</p>
+      <p>Datarails, NetSuite, Oracle, Microsoft, Dynamics 365, Business Central, Power BI, Excel, SAP, Sage Intacct, QuickBooks, Xero, Salesforce, HubSpot, Workday, Workday Adaptive Planning, Cube, Vena, Planful, Google and Google Sheets are trademarks or registered trademarks of their respective owners. They are used here only to describe the systems we work with.</p>
+      <p>Any figures shown in demos, diagrams and animations on this site are for illustration only. Figures are simulated and do not describe any client.</p>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year>2026</span> P CHAK Consulting LLC</span>
+      <span><a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></span>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
