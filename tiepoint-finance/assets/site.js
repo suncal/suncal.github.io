@@ -18,7 +18,14 @@
   function mailto(subject) {
     return "mailto:" + BOOKING_EMAIL + "?subject=" + encodeURIComponent(subject || DEFAULT_SUBJECT) + "&body=" + encodeURIComponent(BODY);
   }
+  /* BOOKING_URL: the Cal.com discovery-call page. Every [data-book] link opens it. */
+  var BOOKING_URL = "https://cal.com/tiepoint/discovery";
   document.querySelectorAll("[data-book]").forEach(function (a) {
+    a.setAttribute("href", BOOKING_URL);
+    a.setAttribute("target", "_blank");
+    a.setAttribute("rel", "noopener");
+  });
+  document.querySelectorAll("[data-mail]").forEach(function (a) {
     var subj = a.getAttribute("data-subject");
     a.setAttribute("href", mailto(subj ? "Discovery call request - " + subj : DEFAULT_SUBJECT));
   });
